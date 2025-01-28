@@ -1,6 +1,6 @@
-# HarvestStat - Harmonized Subnational Crop Statistics
+# HarvestStat-Africa: Harmonized Subnational Crop Statistics for Africa
 
-The HarvestStat is a repository that contains cleaned and harmonized subnational global crop production data from various sources, including the Famine [Early Warning Systems Network (FEWS NET)](https://fews.net/) of the United States Agency for International Development (USAID) and the Food and Agriculture Organization (FAO).</br>
+The HarvestStat-Africa is a repository that contains cleaned and harmonized subnational global crop production data for Africa from various sources, including the Famine [Early Warning Systems Network (FEWS NET)](https://fews.net/) of the United States Agency for International Development (USAID) and the Food and Agriculture Organization (FAO).</br>
 
 This repository provides access to a comprehensive crop dataset that allows researchers, policymakers, and stakeholders to explore trends and patterns from  the subnational to the global level, enabling better-informed decisions related to food security, trade, and development.</br>
 
@@ -31,10 +31,41 @@ HarvetStat currently contains subnational crop statistics for **`35`** countries
 
 <img src="./docs/current_status_map.png" alt="drawing" width="900"/>
 
-## Contributors
-- Dr. Donghoon Lee (U of Manitoba)
-- Dr. Weston Anderson (UMD, NASA)
-- Xuan Chen (IFPRI)
+## Citation
+D. Lee, W. Anderson, X. Chen, F. Davenport, S. Shukla, R. Sahajpale, M. Budde, J. Rowland, J. Verdin, L. You, M. Ahouangbenoni, K. Davis, E. Kebede, S. Ehrmannk, C. Justice, and C. Meyer. (in revision), HarvestStat Africa – Harmonized Subnational Crop Statistics for Sub-Saharan Africa. EarthArXiv, [https://doi.org/10.31223/X5M123](https://doi.org/10.31223/X5M123).
+
+<details>
+<summary>BibTeX</summary>
+<pre>
+@article{lee_eaxv2024,
+  author       = {Lee, Donghoon and
+                  Anderson, Weston and
+                  Chen, Xuan and
+                  Davenport, Frank and
+                  Shukla, Shraddhanand and
+                  Sahajpal, Ritvik and
+                  Budde, Michael and
+                  Rowland, James and
+                  Verdin, Jim and
+                  You, Liangzhi and
+                  Ahouangbenon, Matthieu and
+                  Davis, Kyle Frankel and
+                  Kebede, Endalkachew and
+                  Ehrmann, Steffen and
+                  Justice, Christina and
+                  Meyer, Carsten},
+  title        = {{HarvestStat Africa – Harmonized Subnational Crop Statistics for Sub-Saharan Africa}},
+  year         = {2024},
+  journal      = {EarthArXiv},
+  note         = {Preprint},
+  doi          = {10.31223/X5M123},
+  url          = {https://doi.org/10.31223/X5M123}
+}
+</pre>
+</details>
+
+## How to contribute
+Contribution document will be updated.
 
 ## Contact 
 - Please contact Donghoon Lee ([Donghoon.Lee@umanitoba.ca](Donghoon.Lee@umanitoba.ca) and Weston Anderson [Weston@umd.edu](Weston@umd.edu)) for any questions or collaborations.</br>

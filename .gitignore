@@ -14,6 +14,9 @@ notebook/token.json
 notebook/w*.ipynb
 notebook/Retrieve_AllGrainData.ipynb
 notebook/CP*.ipynb
+# Exceptions for Large Raw Data
+data/crop_raw_data/adm_crop_data_raw_SO.csv
+data/crop_raw_data/adm_crop_data_raw_ET.csv
 # Crop data
 data/fao
 data/auxiliary
