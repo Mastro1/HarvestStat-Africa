@@ -1419,3 +1419,168 @@ def combine(df,crop_list, duplicate_positions,non_repeated_positions):
                                                                                                                  0]
                     return df
 
+#Define the three quality control algorithms to choose from
+
+def detect_anomalies(timeseries, threshold):
+    mean = np.mean(timeseries)
+    std = np.std(timeseries)
+    lower_bound = mean - (threshold * std)
+    upper_bound = mean + (threshold * std)
+    anomalies = [(idx, value) for idx, value in enumerate(timeseries) if   value > upper_bound]
+    return anomalies
+
+
+def posOutlier(outlierCount, df):
+    df['year'] = df['harvest_year']
+    df['outlier']=' '
+    df=df.reset_index()
+    #~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#
+    #   Buttons and knobs for the high outlier QC algorithm             #
+
+    OutThrsh = 3 #outlier (in std) to use to identify outlier
+    maxYldThrsh = 1.5 #what yield level to use below which not to identify outliers
+    numYrs = 5 #minimum number of years to require
+    xThrsh = 3 #minimum multiplicative threshold to use for the preceding or following value to identify an outlier
+                # a value of 3 means that either the outlier must be 3x larger than the preceding or following value to be an outlier
+
+    #~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#
+
+    for country in df['country'].unique():
+        counDF=df[df['country']==country]
+        for crop in counDF['product'].unique():
+            crDF = counDF[counDF['product'] == crop]
+            if len(crDF) == 0:
+                continue
+            cropSys = crDF.crop_production_system.unique()
+            for crop_sys in cropSys:
+                for season_name in crDF[crDF['crop_production_system'] == crop_sys].season_name.unique():
+                    csDF = crDF[(crDF.season_name == season_name) & (crDF.crop_production_system == crop_sys)]
+                    csDF = csDF.drop_duplicates()
+                    if'none'in csDF['admin_2'].unique():
+                        csDF['name']=csDF['admin_1']
+                    else:
+                        csDF['name'] = csDF['admin_2']
+                    names = csDF.name.unique()
+                    for name in names:
+                        rDF = csDF[csDF.name == name]
+                        rDF = rDF.sort_values(by='year', axis=0)
+                        if rDF['yield'].isna().all():
+                            continue
+                        if rDF['yield'].max() < maxYldThrsh:
+                            continue
+                        if len(rDF['yield']) < numYrs:
+                            continue
+                            
+                        # core of the outlier threshold detection
+                        anomalies = detect_anomalies(rDF['yield'].to_list(), OutThrsh)
+
+                        stIndex=rDF.index[0]
+                        endIndex=rDF.index[-1]
+                        maxP = rDF[rDF['yield'] == rDF['yield'].max()].index[0]  # find index of the max value
+                        # check for end member before testing based on following value
+                        if maxP < endIndex:
+                            #avoid missing years in the same crop_production_system
+                            while (maxP+1) not in rDF.index:
+                                maxP=maxP+1
+                            maxPPost = rDF[rDF.index == (maxP + 1)]['yield'].values[0]
+
+                            # check if outlier value is extreme relative to the following value
+                            if rDF['yield'].max() / maxPPost > xThrsh:
+                                rDF.loc[rDF['yield'] == rDF['yield'].max(), 'outlier'] = 'outlier'
+                                # timesIndex.append(rDF[rDF['QC_flag'] == 'outlier'].index[0])
+
+                                # if there is an outlier as identified with the outlier criteria AND the outlier is 3x the following value
+                                if len(anomalies) > 0 and (rDF[rDF['outlier'] == 'outlier'].index[0] ==
+                                                           rDF[rDF['yield'] == max(anomalies)[1]].index[0]):
+                                    df.loc[rDF[rDF['outlier'] == 'outlier'].index, 'outlier'] = 'outlier'
+                                    crDF.loc[rDF[rDF['outlier'] == 'outlier'].index, 'outlier'] = 'outlier'
+                                continue
+                            
+                        if maxP>stIndex:
+                            while (maxP-1) not in rDF.index:
+                                maxP=maxP-1
+                            maxPPre = rDF[rDF.index == (maxP - 1)]['yield'].values[0]
+
+                            # check if outlier value is extreme relative to the preceding value
+                            if rDF['yield'].max() / maxPPre > xThrsh:
+                                rDF.loc[rDF['yield'] == rDF['yield'].max(), 'outlier'] = 'outlier'
+                                # if there is an outlier as identified with the outlier criteria AND the outlier is 3x the previous value
+                                if len(anomalies) > 0 and (rDF[rDF['outlier'] == 'outlier'].index[0] ==
+                                                           rDF[rDF['yield'] == max(anomalies)[1]].index[0]):
+                                    df.loc[rDF[rDF['outlier'] == 'outlier'].index, 'outlier'] = 'outlier'
+                                    crDF.loc[rDF[rDF['outlier'] == 'outlier'].index, 'outlier'] = 'outlier'
+            
+            if len(crDF[crDF['outlier']=='outlier'])>0:
+                outlierCount.loc[((outlierCount.country==country)&(outlierCount.crop==crop)),'outlier_cnt'] = \
+                len(crDF[crDF['outlier']=='outlier'])
+                outlierCount.loc[((outlierCount.country==country)&(outlierCount.crop==crop)),'outlier_pct'] = \
+                100*len(crDF[crDF['outlier']=='outlier']) / len(crDF)
+    return outlierCount, df
+
+def Low_Variance_QC(outlierCount, df):
+    df['year'] = df['harvest_year']
+    # ~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#
+    #            Buttons and knobs for the QC algorithm                 #
+
+    numYrs = 5  # minimum number of years to require
+    maxYldThrsh = 1.5  # what yield level to use below which not to identify outliers
+    numRepeats = 3  # set the number of repeated values (or values that follow a trend) to requrie
+    diffThresh = 0.05  # set the threshold to be used for variance differences
+
+    # ~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#
+    df['low_variance'] = ' '
+    df = df.reset_index()
+    for country in df['country'].unique():
+        counDF=df[df['country']==country]
+        for crop in counDF['product'].unique():
+            crDF = counDF[counDF['product'] == crop]
+            if len(crDF) == 0:  # if there are no crops, move on
+                continue
+            cropSys = crDF.crop_production_system.unique()
+            for crop_sys in cropSys:
+                for season_name in crDF[crDF['crop_production_system'] == crop_sys].season_name.unique():
+                    csDF = crDF[(crDF.season_name == season_name) & (crDF.crop_production_system == crop_sys)]
+                    csDF = csDF.drop_duplicates()
+                    if 'none' in csDF['admin_2'].unique():
+                        csDF['name'] = csDF['admin_1']
+                    else:
+                        csDF['name'] = csDF['admin_2']
+                    names = csDF.name.unique()
+                    for name in names:
+                        rDF = csDF[csDF.name == name]
+                        rDF = rDF.sort_values(by='year', axis=0)
+                        if rDF['yield'].isna().all():
+                            continue
+                        if len(rDF['yield']) < numYrs:  # check for the minimum number of years
+                            continue
+                        if rDF['yield'].max() < maxYldThrsh:
+                            continue
+
+                        fd = np.append(np.nan, np.array(rDF['yield'][~np.isnan(rDF['yield'])][1:]) - np.array(
+                            rDF['yield'][~np.isnan(rDF['yield'])][:-1]))  # first difference
+                        sd = np.append(np.nan, np.array(fd[1:]) - np.array(fd[:-1]))  # second difference
+                        # determine the QA flag based on lack of deviation from a trend
+                        qaFlag = np.array(np.abs(sd) < diffThresh).astype(int)
+                        for iL in range(qaFlag.size - (
+                                numRepeats - 1)):  # look for three consecutive values that don't deviate from the trend
+                            if np.sum(qaFlag[iL:iL + numRepeats] > 0) == numRepeats:
+                                qaFlag[iL - 1:iL + numRepeats] = 2  # because this was the second difference, we need to flag at least the value before as well
+
+                        if np.sum(qaFlag == 2) > 0:
+                            #resolve the situation where yield has a null value
+                            if len(rDF.loc[rDF['yield'].isna()])>0:
+                                tempDF = rDF.copy()
+                                tempDF=tempDF.reset_index()
+                                nanIndex=tempDF[tempDF['yield'].isna()].index.tolist()
+                                for x in nanIndex:
+                                    qaFlag=np.insert(qaFlag,x,0)
+                            rDF.loc[rDF[qaFlag == 2].index,'low_variance']='outlier'
+                            df.loc[rDF[rDF['low_variance'] == 'outlier'].index, 'low_variance'] = 'outlier'
+                            crDF.loc[rDF[rDF['low_variance'] == 'outlier'].index, 'low_variance'] = 'outlier'
+
+            if len(crDF[crDF['low_variance']=='outlier'])>0:
+                outlierCount.loc[((outlierCount.country==country)&(outlierCount.crop==crop)),'low_variance_cnt'] = \
+                len(crDF[crDF['low_variance']=='outlier'])
+                outlierCount.loc[((outlierCount.country==country)&(outlierCount.crop==crop)),'low_variance_pct'] = \
+                100*len(crDF[crDF['low_variance']=='outlier']) / len(crDF)
+    return outlierCount, df

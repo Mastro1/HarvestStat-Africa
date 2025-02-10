@@ -1,0 +1,574 @@
+,country,crop,outlier_cnt,low_variance_cnt,outlier_pct,low_variance_pct
+0,Angola,Banana,0,0,0.0,0.0
+5,Angola,Beans (mixed),0,0,0.0,0.0
+12,Angola,Cassava,0,0,0.0,0.0
+23,Angola,Chili Pepper,0,0,0.0,0.0
+26,Angola,Coffee,0,0,0.0,0.0
+27,Angola,Groundnuts (In Shell),0,4,0.0,1.5384615384615385
+34,Angola,Lemon,0,0,0.0,0.0
+36,Angola,Maize,0,0,0.0,0.0
+57,Angola,Mango,0,0,0.0,0.0
+59,Angola,Onions,0,0,0.0,0.0
+62,Angola,Pineapple,0,0,0.0,0.0
+65,Angola,Potato,0,0,0.0,0.0
+78,Angola,Sorghum,0,0,0.0,0.0
+83,Angola,Soybean,0,0,0.0,0.0
+84,Angola,Sweet Potatoes,0,0,0.0,0.0
+101,Angola,Tomato,0,0,0.0,0.0
+132,Angola,Cabbage,0,0,0.0,0.0
+155,Angola,Garlic,0,0,0.0,0.0
+201,Angola,Millet,0,0,0.0,0.0
+231,Angola,Rice,0,0,0.0,0.0
+301,Angola,Carrots,0,0,0.0,0.0
+458,Angola,Avocado,0,0,0.0,0.0
+880,Angola,Wheat,0,0,0.0,0.0
+930,Angola,Cowpea,0,0,0.0,0.0
+1458,Angola,Okras,0,0,0.0,0.0
+1988,Angola,Green Bean,0,0,0.0,0.0
+2717,Burkina Faso,Bambara groundnut,6,0,0.430416068866571,0.0
+2753,Burkina Faso,Cotton,0,4,0.0,0.3707136237256719
+2772,Burkina Faso,Cowpea,2,13,0.14326647564469913,0.9312320916905444
+2804,Burkina Faso,Groundnuts (In Shell),1,0,0.06830601092896176,0.0
+2843,Burkina Faso,Maize,1,8,0.0625,0.5
+2888,Burkina Faso,Millet,1,8,0.06675567423230974,0.5340453938584779
+2927,Burkina Faso,Rice,0,0,0.0,0.0
+2967,Burkina Faso,Sesame Seed,2,0,0.15885623510722796,0.0
+2996,Burkina Faso,Sorghum,5,0,0.33444816053511706,0.0
+3035,Burkina Faso,Sorghum (Red),0,0,0.0,0.0
+3050,Burkina Faso,Soybean,1,4,0.1466275659824047,0.5865102639296188
+3054,Burkina Faso,Sweet Potatoes,0,0,0.0,0.0
+3389,Burkina Faso,Fonio,0,0,0.0,0.0
+3623,Burkina Faso,Yams,0,0,0.0,0.0
+7147,Burkina Faso,Potato,0,0,0.0,0.0
+18367,Burundi,Banana,0,0,0.0,0.0
+18415,Burundi,Beans (mixed),0,0,0.0,0.0
+18458,Burundi,Bush Bean,0,0,0.0,0.0
+18467,Burundi,Cassava,0,0,0.0,0.0
+18519,Burundi,Cowpea,0,0,0.0,0.0
+18528,Burundi,Groundnuts (In Shell),0,0,0.0,0.0
+18536,Burundi,Maize,0,0,0.0,0.0
+18588,Burundi,Pea,0,0,0.0,0.0
+18631,Burundi,Pigeon Pea,0,0,0.0,0.0
+18634,Burundi,Pole Bean,0,0,0.0,0.0
+18642,Burundi,Potato,0,0,0.0,0.0
+18652,Burundi,Rice,0,0,0.0,0.0
+18670,Burundi,Sorghum,0,0,0.0,0.0
+18689,Burundi,Soybean,0,0,0.0,0.0
+18696,Burundi,Sweet Potatoes,0,0,0.0,0.0
+18742,Burundi,Taro,0,0,0.0,0.0
+18786,Burundi,Yams,0,0,0.0,0.0
+18985,Burundi,Millet,0,0,0.0,0.0
+19203,Burundi,Wheat,0,0,0.0,0.0
+20117,Burundi,Sunflower Seed,0,0,0.0,0.0
+26050,Benin,Bambara groundnut,5,8,0.46511627906976744,0.7441860465116279
+26074,Benin,Cabbage,0,0,0.0,0.0
+26081,Benin,Carrots,0,0,0.0,0.0
+26088,Benin,Cassava,3,8,0.1466992665036675,0.39119804400978
+26113,Benin,Cowpea,9,48,0.44160942100098133,2.355250245338567
+26140,Benin,Cucumber,0,0,0.0,0.0
+26147,Benin,Eggplant,0,0,0.0,0.0
+26160,Benin,Goussi,19,88,1.898101898101898,8.791208791208792
+26180,Benin,Groundnuts (In Shell),3,30,0.14749262536873156,1.4749262536873156
+26207,Benin,Lettuce,0,0,0.0,0.0
+26219,Benin,Maize,2,31,0.09689922480620156,1.501937984496124
+26246,Benin,Millet,1,21,0.14388489208633093,3.0215827338129495
+26267,Benin,Molokhia,0,0,0.0,0.0
+26273,Benin,Okras,7,8,0.4657351962741184,0.5322687957418496
+26296,Benin,Onions,0,0,0.0,0.0
+26298,Benin,Rice,1,33,0.06218905472636816,2.0522388059701493
+26325,Benin,Sorghum,9,53,0.8093525179856115,4.766187050359712
+26352,Benin,Soybean,2,31,0.1692047377326565,2.6226734348561758
+26375,Benin,Sweet Potatoes,6,8,0.316288877174486,0.42171850289931473
+26402,Benin,Tomato,13,4,0.6615776081424937,0.2035623409669211
+26428,Benin,Watermelon,0,0,0.0,0.0
+26434,Benin,Yams,1,9,0.0764525993883792,0.6880733944954128
+26678,Benin,Pigeon Pea,4,4,0.6042296072507553,0.6042296072507553
+26708,Benin,Sesame Seed,3,5,1.4705882352941178,2.450980392156863
+28384,Benin,Taro,6,14,1.3333333333333333,3.111111111111111
+29422,Benin,Sugarcane,0,0,0.0,0.0
+30404,Benin,Geocarpa groundnut,0,0,0.0,0.0
+35083,Benin,Pineapple,0,0,0.0,0.0
+37093,Benin,Fonio,1,15,0.6289308176100629,9.433962264150944
+37267,Benin,Potato,0,0,0.0,0.0
+52820,DRC,Banana,0,0,0.0,0.0
+52831,DRC,Beans (mixed),0,0,0.0,0.0
+52838,DRC,Cassava,0,0,0.0,0.0
+52849,DRC,Maize,0,0,0.0,0.0
+52860,DRC,Rice,0,0,0.0,0.0
+53815,Central African Republic,Cassava,0,0,0.0,0.0
+53818,Central African Republic,Groundnuts (In Shell),0,0,0.0,0.0
+53821,Central African Republic,Maize,0,0,0.0,0.0
+53824,Central African Republic,Rice,0,0,0.0,0.0
+53827,Central African Republic,Sesame Seed,0,0,0.0,0.0
+54037,Cameroon,Banana,0,4,0.0,1.0204081632653061
+54045,Cameroon,Beans (mixed),0,9,0.0,1.875
+54046,Cameroon,Cassava,0,0,0.0,0.0
+54047,Cameroon,Groundnuts (In Shell),0,10,0.0,1.6339869281045751
+54048,Cameroon,Maize,0,9,0.0,1.271186440677966
+54059,Cameroon,Soybean,0,0,0.0,0.0
+54069,Cameroon,Squash and Melon Seeds,0,0,0.0,0.0
+54078,Cameroon,Sweet Potatoes,0,0,0.0,0.0
+54091,Cameroon,Taro,0,8,0.0,1.492537313432836
+54101,Cameroon,Yams,0,0,0.0,0.0
+54133,Cameroon,Millet,0,8,0.0,4.651162790697675
+54204,Cameroon,Okras,0,0,0.0,0.0
+54206,Cameroon,Pam Nut,0,13,0.0,4.593639575971731
+54213,Cameroon,Rice,0,28,0.0,12.280701754385966
+54216,Cameroon,Sesame Seed,0,0,0.0,0.0
+54283,Cameroon,Melon,0,0,0.0,0.0
+54285,Cameroon,Potato,0,0,0.0,0.0
+54346,Cameroon,Cowpea,0,0,0.0,0.0
+54527,Cameroon,Tomato,0,0,0.0,0.0
+54528,Cameroon,Watermelon,0,0,0.0,0.0
+54668,Cameroon,Bambara groundnut,0,0,0.0,0.0
+55851,Cameroon,Onions,0,0,0.0,0.0
+56436,Cameroon,Pineapple,0,0,0.0,0.0
+60204,Ethiopia,Barley,0,0,0.0,0.0
+60217,Ethiopia,Beans (White),0,0,0.0,0.0
+60222,Ethiopia,Chick Peas,0,0,0.0,0.0
+60238,Ethiopia,Chili Pepper,0,0,0.0,0.0
+60244,Ethiopia,Fava Bean,2,4,0.26143790849673204,0.5228758169934641
+60259,Ethiopia,Field Peas,0,0,0.0,0.0
+60265,Ethiopia,Green Peppers,0,0,0.0,0.0
+60267,Ethiopia,Guava,0,0,0.0,0.0
+60268,Ethiopia,Hops,0,0,0.0,0.0
+60276,Ethiopia,Lemon,0,0,0.0,0.0
+60281,Ethiopia,Linseed,0,0,0.0,0.0
+60296,Ethiopia,Maize,0,0,0.0,0.0
+60312,Ethiopia,Millet,0,0,0.0,0.0
+60328,Ethiopia,Neug,0,0,0.0,0.0
+60341,Ethiopia,Onions,0,0,0.0,0.0
+60342,Ethiopia,Orange,0,0,0.0,0.0
+60343,Ethiopia,Papaya,0,0,0.0,0.0
+60347,Ethiopia,Sesame Seed,0,0,0.0,0.0
+60361,Ethiopia,Sorghum,0,4,0.0,0.45248868778280543
+60377,Ethiopia,Teff,0,8,0.0,0.9324009324009324
+60393,Ethiopia,Tomato,0,0,0.0,0.0
+60439,Ethiopia,Ethiopian Cabbage,0,0,0.0,0.0
+60456,Ethiopia,Fenugreek,0,0,0.0,0.0
+60478,Ethiopia,Garlic,0,0,0.0,0.0
+60494,Ethiopia,Lentils,0,0,0.0,0.0
+60576,Ethiopia,Potato,1,0,0.28653295128939826,0.0
+60597,Ethiopia,Soybean,0,0,0.0,0.0
+60615,Ethiopia,Wheat,0,4,0.0,0.5398110661268556
+60648,Ethiopia,Cabbage,0,0,0.0,0.0
+60665,Ethiopia,Coffee,1,0,0.21321961620469082,0.0
+61044,Ethiopia,Sunflower Seed,0,0,0.0,0.0
+61078,Ethiopia,Banana,0,0,0.0,0.0
+61203,Ethiopia,Rice,0,0,0.0,0.0
+61292,Ethiopia,Beet,0,0,0.0,0.0
+61528,Ethiopia,Oats,0,0,0.0,0.0
+61551,Ethiopia,Rape,0,0,0.0,0.0
+62087,Ethiopia,Mango,0,0,0.0,0.0
+62479,Ethiopia,Sugarcane,0,0,0.0,0.0
+62483,Ethiopia,Sweet Potatoes,0,0,0.0,0.0
+63125,Ethiopia,Avocado,0,0,0.0,0.0
+63981,Ethiopia,Groundnuts (In Shell),0,0,0.0,0.0
+64038,Ethiopia,Mung bean,0,0,0.0,0.0
+64450,Ethiopia,Carrots,0,0,0.0,0.0
+64709,Ethiopia,Taro,0,0,0.0,0.0
+71473,Ethiopia,Yams,0,0,0.0,0.0
+73862,Ethiopia,Pineapple,0,0,0.0,0.0
+75462,Ghana,Banana,0,34,0.0,12.977099236641221
+75488,Ghana,Cassava,0,0,0.0,0.0
+75514,Ghana,Cowpea,0,57,0.0,27.941176470588236
+75526,Ghana,Groundnuts (In Shell),0,62,0.0,30.097087378640776
+75538,Ghana,Maize,0,115,0.0,26.62037037037037
+75565,Ghana,Rice,0,108,0.0,25.233644859813083
+75592,Ghana,Taro,0,63,0.0,24.23076923076923
+75618,Ghana,Yams,0,4,0.0,1.075268817204301
+76254,Ghana,Millet,0,32,0.0,23.703703703703702
+76308,Ghana,Sorghum,0,67,0.0,31.753554502369667
+76335,Ghana,Soybean,0,51,0.0,47.66355140186916
+77184,Ghana,Sweet Potatoes,0,0,0.0,0.0
+78451,Guinea,Cassava,0,0,0.0,0.0
+78457,Guinea,Groundnuts (In Shell),0,0,0.0,0.0
+78463,Guinea,Maize,0,0,0.0,0.0
+78469,Guinea,Rice,0,0,0.0,0.0
+79231,Kenya,Banana,0,0,0.0,0.0
+79234,Kenya,Beans (mixed),1,0,0.09074410163339383,0.0
+79247,Kenya,Cassava,0,0,0.0,0.0
+79250,Kenya,Cowpea,0,0,0.0,0.0
+79253,Kenya,Maize,2,10,0.10362694300518134,0.5181347150259067
+79299,Kenya,Mung bean,0,0,0.0,0.0
+79302,Kenya,Pigeon Pea,0,0,0.0,0.0
+79303,Kenya,Rice,0,0,0.0,0.0
+79305,Kenya,Sorghum,0,0,0.0,0.0
+79310,Kenya,Sweet Potatoes,0,0,0.0,0.0
+79313,Kenya,Taro,0,0,0.0,0.0
+79401,Kenya,Millet,0,5,0.0,1.9455252918287937
+80091,Kenya,Wheat,0,0,0.0,0.0
+80213,Kenya,Barley,0,0,0.0,0.0
+80249,Kenya,Coffee,0,0,0.0,0.0
+80315,Kenya,Potato,0,0,0.0,0.0
+80343,Kenya,Tea,0,0,0.0,0.0
+80378,Kenya,Yams,0,0,0.0,0.0
+84514,Liberia,Cassava,0,0,0.0,0.0
+84522,Liberia,Rice,0,0,0.0,0.0
+84796,Lesotho,Beans (mixed),0,0,0.0,0.0
+84835,Lesotho,Maize,1,0,0.25252525252525254,0.0
+84877,Lesotho,Oats,0,0,0.0,0.0
+84879,Lesotho,Pea,0,0,0.0,0.0
+84923,Lesotho,Sorghum,0,0,0.0,0.0
+84964,Lesotho,Wheat,0,0,0.0,0.0
+86797,Madagascar,Bambara groundnut,0,0,0.0,0.0
+86798,Madagascar,Banana,0,0,0.0,0.0
+86799,Madagascar,Beans (mixed),0,27,0.0,5.8441558441558445
+86820,Madagascar,Beet,0,0,0.0,0.0
+86821,Madagascar,Broad Beans,0,0,0.0,0.0
+86822,Madagascar,Carrots,0,0,0.0,0.0
+86823,Madagascar,Cassava,0,41,0.0,6.436420722135008
+86852,Madagascar,Chili Pepper,0,0,0.0,0.0
+86853,Madagascar,Coffee,0,0,0.0,0.0
+86874,Madagascar,Cotton,0,0,0.0,0.0
+86875,Madagascar,Cowpea,0,0,0.0,0.0
+86876,Madagascar,Cucumber,0,0,0.0,0.0
+86877,Madagascar,Eggplant,0,0,0.0,0.0
+86878,Madagascar,Garlic,0,0,0.0,0.0
+86879,Madagascar,Green Pea,0,0,0.0,0.0
+86880,Madagascar,Groundnuts (In Shell),0,52,0.0,12.264150943396226
+86901,Madagascar,Lentils,0,0,0.0,0.0
+86902,Madagascar,Lettuce,0,0,0.0,0.0
+86903,Madagascar,Maize,0,27,0.0,4.23861852433281
+86932,Madagascar,Onions,0,0,0.0,0.0
+86933,Madagascar,Pineapple,0,0,0.0,0.0
+86934,Madagascar,Potato,0,12,0.0,5.150214592274678
+86955,Madagascar,Rice,0,0,0.0,0.0
+86985,Madagascar,Soybean,0,0,0.0,0.0
+86986,Madagascar,Squash,0,0,0.0,0.0
+86987,Madagascar,Sugarcane,1,13,0.20964360587002095,2.7253668763102725
+87008,Madagascar,Sweet Potatoes,0,63,0.0,12.0
+87032,Madagascar,Taro,0,0,0.0,0.0
+87033,Madagascar,Tobacco,0,0,0.0,0.0
+87034,Madagascar,Tomato,0,0,0.0,0.0
+87035,Madagascar,Yams,0,0,0.0,0.0
+87115,Madagascar,Ginger,0,0,0.0,0.0
+87167,Madagascar,Pepper,0,0,0.0,0.0
+87393,Madagascar,Millet,0,0,0.0,0.0
+87500,Madagascar,Barley,0,0,0.0,0.0
+87736,Madagascar,Wheat,0,0,0.0,0.0
+89824,Madagascar,Pigeon Pea,0,4,0.0,5.555555555555555
+91099,Madagascar,Jute,0,0,0.0,0.0
+91680,Mali,Bambara groundnut,0,4,0.0,2.3391812865497075
+91712,Mali,Cotton,0,4,0.0,2.797202797202797
+91742,Mali,Cowpea,0,6,0.0,2.2388059701492535
+91779,Mali,Fonio,1,0,0.4484304932735426,0.0
+91820,Mali,Groundnuts (In Shell),0,0,0.0,0.0
+91859,Mali,Maize,2,0,0.6644518272425249,0.0
+91908,Mali,Millet,0,0,0.0,0.0
+91949,Mali,Rice,2,4,0.6756756756756757,1.3513513513513513
+91989,Mali,Sesame Seed,0,0,0.0,0.0
+92005,Mali,Sorghum,1,4,0.33112582781456956,1.3245033112582782
+92046,Mali,Soybean,0,0,0.0,0.0
+92053,Mali,Sweet Potatoes,0,0,0.0,0.0
+92440,Mali,Wheat,0,0,0.0,0.0
+92476,Mali,Beans (mixed),0,0,0.0,0.0
+92848,Mali,Tomato,0,0,0.0,0.0
+92851,Mali,Yams,0,0,0.0,0.0
+93259,Mali,Sugarcane,0,0,0.0,0.0
+93648,Mali,Barley,0,0,0.0,0.0
+94201,Mauritania,Cowpea,0,0,0.0,0.0
+94209,Mauritania,Groundnuts (In Shell),0,0,0.0,0.0
+94210,Mauritania,Maize,1,0,0.3875968992248062,0.0
+94216,Mauritania,Millet,0,0,0.0,0.0
+94240,Mauritania,Sorghum,0,0,0.0,0.0
+94390,Mauritania,Wheat,0,0,0.0,0.0
+94602,Mauritania,Rice,0,0,0.0,0.0
+95190,Malawi,Bambara groundnut,0,0,0.0,0.0
+95207,Malawi,Banana,0,0,0.0,0.0
+95208,Malawi,Bean (Hyacinth),1,4,0.45871559633027525,1.834862385321101
+95209,Malawi,Beans (mixed),1,0,0.12804097311139565,0.0
+95241,Malawi,Cassava,0,0,0.0,0.0
+95282,Malawi,Chick Peas,0,0,0.0,0.0
+95283,Malawi,Chili Pepper,2,0,0.9523809523809523,0.0
+95284,Malawi,Coffee,1,5,1.6129032258064515,8.064516129032258
+95285,Malawi,Cotton,1,0,0.1272264631043257,0.0
+95323,Malawi,Cowpea,0,0,0.0,0.0
+95354,Malawi,Field Peas,1,0,0.625,0.0
+95383,Malawi,Groundnuts (In Shell),0,0,0.0,0.0
+95423,Malawi,Maize,1,0,0.09337068160597572,0.0
+95463,Malawi,Millet,0,0,0.0,0.0
+95498,Malawi,Paprika,1,4,0.44642857142857145,1.7857142857142858
+95514,Malawi,Pigeon Pea,2,4,0.5376344086021505,1.075268817204301
+95529,Malawi,Potato,0,0,0.0,0.0
+95561,Malawi,Rice,0,0,0.0,0.0
+95598,Malawi,Sorghum,0,9,0.0,1.262272089761571
+95634,Malawi,Soybean,1,6,0.20161290322580644,1.2096774193548387
+95654,Malawi,Sweet Potatoes,0,0,0.0,0.0
+95687,Malawi,Tobacco,1,4,0.26246719160104987,1.0498687664041995
+95759,Malawi,Cabbage,0,0,0.0,0.0
+95950,Malawi,Onions,0,0,0.0,0.0
+96064,Malawi,Sunflower Seed,1,0,0.46296296296296297,0.0
+96110,Malawi,Tomato,0,0,0.0,0.0
+98323,Malawi,Garlic,0,0,0.0,0.0
+98454,Malawi,Sesame Seed,1,0,0.591715976331361,0.0
+101666,Malawi,Velvet Bean,0,0,0.0,0.0
+107186,Mozambique,Bambara groundnut,0,0,0.0,0.0
+107203,Mozambique,Beans (Rosecoco),0,4,0.0,3.8095238095238093
+107214,Mozambique,Beans (mixed),0,7,0.0,4.761904761904762
+107228,Mozambique,Cassava,0,0,0.0,0.0
+107250,Mozambique,Cotton,0,0,0.0,0.0
+107267,Mozambique,Cowpea,0,0,0.0,0.0
+107284,Mozambique,Green Bean,0,0,0.0,0.0
+107291,Mozambique,Groundnuts (In Shell),0,4,0.0,2.9197080291970803
+107305,Mozambique,Maize,0,0,0.0,0.0
+107327,Mozambique,Millet,0,0,0.0,0.0
+107345,Mozambique,Mung bean,0,0,0.0,0.0
+107347,Mozambique,Pigeon Pea,0,0,0.0,0.0
+107364,Mozambique,Rice,0,0,0.0,0.0
+107382,Mozambique,Sesame Seed,0,0,0.0,0.0
+107400,Mozambique,Sorghum,0,5,0.0,2.293577981651376
+107422,Mozambique,Sunflower Seed,0,0,0.0,0.0
+107430,Mozambique,Sweet Potatoes,0,0,0.0,0.0
+107438,Mozambique,Tobacco,0,0,0.0,0.0
+107957,Mozambique,Banana,0,0,0.0,0.0
+108100,Mozambique,Paprika,0,0,0.0,0.0
+108102,Mozambique,Pepper,0,0,0.0,0.0
+108178,Mozambique,Soybean,0,0,0.0,0.0
+108217,Mozambique,Wheat,0,0,0.0,0.0
+108302,Mozambique,Ginger,0,0,0.0,0.0
+108429,Mozambique,Sugarcane,0,0,0.0,0.0
+108527,Mozambique,Chili Pepper,0,0,0.0,0.0
+108582,Mozambique,Jute,0,0,0.0,0.0
+109849,Mozambique,Tea,0,0,0.0,0.0
+109867,Niger,Bean (Hyacinth),0,0,0.0,0.0
+109869,Niger,Cabbage,0,0,0.0,0.0
+109876,Niger,Capsicum Chinense,0,0,0.0,0.0
+109878,Niger,Carrots,0,0,0.0,0.0
+109880,Niger,Lettuce,0,0,0.0,0.0
+109887,Niger,Maize,0,4,0.0,0.45714285714285713
+109894,Niger,Onions,0,0,0.0,0.0
+109901,Niger,Potato,0,0,0.0,0.0
+109908,Niger,Tomato,0,0,0.0,0.0
+109915,Niger,Wheat,0,4,0.0,2.127659574468085
+109940,Niger,Chili Pepper,0,0,0.0,0.0
+109947,Niger,Cowpea,4,0,0.172488141440276,0.0
+109965,Niger,Cucumber,0,0,0.0,0.0
+109966,Niger,Eggplant,0,0,0.0,0.0
+109967,Niger,Garlic,0,0,0.0,0.0
+110018,Niger,Melon,0,0,0.0,0.0
+110023,Niger,Millet,0,8,0.0,0.34949759720401924
+110076,Niger,Pea,0,0,0.0,0.0
+110084,Niger,Rape,0,0,0.0,0.0
+110088,Niger,Sorghum,2,4,0.087070091423596,0.174140182847192
+110116,Niger,Sorrel,4,4,0.7547169811320755,0.7547169811320755
+110118,Niger,Squash,0,0,0.0,0.0
+110140,Niger,Watermelon,0,0,0.0,0.0
+110173,Niger,Celery,0,0,0.0,0.0
+110840,Niger,Bambara groundnut,1,0,0.19455252918287938,0.0
+110870,Niger,Cassava,0,0,0.0,0.0
+110928,Niger,Groundnuts (In Shell),9,0,0.7352941176470589,0.0
+110995,Niger,Okras,5,0,0.9861932938856016,0.0
+111021,Niger,Rice,0,0,0.0,0.0
+111083,Niger,Sweet Potatoes,0,0,0.0,0.0
+111326,Niger,Sugarcane,0,0,0.0,0.0
+111778,Niger,Sesame Seed,2,4,0.2886002886002886,0.5772005772005772
+112325,Niger,Tobacco,0,0,0.0,0.0
+113179,Niger,Fonio,0,0,0.0,0.0
+113854,Niger,Cotton,0,0,0.0,0.0
+127354,Nigeria,Banana,0,0,0.0,0.0
+127357,Nigeria,Cassava,3,25,0.3525264394829612,2.937720329024677
+127382,Nigeria,Cowpea,4,78,0.4645760743321719,9.059233449477352
+127405,Nigeria,Groundnuts (In Shell),0,75,0.0,9.59079283887468
+127422,Nigeria,Maize,0,144,0.0,15.669205658324266
+127447,Nigeria,Melon,0,0,0.0,0.0
+127458,Nigeria,Okras,0,53,0.0,13.054187192118226
+127469,Nigeria,Rice,2,104,0.22002200220022003,11.441144114411442
+127494,Nigeria,Sorghum,0,110,0.0,20.52238805970149
+127495,Nigeria,Sweet Potatoes,0,0,0.0,0.0
+127506,Nigeria,Taro,0,8,0.0,1.3071895424836601
+127529,Nigeria,Tomato,0,32,0.0,7.30593607305936
+127542,Nigeria,Yams,3,40,0.430416068866571,5.738880918220947
+127585,Nigeria,Cotton,0,35,0.0,11.513157894736842
+127687,Nigeria,Millet,1,46,0.1953125,8.984375
+127723,Nigeria,Onions,1,20,0.5681818181818182,11.363636363636363
+127759,Nigeria,Sesame Seed,0,14,0.0,3.6175710594315245
+127798,Nigeria,Soybean,0,51,0.0,10.303030303030303
+127856,Nigeria,Wheat,0,13,0.0,15.476190476190476
+128319,Nigeria,Ginger,0,0,0.0,0.0
+136990,Rwanda,Avocado,0,0,0.0,0.0
+136992,Rwanda,Banana,0,0,0.0,0.0
+137002,Rwanda,Beans (mixed),0,0,0.0,0.0
+137006,Rwanda,Beet,0,0,0.0,0.0
+137007,Rwanda,Bush Bean,0,0,0.0,0.0
+137014,Rwanda,Cabbage,0,0,0.0,0.0
+137016,Rwanda,Carrots,0,0,0.0,0.0
+137018,Rwanda,Cassava,0,0,0.0,0.0
+137028,Rwanda,Cereal Crops,0,0,0.0,0.0
+137030,Rwanda,Eggplant,0,0,0.0,0.0
+137032,Rwanda,Green Bean,0,0,0.0,0.0
+137034,Rwanda,Green Pea,0,0,0.0,0.0
+137036,Rwanda,Groundnuts (In Shell),0,0,0.0,0.0
+137046,Rwanda,Maize,0,0,0.0,0.0
+137056,Rwanda,Pea,0,0,0.0,0.0
+137065,Rwanda,Pole Bean,0,0,0.0,0.0
+137072,Rwanda,Potato,0,0,0.0,0.0
+137081,Rwanda,Rice,0,0,0.0,0.0
+137088,Rwanda,Sorghum,0,0,0.0,0.0
+137098,Rwanda,Soybean,0,0,0.0,0.0
+137109,Rwanda,Squash,0,0,0.0,0.0
+137111,Rwanda,Sugarcane,0,0,0.0,0.0
+137113,Rwanda,Sunflower Seed,0,0,0.0,0.0
+137115,Rwanda,Sweet Potatoes,0,0,0.0,0.0
+137125,Rwanda,Taro,0,0,0.0,0.0
+137128,Rwanda,Tomato,0,0,0.0,0.0
+137130,Rwanda,Wheat,0,0,0.0,0.0
+137133,Rwanda,Yams,0,0,0.0,0.0
+137173,Rwanda,Celery,0,0,0.0,0.0
+137196,Rwanda,Okras,0,0,0.0,0.0
+140602,Sudan,Sorghum,0,6,0.0,0.5054759898904801
+140622,Sudan,Wheat,0,0,0.0,0.0
+140635,Sudan,Groundnuts (In Shell),0,4,0.0,1.015228426395939
+140663,Sudan,Millet,0,0,0.0,0.0
+140706,Sudan,Sesame Seed,0,0,0.0,0.0
+141426,Sudan,Cotton (Acala),0,0,0.0,0.0
+141429,Sudan,Cotton (American),0,0,0.0,0.0
+141539,Sudan,Pigeon Pea,0,0,0.0,0.0
+141681,Sudan,Sunflower Seed,0,0,0.0,0.0
+144106,Sierra Leone,Banana,0,0,0.0,0.0
+144107,Sierra Leone,Cashew (unshelled),0,0,0.0,0.0
+144108,Sierra Leone,Cassava,0,0,0.0,0.0
+144112,Sierra Leone,Groundnuts (In Shell),0,0,0.0,0.0
+144117,Sierra Leone,Maize,0,0,0.0,0.0
+144122,Sierra Leone,Millet,0,0,0.0,0.0
+144123,Sierra Leone,Okras,0,0,0.0,0.0
+144125,Sierra Leone,Potato,0,0,0.0,0.0
+144126,Sierra Leone,Rice,0,0,0.0,0.0
+144131,Sierra Leone,Sesame Seed,0,0,0.0,0.0
+144133,Sierra Leone,Sorghum,0,0,0.0,0.0
+144135,Sierra Leone,Sweet Potatoes,0,0,0.0,0.0
+144509,Senegal,Cassava,0,16,0.0,5.925925925925926
+144518,Senegal,Cowpea,7,29,0.45161290322580644,1.8709677419354838
+144570,Senegal,Groundnuts (In Shell),0,24,0.0,1.1639185257032008
+144611,Senegal,Maize,7,35,0.46885465505693236,2.3442732752846616
+144639,Senegal,Millet,1,13,0.04899559039686428,0.6369426751592356
+144664,Senegal,Rice,3,29,0.23885350318471338,2.3089171974522293
+144667,Senegal,Sesame Seed,0,0,0.0,0.0
+144669,Senegal,Sorghum,3,0,0.27752081406105455,0.0
+146228,Senegal,Sweet Potatoes,0,0,0.0,0.0
+148645,Senegal,Fonio,0,0,0.0,0.0
+154488,Somalia,Cowpea,0,0,0.0,0.0
+154496,Somalia,Maize,1,4,0.0484027105517909,0.1936108422071636
+154542,Somalia,Sorghum,0,0,0.0,0.0
+154587,Somalia,Tomato,0,10,0.0,7.518796992481203
+154589,Somalia,Watermelon,0,6,0.0,8.450704225352112
+154795,Somalia,Sesame Seed,0,0,0.0,0.0
+155069,Somalia,Onions,0,6,0.0,3.8461538461538463
+155086,Somalia,Pepper,0,23,0.0,42.592592592592595
+155331,Somalia,Rice,0,0,0.0,0.0
+157102,Somalia,Groundnuts (In Shell),0,0,0.0,0.0
+160290,South Sudan,Cereal Crops,0,0,0.0,0.0
+160292,South Sudan,Cotton (Acala),0,0,0.0,0.0
+160303,South Sudan,Millet,0,0,0.0,0.0
+160317,South Sudan,Sesame Seed,0,0,0.0,0.0
+160332,South Sudan,Sorghum,0,0,0.0,0.0
+160365,South Sudan,Sunflower Seed,0,0,0.0,0.0
+160392,South Sudan,Cotton (American),0,0,0.0,0.0
+160396,South Sudan,Groundnuts (In Shell),0,0,0.0,0.0
+160572,Chad,Cowpea,0,0,0.0,0.0
+160581,Chad,Groundnuts (In Shell),1,0,0.2288329519450801,0.0
+160589,Chad,Maize,0,0,0.0,0.0
+160613,Chad,Millet,0,0,0.0,0.0
+160644,Chad,Rice,0,0,0.0,0.0
+160646,Chad,Sesame Seed,1,0,0.25252525252525254,0.0
+160647,Chad,Sorghum,3,7,0.36101083032490977,0.8423586040914561
+160669,Chad,Bambara groundnut,0,0,0.0,0.0
+160846,Chad,Sweet Potatoes,0,0,0.0,0.0
+160856,Chad,Cassava,0,0,0.0,0.0
+161764,Chad,Wheat,0,0,0.0,0.0
+161836,Chad,Fonio,0,0,0.0,0.0
+162038,Chad,Taro,0,0,0.0,0.0
+164397,Togo,Beans (mixed),0,0,0.0,0.0
+164398,Togo,Cassava,0,0,0.0,0.0
+164399,Togo,Cotton,0,0,0.0,0.0
+164400,Togo,Groundnuts (In Shell),0,0,0.0,0.0
+164401,Togo,Maize,2,4,0.29895366218236175,0.5979073243647235
+164420,Togo,Millet,1,6,0.4132231404958678,2.479338842975207
+164439,Togo,Rice,0,0,0.0,0.0
+164440,Togo,Sorghum,1,0,0.1953125,0.0
+164459,Togo,Sweet Potatoes,0,0,0.0,0.0
+164460,Togo,Yams,0,0,0.0,0.0
+164839,Togo,Cowpea,0,0,0.0,0.0
+164903,Togo,Soybean,0,0,0.0,0.0
+166645,"Tanzania, United Republic of",Bambara groundnut,0,0,0.0,0.0
+166646,"Tanzania, United Republic of",Banana,0,15,0.0,3.303964757709251
+166671,"Tanzania, United Republic of",Barley,0,0,0.0,0.0
+166685,"Tanzania, United Republic of",Beans (mixed),0,0,0.0,0.0
+166703,"Tanzania, United Republic of",Cassava,0,0,0.0,0.0
+166724,"Tanzania, United Republic of",Chick Peas,0,0,0.0,0.0
+166725,"Tanzania, United Republic of",Cowpea,0,0,0.0,0.0
+166727,"Tanzania, United Republic of",Field Peas,0,0,0.0,0.0
+166735,"Tanzania, United Republic of",Groundnuts (In Shell),2,0,0.45558086560364464,0.0
+166737,"Tanzania, United Republic of",Maize,0,0,0.0,0.0
+166764,"Tanzania, United Republic of",Millet,0,0,0.0,0.0
+166783,"Tanzania, United Republic of",Mung bean,0,0,0.0,0.0
+166785,"Tanzania, United Republic of",Pea,0,0,0.0,0.0
+166786,"Tanzania, United Republic of",Pigeon Pea,0,0,0.0,0.0
+166789,"Tanzania, United Republic of",Potato,2,0,0.6211180124223602,0.0
+166809,"Tanzania, United Republic of",Rice,0,0,0.0,0.0
+166834,"Tanzania, United Republic of",Sorghum,2,0,0.34782608695652173,0.0
+166858,"Tanzania, United Republic of",Soybean,0,0,0.0,0.0
+166861,"Tanzania, United Republic of",Sunflower Seed,0,0,0.0,0.0
+166874,"Tanzania, United Republic of",Sweet Potatoes,1,10,0.23529411764705882,2.3529411764705883
+166890,"Tanzania, United Republic of",Wheat,0,0,0.0,0.0
+167055,"Tanzania, United Republic of",Sesame Seed,0,0,0.0,0.0
+167848,"Tanzania, United Republic of",Taro,0,0,0.0,0.0
+167853,"Tanzania, United Republic of",Yams,0,0,0.0,0.0
+167902,"Tanzania, United Republic of",Sugarcane,0,0,0.0,0.0
+173042,Uganda,Banana,0,0,0.0,0.0
+173044,Uganda,Beans (mixed),0,0,0.0,0.0
+173046,Uganda,Cassava,0,0,0.0,0.0
+173048,Uganda,Maize,0,0,0.0,0.0
+173050,Uganda,Sorghum,0,0,0.0,0.0
+173051,Uganda,Sweet Potatoes,0,0,0.0,0.0
+173059,Uganda,Groundnuts (In Shell),0,0,0.0,0.0
+173062,Uganda,Potato,0,0,0.0,0.0
+173071,Uganda,Field Peas,0,0,0.0,0.0
+173077,Uganda,Millet,0,0,0.0,0.0
+173080,Uganda,Rice,0,0,0.0,0.0
+173082,Uganda,Sesame Seed,0,0,0.0,0.0
+173086,Uganda,Soybean,0,0,0.0,0.0
+173151,Uganda,Cowpea,0,0,0.0,0.0
+173385,Uganda,Pigeon Pea,0,0,0.0,0.0
+174846,South Africa,Barley,0,0,0.0,0.0
+174865,South Africa,Beans (mixed),0,8,0.0,3.053435114503817
+174893,South Africa,Maize,0,4,0.0,1.2618296529968454
+174923,South Africa,Maize (Yellow),0,4,0.0,1.2422360248447204
+174959,South Africa,Sorghum,0,4,0.0,1.7467248908296944
+174960,South Africa,Soybean,0,4,0.0,1.4134275618374559
+174977,South Africa,Sunflower Seed,0,0,0.0,0.0
+174986,South Africa,Wheat,0,4,0.0,1.0101010101010102
+175276,South Africa,Groundnuts (In Shell),0,16,0.0,6.25
+177239,Zambia,Bambara groundnut,1,0,0.1594896331738437,0.0
+177250,Zambia,Barley,0,0,0.0,0.0
+177255,Zambia,Beans (mixed),5,0,0.33222591362126247,0.0
+177279,Zambia,Cassava,0,0,0.0,0.0
+177283,Zambia,Coffee,0,0,0.0,0.0
+177284,Zambia,Cottonseed,4,0,0.6211180124223602,0.0
+177303,Zambia,Cowpea,1,0,0.14285714285714285,0.0
+177318,Zambia,Maize,16,4,0.6482982171799028,0.1620745542949757
+177351,Zambia,Millet,3,4,0.23828435266084194,0.3177124702144559
+177366,Zambia,Potato,4,0,1.0526315789473684,0.0
+177379,Zambia,Rice,2,0,0.1893939393939394,0.0
+177389,Zambia,Sorghum,11,0,0.8124076809453471,0.0
+177412,Zambia,Soybean,3,4,0.23510971786833856,0.31347962382445144
+177436,Zambia,Sunflower Seed,12,0,1.0109519797809603,0.0
+177457,Zambia,Sweet Potatoes,8,0,0.6600660066006601,0.0
+177475,Zambia,Velvet Bean,0,0,0.0,0.0
+177477,Zambia,Wheat,0,0,0.0,0.0
+178759,Zambia,Pineapple,0,0,0.0,0.0
+178823,Zambia,Sugarcane,0,0,0.0,0.0
+191438,Zimbabwe,Bambara groundnut,0,0,0.0,0.0
+191439,Zimbabwe,Beans (Rosecoco),0,0,0.0,0.0
+191451,Zimbabwe,Cassava,0,0,0.0,0.0
+191453,Zimbabwe,Cowpea,0,0,0.0,0.0
+191460,Zimbabwe,Groundnuts (In Shell),0,0,0.0,0.0
+191492,Zimbabwe,Maize,0,0,0.0,0.0
+191545,Zimbabwe,Millet,1,0,0.2949852507374631,0.0
+191586,Zimbabwe,Rape,0,0,0.0,0.0
+191593,Zimbabwe,Rice,0,0,0.0,0.0
+191598,Zimbabwe,Sesame Seed,0,0,0.0,0.0
+191603,Zimbabwe,Sorghum,0,0,0.0,0.0
+191636,Zimbabwe,Soybean,0,0,0.0,0.0
+191662,Zimbabwe,Sunflower Seed,0,0,0.0,0.0
+191687,Zimbabwe,Sweet Potatoes,0,0,0.0,0.0
