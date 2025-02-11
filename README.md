@@ -1,4 +1,12 @@
-# HarvestStat-Africa: Harmonized Subnational Crop Statistics for Africa
+# HarvestStat-Africa: Open-Access Harmonized Subnational Crop Statistics
+![GitHub](https://img.shields.io/github/license/HarvestStat/HarvestStat-Africa)
+![GitHub last commit](https://img.shields.io/github/last-commit/HarvestStat/HarvestStat-Africa)
+![GitHub issues](https://img.shields.io/github/issues/HarvestStat/HarvestStat-Africa)
+![GitHub pull requests](https://img.shields.io/github/issues-pr/HarvestStat/HarvestStat-Africa)
+<!-- ![GitHub forks](https://img.shields.io/github/forks/HarvestStat/HarvestStat-Africa)
+![GitHub stars](https://img.shields.io/github/stars/HarvestStat/HarvestStat-Africa) -->
+
+## Overview
 
 The HarvestStat-Africa is a repository that contains cleaned and harmonized subnational global crop production data for Africa from various sources, including the Famine [Early Warning Systems Network (FEWS NET)](https://fews.net/) of the United States Agency for International Development (USAID) and the Food and Agriculture Organization (FAO).</br>
 
@@ -7,21 +15,38 @@ This repository provides access to a comprehensive crop dataset that allows rese
 ## Data sources
 The data in this repository is compiled from various sources, including:
 - Famine Early Warning Systems Network (FEWS NET) of the United States Agency for International Development (USAID). This is the primary source of information
-    - [FEWS NET Data Warehouse (FDW)](https://fews.net/data) (login required)
+    - [FEWS NET Data Warehouse (FDW)](https://fews.net/data)
 - Food and Agriculture Organization (FAO)
     - [FAO-STAT](https://www.fao.org/faostat/en/#home)
 - National agricultural agencies
 
-## Data processing and sharing
-We are currently sharing the Jupyter notebooks that we used to calibrate and harmonize the crop data for each country, which can be found in the `notebook/` directory. However, in order to keep the process streamlined, we do not share underlying data sources externally at this time. 
-
 ## Repository structure
 This repository is organized as follows:
-
+- `data/`: stores raw and intermediate crop statistics generated during internal processing.
 - `docs/`: contains documentation related to the data.
-- `notebook/`: contains the Jupyter notebook used for processing the data per each country.
-- `public/`: contains the processed data in CSV and JSON formats. 
-    - Note: the data is currently experimental and only available to internal research team.
+- `notebook/`: includes Jupyter notebook and Python files for processing crop data for each country.
+- `public/`: holds the semi-final & final processed datasets in CSV, Parquet, and GeoPackage formats, ready for public use.
+
+## Setting up the environment
+To set up the environment using `environment.yml`, follow these steps:
+
+1. Clone the repository:
+    ```bash
+    git clone https://github.com/HarvestStat/HarvestStat-Africa.git
+    cd HarvestStat-Africa
+    ```
+
+2. Create the conda environment:
+    ```bash
+    conda env create -f environment.yml
+    ```
+
+3. Activate the environment:
+    ```bash
+    conda activate hvstat
+    ```
+
+4. Start your preferred development environment (e.g., Jupyter Notebook, VSCode):
 
 ## Current data status
 HarvetStat currently contains subnational crop statistics for **`35`** countries.
@@ -32,6 +57,8 @@ HarvetStat currently contains subnational crop statistics for **`35`** countries
 <img src="./docs/current_status_map.png" alt="drawing" width="900"/>
 
 ## Citation
+The data in this repository is available for free and unrestricted use. Users are encouraged to cite the following:
+
 D. Lee, W. Anderson, X. Chen, F. Davenport, S. Shukla, R. Sahajpale, M. Budde, J. Rowland, J. Verdin, L. You, M. Ahouangbenoni, K. Davis, E. Kebede, S. Ehrmannk, C. Justice, and C. Meyer. (in revision), HarvestStat Africa – Harmonized Subnational Crop Statistics for Sub-Saharan Africa. EarthArXiv, [https://doi.org/10.31223/X5M123](https://doi.org/10.31223/X5M123).
 
 <details>
@@ -65,17 +92,11 @@ D. Lee, W. Anderson, X. Chen, F. Davenport, S. Shukla, R. Sahajpale, M. Budde, J
 </details>
 
 ## How to contribute
-Contribution document will be updated.
+Contributions to this repository are welcome, including new data sources or improvements to the existing data. To contribute, please create a pull request with a clear description of the changes proposed.
 
 ## Contact 
 - Please contact Donghoon Lee ([Donghoon.Lee@umanitoba.ca](Donghoon.Lee@umanitoba.ca) and Weston Anderson [Weston@umd.edu](Weston@umd.edu)) for any questions or collaborations.</br>
-- Users are welcome to open an [issue](https://github.com/HarvestStat/HarvestStat/issues).
-
-<!-- ## Usage
-The data in this repository is available for free and unrestricted use. Users are encouraged to cite the sources of the data appropriately. The repository can be cloned or downloaded using the git command or the Github interface.
-
-## Contributing
-Contributions to this repository are welcome, including new data sources or improvements to the existing data. To contribute, please create a pull request with a clear description of the changes proposed.
+- Users are encouraged to [open an issue](https://github.com/HarvestStat/HarvestStat/issues) for questions, feedback, or bug reports.
 
 ## License
-The data in this repository is licensed under the Creative Commons Attribution 4.0 International license (CC BY 4.0). -->
+The data in this repository is licensed under the MIT License.
