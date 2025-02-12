@@ -383,14 +383,14 @@
 381,GH2018A102,Ghana,GH,Eastern,none,Eastern,Rice,Main,2019,6,2019,10,All (PS),production,41552.24744966936,0
 382,GH2018A102,Ghana,GH,Eastern,none,Eastern,Rice,Main,2019,6,2019,10,All (PS),yield,4.17359624398516,0
 383,GH2018A102,Ghana,GH,Eastern,none,Eastern,Rice,Main,2020,6,2020,10,All (PS),area,11491.5777608257,0
-384,GH2018A102,Ghana,GH,Eastern,none,Eastern,Rice,Main,2020,6,2020,10,All (PS),production,46853.292579668276,0
+384,GH2018A102,Ghana,GH,Eastern,none,Eastern,Rice,Main,2020,6,2020,10,All (PS),production,46853.29257966827,0
 385,GH2018A102,Ghana,GH,Eastern,none,Eastern,Rice,Main,2020,6,2020,10,All (PS),yield,4.07718535738314,0
 386,GH2018A102,Ghana,GH,Eastern,none,Eastern,Rice,Main,2021,6,2021,10,All (PS),area,11235.82,0
 387,GH2018A102,Ghana,GH,Eastern,none,Eastern,Rice,Main,2021,6,2021,10,All (PS),production,48498.24989999997,0
 388,GH2018A102,Ghana,GH,Eastern,none,Eastern,Rice,Main,2021,6,2021,10,All (PS),yield,4.31639612418141,0
 389,GH2018A102,Ghana,GH,Eastern,none,Eastern,Rice,Main,2022,6,2022,10,All (PS),area,11158.03,0
-390,GH2018A102,Ghana,GH,Eastern,none,Eastern,Rice,Main,2022,6,2022,10,All (PS),production,45859.503300000004,0
-391,GH2018A102,Ghana,GH,Eastern,none,Eastern,Rice,Main,2022,6,2022,10,All (PS),yield,4.11,0
+390,GH2018A102,Ghana,GH,Eastern,none,Eastern,Rice,Main,2022,6,2022,10,All (PS),production,45859.5033,0
+391,GH2018A102,Ghana,GH,Eastern,none,Eastern,Rice,Main,2022,6,2022,10,All (PS),yield,4.109999999999999,0
 392,GH2018A102,Ghana,GH,Eastern,none,Eastern,Yams,Main,1984,6,1984,10,All (PS),area,9214.89275596924,0
 393,GH2018A102,Ghana,GH,Eastern,none,Eastern,Yams,Main,1997,6,1997,10,All (PS),area,30200.0,0
 394,GH2018A102,Ghana,GH,Eastern,none,Eastern,Yams,Main,1997,6,1997,10,All (PS),production,549400.0,0
@@ -693,8 +693,8 @@
 691,GH2018A103,Ghana,GH,Ashanti,none,Ashanti,Banana,Main,2021,6,2021,10,All (PS),production,1936758.8692049996,0
 692,GH2018A103,Ghana,GH,Ashanti,none,Ashanti,Banana,Main,2021,6,2021,10,All (PS),yield,15.4861980307293,0
 693,GH2018A103,Ghana,GH,Ashanti,none,Ashanti,Banana,Main,2022,6,2022,10,All (PS),area,125689.0,0
-694,GH2018A103,Ghana,GH,Ashanti,none,Ashanti,Banana,Main,2022,6,2022,10,All (PS),production,2023592.9000000001,0
-695,GH2018A103,Ghana,GH,Ashanti,none,Ashanti,Banana,Main,2022,6,2022,10,All (PS),yield,16.1,0
+694,GH2018A103,Ghana,GH,Ashanti,none,Ashanti,Banana,Main,2022,6,2022,10,All (PS),production,2023592.9,0
+695,GH2018A103,Ghana,GH,Ashanti,none,Ashanti,Banana,Main,2022,6,2022,10,All (PS),yield,16.099999999999998,0
 696,GH2018A103,Ghana,GH,Ashanti,none,Ashanti,Cassava,Annual,1997,1,1997,12,All (PS),area,117462.0,0
 697,GH2018A103,Ghana,GH,Ashanti,none,Ashanti,Cassava,Annual,1997,1,1997,12,All (PS),production,1191481.0,0
 698,GH2018A103,Ghana,GH,Ashanti,none,Ashanti,Cassava,Annual,1997,1,1997,12,All (PS),yield,10.143544295176312,0
@@ -1035,11 +1035,11 @@
 1033,GH2018A103,Ghana,GH,Ashanti,none,Ashanti,Groundnuts (In Shell),Main,2019,6,2019,10,All (PS),production,11342.000000000004,0
 1034,GH2018A103,Ghana,GH,Ashanti,none,Ashanti,Groundnuts (In Shell),Main,2019,6,2019,10,All (PS),yield,1.85903950172103,0
 1035,GH2018A103,Ghana,GH,Ashanti,none,Ashanti,Groundnuts (In Shell),Main,2020,6,2020,10,All (PS),area,6278.1,0
-1036,GH2018A103,Ghana,GH,Ashanti,none,Ashanti,Groundnuts (In Shell),Main,2020,6,2020,10,All (PS),production,12151.501999999995,0
-1037,GH2018A103,Ghana,GH,Ashanti,none,Ashanti,Groundnuts (In Shell),Main,2020,6,2020,10,All (PS),yield,1.93553814052022,0
+1036,GH2018A103,Ghana,GH,Ashanti,none,Ashanti,Groundnuts (In Shell),Main,2020,6,2020,10,All (PS),production,12151.501999999997,0
+1037,GH2018A103,Ghana,GH,Ashanti,none,Ashanti,Groundnuts (In Shell),Main,2020,6,2020,10,All (PS),yield,1.9355381405202206,0
 1038,GH2018A103,Ghana,GH,Ashanti,none,Ashanti,Groundnuts (In Shell),Main,2021,6,2021,10,All (PS),area,6526.9237,0
-1039,GH2018A103,Ghana,GH,Ashanti,none,Ashanti,Groundnuts (In Shell),Main,2021,6,2021,10,All (PS),production,13351.411544000013,0
-1040,GH2018A103,Ghana,GH,Ashanti,none,Ashanti,Groundnuts (In Shell),Main,2021,6,2021,10,All (PS),yield,2.04559025931313,0
+1039,GH2018A103,Ghana,GH,Ashanti,none,Ashanti,Groundnuts (In Shell),Main,2021,6,2021,10,All (PS),production,13351.411544000011,0
+1040,GH2018A103,Ghana,GH,Ashanti,none,Ashanti,Groundnuts (In Shell),Main,2021,6,2021,10,All (PS),yield,2.0455902593131294,0
 1041,GH2018A103,Ghana,GH,Ashanti,none,Ashanti,Groundnuts (In Shell),Main,2022,6,2022,10,All (PS),area,6560.0,0
 1042,GH2018A103,Ghana,GH,Ashanti,none,Ashanti,Groundnuts (In Shell),Main,2022,6,2022,10,All (PS),production,13776.0,0
 1043,GH2018A103,Ghana,GH,Ashanti,none,Ashanti,Groundnuts (In Shell),Main,2022,6,2022,10,All (PS),yield,2.1,0
@@ -1168,8 +1168,8 @@
 1166,GH2018A104,Ghana,GH,Ahafo,none,Ahafo,Taro,Annual,2018,1,2018,12,All (PS),production,103714.33333333333,0
 1167,GH2018A104,Ghana,GH,Ahafo,none,Ahafo,Taro,Annual,2018,1,2018,12,All (PS),yield,7.0,0
 1168,GH2018A104,Ghana,GH,Ahafo,none,Ahafo,Taro,Main,2019,6,2019,10,All (PS),area,29160.0,0
-1169,GH2018A104,Ghana,GH,Ahafo,none,Ahafo,Taro,Main,2019,6,2019,10,All (PS),production,226163.90000000002,0
-1170,GH2018A104,Ghana,GH,Ahafo,none,Ahafo,Taro,Main,2019,6,2019,10,All (PS),yield,7.75596364883402,0
+1169,GH2018A104,Ghana,GH,Ahafo,none,Ahafo,Taro,Main,2019,6,2019,10,All (PS),production,226163.9,0
+1170,GH2018A104,Ghana,GH,Ahafo,none,Ahafo,Taro,Main,2019,6,2019,10,All (PS),yield,7.755963648834019,0
 1171,GH2018A104,Ghana,GH,Ahafo,none,Ahafo,Taro,Main,2020,6,2020,10,All (PS),area,28825.0,0
 1172,GH2018A104,Ghana,GH,Ahafo,none,Ahafo,Taro,Main,2020,6,2020,10,All (PS),production,218318.6499999999,0
 1173,GH2018A104,Ghana,GH,Ahafo,none,Ahafo,Taro,Main,2020,6,2020,10,All (PS),yield,7.573934084995661,0
@@ -1324,8 +1324,8 @@
 1322,GH2018A104,Ghana,GH,Ahafo,none,Ahafo,Cassava,Annual,2018,1,2018,12,All (PS),production,1622918.3333333333,0
 1323,GH2018A104,Ghana,GH,Ahafo,none,Ahafo,Cassava,Annual,2018,1,2018,12,All (PS),yield,23.000000000000004,0
 1324,GH2018A104,Ghana,GH,Ahafo,none,Ahafo,Cassava,Main,2019,6,2019,10,All (PS),area,53909.0,0
-1325,GH2018A104,Ghana,GH,Ahafo,none,Ahafo,Cassava,Main,2019,6,2019,10,All (PS),production,1380178.4699999979,0
-1326,GH2018A104,Ghana,GH,Ahafo,none,Ahafo,Cassava,Main,2019,6,2019,10,All (PS),yield,25.6020046745441,0
+1325,GH2018A104,Ghana,GH,Ahafo,none,Ahafo,Cassava,Main,2019,6,2019,10,All (PS),production,1380178.469999998,0
+1326,GH2018A104,Ghana,GH,Ahafo,none,Ahafo,Cassava,Main,2019,6,2019,10,All (PS),yield,25.602004674544105,0
 1327,GH2018A104,Ghana,GH,Ahafo,none,Ahafo,Cassava,Main,2020,6,2020,10,All (PS),area,33741.0,0
 1328,GH2018A104,Ghana,GH,Ahafo,none,Ahafo,Cassava,Main,2020,6,2020,10,All (PS),production,828482.1199999986,0
 1329,GH2018A104,Ghana,GH,Ahafo,none,Ahafo,Cassava,Main,2020,6,2020,10,All (PS),yield,24.5541661480098,0
@@ -1412,8 +1412,8 @@
 1410,GH2018A104,Ghana,GH,Ahafo,none,Ahafo,Maize,Main,2021,6,2021,10,All (PS),production,76095.36091211322,0
 1411,GH2018A104,Ghana,GH,Ahafo,none,Ahafo,Maize,Main,2021,6,2021,10,All (PS),yield,2.06882064357874,0
 1412,GH2018A104,Ghana,GH,Ahafo,none,Ahafo,Maize,Main,2022,6,2022,10,All (PS),area,38088.0,0
-1413,GH2018A104,Ghana,GH,Ahafo,none,Ahafo,Maize,Main,2022,6,2022,10,All (PS),production,31313.289999999986,0
-1414,GH2018A104,Ghana,GH,Ahafo,none,Ahafo,Maize,Main,2022,6,2022,10,All (PS),yield,0.82213006721277,0
+1413,GH2018A104,Ghana,GH,Ahafo,none,Ahafo,Maize,Main,2022,6,2022,10,All (PS),production,31313.289999999983,0
+1414,GH2018A104,Ghana,GH,Ahafo,none,Ahafo,Maize,Main,2022,6,2022,10,All (PS),yield,0.8221300672127699,0
 1415,GH2018A104,Ghana,GH,Ahafo,none,Ahafo,Rice,Main,1984,6,1984,10,All (PS),area,3454.1164113260893,0
 1416,GH2018A104,Ghana,GH,Ahafo,none,Ahafo,Rice,Main,1997,6,1997,10,All (PS),area,1533.2726123094587,0
 1417,GH2018A104,Ghana,GH,Ahafo,none,Ahafo,Rice,Main,1997,6,1997,10,All (PS),production,1516.012507855694,0
@@ -1941,8 +1941,8 @@
 1939,GH2018A105,Ghana,GH,Central,none,Central,Rice,Main,2019,6,2019,10,All (PS),production,8927.55615318702,0
 1940,GH2018A105,Ghana,GH,Central,none,Central,Rice,Main,2019,6,2019,10,All (PS),yield,3.3528602576019004,0
 1941,GH2018A105,Ghana,GH,Central,none,Central,Rice,Main,2020,6,2020,10,All (PS),area,3982.6,0
-1942,GH2018A105,Ghana,GH,Central,none,Central,Rice,Main,2020,6,2020,10,All (PS),production,12308.280000000017,0
-1943,GH2018A105,Ghana,GH,Central,none,Central,Rice,Main,2020,6,2020,10,All (PS),yield,3.09051373474615,0
+1942,GH2018A105,Ghana,GH,Central,none,Central,Rice,Main,2020,6,2020,10,All (PS),production,12308.280000000015,0
+1943,GH2018A105,Ghana,GH,Central,none,Central,Rice,Main,2020,6,2020,10,All (PS),yield,3.0905137347461498,0
 1944,GH2018A105,Ghana,GH,Central,none,Central,Rice,Main,2021,6,2021,10,All (PS),area,4817.0,0
 1945,GH2018A105,Ghana,GH,Central,none,Central,Rice,Main,2021,6,2021,10,All (PS),production,16246.41592233011,0
 1946,GH2018A105,Ghana,GH,Central,none,Central,Rice,Main,2021,6,2021,10,All (PS),yield,3.3727249164065,0
@@ -2020,8 +2020,8 @@
 2018,GH2018A105,Ghana,GH,Central,none,Central,Yams,Main,2020,6,2020,10,All (PS),production,18362.72400000001,0
 2019,GH2018A105,Ghana,GH,Central,none,Central,Yams,Main,2020,6,2020,10,All (PS),yield,7.52558318716087,0
 2020,GH2018A105,Ghana,GH,Central,none,Central,Yams,Main,2021,6,2021,10,All (PS),area,2964.04727868852,0
-2021,GH2018A105,Ghana,GH,Central,none,Central,Yams,Main,2021,6,2021,10,All (PS),production,23264.155610819642,0
-2022,GH2018A105,Ghana,GH,Central,none,Central,Yams,Main,2021,6,2021,10,All (PS),yield,7.84878020606782,0
+2021,GH2018A105,Ghana,GH,Central,none,Central,Yams,Main,2021,6,2021,10,All (PS),production,23264.15561081964,0
+2022,GH2018A105,Ghana,GH,Central,none,Central,Yams,Main,2021,6,2021,10,All (PS),yield,7.848780206067819,0
 2023,GH2018A105,Ghana,GH,Central,none,Central,Yams,Main,2022,6,2022,10,All (PS),area,2800.04590163934,0
 2024,GH2018A105,Ghana,GH,Central,none,Central,Yams,Main,2022,6,2022,10,All (PS),production,21784.357114754068,0
 2025,GH2018A105,Ghana,GH,Central,none,Central,Yams,Main,2022,6,2022,10,All (PS),yield,7.78,0
@@ -2327,8 +2327,8 @@
 2325,GH2018A107,Ghana,GH,Volta,none,Volta,Maize,Main,2018,6,2018,10,All (PS),production,73878.41715374547,0
 2326,GH2018A107,Ghana,GH,Volta,none,Volta,Maize,Main,2018,6,2018,10,All (PS),yield,2.0,0
 2327,GH2018A107,Ghana,GH,Volta,none,Volta,Maize,Main,2019,6,2019,10,All (PS),area,39871.22,0
-2328,GH2018A107,Ghana,GH,Volta,none,Volta,Maize,Main,2019,6,2019,10,All (PS),production,97313.54339999991,0
-2329,GH2018A107,Ghana,GH,Volta,none,Volta,Maize,Main,2019,6,2019,10,All (PS),yield,2.4406964070826,0
+2328,GH2018A107,Ghana,GH,Volta,none,Volta,Maize,Main,2019,6,2019,10,All (PS),production,97313.54339999992,0
+2329,GH2018A107,Ghana,GH,Volta,none,Volta,Maize,Main,2019,6,2019,10,All (PS),yield,2.4406964070826005,0
 2330,GH2018A107,Ghana,GH,Volta,none,Volta,Maize,Main,2020,6,2020,10,All (PS),area,39125.5,0
 2331,GH2018A107,Ghana,GH,Volta,none,Volta,Maize,Main,2020,6,2020,10,All (PS),production,96277.2378277412,0
 2332,GH2018A107,Ghana,GH,Volta,none,Volta,Maize,Main,2020,6,2020,10,All (PS),yield,2.46072862526335,0
@@ -2338,85 +2338,85 @@
 2336,GH2018A107,Ghana,GH,Volta,none,Volta,Maize,Main,2022,6,2022,10,All (PS),area,35967.89,0
 2337,GH2018A107,Ghana,GH,Volta,none,Volta,Maize,Main,2022,6,2022,10,All (PS),production,85243.8993,0
 2338,GH2018A107,Ghana,GH,Volta,none,Volta,Maize,Main,2022,6,2022,10,All (PS),yield,2.37,0
-2339,GH2018A107,Ghana,GH,Volta,none,Volta,Rice,Main,1984,6,1984,10,All (PS),area,3537.5339076954447,0
-2340,GH2018A107,Ghana,GH,Volta,none,Volta,Rice,Main,1997,6,1997,10,All (PS),area,5752.361868453661,0
-2341,GH2018A107,Ghana,GH,Volta,none,Volta,Rice,Main,1997,6,1997,10,All (PS),production,21957.149699313195,0
+2339,GH2018A107,Ghana,GH,Volta,none,Volta,Rice,Main,1984,6,1984,10,All (PS),area,3537.5339076954456,0
+2340,GH2018A107,Ghana,GH,Volta,none,Volta,Rice,Main,1997,6,1997,10,All (PS),area,5752.361868453662,0
+2341,GH2018A107,Ghana,GH,Volta,none,Volta,Rice,Main,1997,6,1997,10,All (PS),production,21957.1496993132,0
 2342,GH2018A107,Ghana,GH,Volta,none,Volta,Rice,Main,1997,6,1997,10,All (PS),yield,3.8170668329695454,0
-2343,GH2018A107,Ghana,GH,Volta,none,Volta,Rice,Main,1998,6,1998,10,All (PS),area,5999.891004046615,0
-2344,GH2018A107,Ghana,GH,Volta,none,Volta,Rice,Main,1998,6,1998,10,All (PS),production,21780.770242791645,0
-2345,GH2018A107,Ghana,GH,Volta,none,Volta,Rice,Main,1998,6,1998,10,All (PS),yield,3.6301943198804185,0
-2346,GH2018A107,Ghana,GH,Volta,none,Volta,Rice,Main,1999,6,1999,10,All (PS),area,5916.185499256728,0
-2347,GH2018A107,Ghana,GH,Volta,none,Volta,Rice,Main,1999,6,1999,10,All (PS),production,21476.440943234124,0
+2343,GH2018A107,Ghana,GH,Volta,none,Volta,Rice,Main,1998,6,1998,10,All (PS),area,5999.891004046617,0
+2344,GH2018A107,Ghana,GH,Volta,none,Volta,Rice,Main,1998,6,1998,10,All (PS),production,21780.77024279165,0
+2345,GH2018A107,Ghana,GH,Volta,none,Volta,Rice,Main,1998,6,1998,10,All (PS),yield,3.630194319880418,0
+2346,GH2018A107,Ghana,GH,Volta,none,Volta,Rice,Main,1999,6,1999,10,All (PS),area,5916.185499256729,0
+2347,GH2018A107,Ghana,GH,Volta,none,Volta,Rice,Main,1999,6,1999,10,All (PS),production,21476.440943234127,0
 2348,GH2018A107,Ghana,GH,Volta,none,Volta,Rice,Main,1999,6,1999,10,All (PS),yield,3.6301162203132895,0
-2349,GH2018A107,Ghana,GH,Volta,none,Volta,Rice,Main,2000,6,2000,10,All (PS),area,6391.513187170734,0
-2350,GH2018A107,Ghana,GH,Volta,none,Volta,Rice,Main,2000,6,2000,10,All (PS),production,20968.22894986695,0
-2351,GH2018A107,Ghana,GH,Volta,none,Volta,Rice,Main,2000,6,2000,10,All (PS),yield,3.280636108512629,0
-2352,GH2018A107,Ghana,GH,Volta,none,Volta,Rice,Main,2001,6,2001,10,All (PS),area,7892.2333087608695,0
-2353,GH2018A107,Ghana,GH,Volta,none,Volta,Rice,Main,2001,6,2001,10,All (PS),production,26845.551179042657,0
-2354,GH2018A107,Ghana,GH,Volta,none,Volta,Rice,Main,2001,6,2001,10,All (PS),yield,3.401515151515152,0
-2355,GH2018A107,Ghana,GH,Volta,none,Volta,Rice,Main,2002,6,2002,10,All (PS),area,10158.260902715696,0
-2356,GH2018A107,Ghana,GH,Volta,none,Volta,Rice,Main,2002,6,2002,10,All (PS),production,32501.651716987944,0
+2349,GH2018A107,Ghana,GH,Volta,none,Volta,Rice,Main,2000,6,2000,10,All (PS),area,6391.513187170736,0
+2350,GH2018A107,Ghana,GH,Volta,none,Volta,Rice,Main,2000,6,2000,10,All (PS),production,20968.228949866952,0
+2351,GH2018A107,Ghana,GH,Volta,none,Volta,Rice,Main,2000,6,2000,10,All (PS),yield,3.2806361085126285,0
+2352,GH2018A107,Ghana,GH,Volta,none,Volta,Rice,Main,2001,6,2001,10,All (PS),area,7892.233308760871,0
+2353,GH2018A107,Ghana,GH,Volta,none,Volta,Rice,Main,2001,6,2001,10,All (PS),production,26845.55117904266,0
+2354,GH2018A107,Ghana,GH,Volta,none,Volta,Rice,Main,2001,6,2001,10,All (PS),yield,3.4015151515151514,0
+2355,GH2018A107,Ghana,GH,Volta,none,Volta,Rice,Main,2002,6,2002,10,All (PS),area,10158.260902715698,0
+2356,GH2018A107,Ghana,GH,Volta,none,Volta,Rice,Main,2002,6,2002,10,All (PS),production,32501.65171698795,0
 2357,GH2018A107,Ghana,GH,Volta,none,Volta,Rice,Main,2002,6,2002,10,All (PS),yield,3.1995291347851675,0
-2358,GH2018A107,Ghana,GH,Volta,none,Volta,Rice,Main,2003,6,2003,10,All (PS),area,8609.709064102766,0
-2359,GH2018A107,Ghana,GH,Volta,none,Volta,Rice,Main,2003,6,2003,10,All (PS),production,27951.65963519475,0
+2358,GH2018A107,Ghana,GH,Volta,none,Volta,Rice,Main,2003,6,2003,10,All (PS),area,8609.709064102768,0
+2359,GH2018A107,Ghana,GH,Volta,none,Volta,Rice,Main,2003,6,2003,10,All (PS),production,27951.659635194752,0
 2360,GH2018A107,Ghana,GH,Volta,none,Volta,Rice,Main,2003,6,2003,10,All (PS),yield,3.246527777777778,0
-2361,GH2018A107,Ghana,GH,Volta,none,Volta,Rice,Main,2004,6,2004,10,All (PS),area,7593.285077368412,0
-2362,GH2018A107,Ghana,GH,Volta,none,Volta,Rice,Main,2004,6,2004,10,All (PS),production,25256.94027742314,0
-2363,GH2018A107,Ghana,GH,Volta,none,Volta,Rice,Main,2004,6,2004,10,All (PS),yield,3.326220472440945,0
-2364,GH2018A107,Ghana,GH,Volta,none,Volta,Rice,Main,2005,6,2005,10,All (PS),area,9111.942092842095,0
-2365,GH2018A107,Ghana,GH,Volta,none,Volta,Rice,Main,2005,6,2005,10,All (PS),production,19516.536338225174,0
+2361,GH2018A107,Ghana,GH,Volta,none,Volta,Rice,Main,2004,6,2004,10,All (PS),area,7593.285077368414,0
+2362,GH2018A107,Ghana,GH,Volta,none,Volta,Rice,Main,2004,6,2004,10,All (PS),production,25256.940277423142,0
+2363,GH2018A107,Ghana,GH,Volta,none,Volta,Rice,Main,2004,6,2004,10,All (PS),yield,3.3262204724409448,0
+2364,GH2018A107,Ghana,GH,Volta,none,Volta,Rice,Main,2005,6,2005,10,All (PS),area,9111.942092842097,0
+2365,GH2018A107,Ghana,GH,Volta,none,Volta,Rice,Main,2005,6,2005,10,All (PS),production,19516.536338225178,0
 2366,GH2018A107,Ghana,GH,Volta,none,Volta,Rice,Main,2005,6,2005,10,All (PS),yield,2.1418635170603673,0
-2367,GH2018A107,Ghana,GH,Volta,none,Volta,Rice,Main,2006,6,2006,10,All (PS),area,9516.717998147482,0
-2368,GH2018A107,Ghana,GH,Volta,none,Volta,Rice,Main,2006,6,2006,10,All (PS),production,20626.83006961676,0
+2367,GH2018A107,Ghana,GH,Volta,none,Volta,Rice,Main,2006,6,2006,10,All (PS),area,9516.717998147484,0
+2368,GH2018A107,Ghana,GH,Volta,none,Volta,Rice,Main,2006,6,2006,10,All (PS),production,20626.830069616764,0
 2369,GH2018A107,Ghana,GH,Volta,none,Volta,Rice,Main,2006,6,2006,10,All (PS),yield,2.167431048564428,0
-2370,GH2018A107,Ghana,GH,Volta,none,Volta,Rice,Main,2007,6,2007,10,All (PS),area,9667.985803232066,0
-2371,GH2018A107,Ghana,GH,Volta,none,Volta,Rice,Main,2007,6,2007,10,All (PS),production,22097.65536806765,0
+2370,GH2018A107,Ghana,GH,Volta,none,Volta,Rice,Main,2007,6,2007,10,All (PS),area,9667.985803232068,0
+2371,GH2018A107,Ghana,GH,Volta,none,Volta,Rice,Main,2007,6,2007,10,All (PS),production,22097.655368067655,0
 2372,GH2018A107,Ghana,GH,Volta,none,Volta,Rice,Main,2007,6,2007,10,All (PS),yield,2.2856524427952998,0
-2373,GH2018A107,Ghana,GH,Volta,none,Volta,Rice,Main,2008,6,2008,10,All (PS),area,10842.254456141638,0
-2374,GH2018A107,Ghana,GH,Volta,none,Volta,Rice,Main,2008,6,2008,10,All (PS),production,21684.508912283276,0
+2373,GH2018A107,Ghana,GH,Volta,none,Volta,Rice,Main,2008,6,2008,10,All (PS),area,10842.25445614164,0
+2374,GH2018A107,Ghana,GH,Volta,none,Volta,Rice,Main,2008,6,2008,10,All (PS),production,21684.50891228328,0
 2375,GH2018A107,Ghana,GH,Volta,none,Volta,Rice,Main,2008,6,2008,10,All (PS),yield,2.0,0
-2376,GH2018A107,Ghana,GH,Volta,none,Volta,Rice,Main,2009,6,2009,10,All (PS),area,12232.961628579347,0
-2377,GH2018A107,Ghana,GH,Volta,none,Volta,Rice,Main,2009,6,2009,10,All (PS),production,36698.88488573804,0
+2376,GH2018A107,Ghana,GH,Volta,none,Volta,Rice,Main,2009,6,2009,10,All (PS),area,12232.96162857935,0
+2377,GH2018A107,Ghana,GH,Volta,none,Volta,Rice,Main,2009,6,2009,10,All (PS),production,36698.88488573805,0
 2378,GH2018A107,Ghana,GH,Volta,none,Volta,Rice,Main,2009,6,2009,10,All (PS),yield,3.0,0
-2379,GH2018A107,Ghana,GH,Volta,none,Volta,Rice,Main,2010,6,2010,10,All (PS),area,13070.016676478228,0
-2380,GH2018A107,Ghana,GH,Volta,none,Volta,Rice,Main,2010,6,2010,10,All (PS),production,39210.050029434686,0
-2381,GH2018A107,Ghana,GH,Volta,none,Volta,Rice,Main,2010,6,2010,10,All (PS),yield,3.0,0
-2382,GH2018A107,Ghana,GH,Volta,none,Volta,Rice,Main,2011,6,2011,10,All (PS),area,13607.525596521866,0
-2383,GH2018A107,Ghana,GH,Volta,none,Volta,Rice,Main,2011,6,2011,10,All (PS),production,40822.576789565595,0
-2384,GH2018A107,Ghana,GH,Volta,none,Volta,Rice,Main,2011,6,2011,10,All (PS),yield,3.0,0
-2385,GH2018A107,Ghana,GH,Volta,none,Volta,Rice,Main,2012,6,2012,10,All (PS),area,15129.769990772258,0
-2386,GH2018A107,Ghana,GH,Volta,none,Volta,Rice,Main,2012,6,2012,10,All (PS),production,45389.309972316776,0
+2379,GH2018A107,Ghana,GH,Volta,none,Volta,Rice,Main,2010,6,2010,10,All (PS),area,13070.01667647823,0
+2380,GH2018A107,Ghana,GH,Volta,none,Volta,Rice,Main,2010,6,2010,10,All (PS),production,39210.05002943469,0
+2381,GH2018A107,Ghana,GH,Volta,none,Volta,Rice,Main,2010,6,2010,10,All (PS),yield,3.0000000000000004,0
+2382,GH2018A107,Ghana,GH,Volta,none,Volta,Rice,Main,2011,6,2011,10,All (PS),area,13607.52559652187,0
+2383,GH2018A107,Ghana,GH,Volta,none,Volta,Rice,Main,2011,6,2011,10,All (PS),production,40822.5767895656,0
+2384,GH2018A107,Ghana,GH,Volta,none,Volta,Rice,Main,2011,6,2011,10,All (PS),yield,2.9999999999999996,0
+2385,GH2018A107,Ghana,GH,Volta,none,Volta,Rice,Main,2012,6,2012,10,All (PS),area,15129.769990772262,0
+2386,GH2018A107,Ghana,GH,Volta,none,Volta,Rice,Main,2012,6,2012,10,All (PS),production,45389.30997231678,0
 2387,GH2018A107,Ghana,GH,Volta,none,Volta,Rice,Main,2012,6,2012,10,All (PS),yield,3.0,0
-2388,GH2018A107,Ghana,GH,Volta,none,Volta,Rice,Main,2013,6,2013,10,All (PS),area,24035.43780395356,0
-2389,GH2018A107,Ghana,GH,Volta,none,Volta,Rice,Main,2013,6,2013,10,All (PS),production,96141.75121581423,0
+2388,GH2018A107,Ghana,GH,Volta,none,Volta,Rice,Main,2013,6,2013,10,All (PS),area,24035.437803953562,0
+2389,GH2018A107,Ghana,GH,Volta,none,Volta,Rice,Main,2013,6,2013,10,All (PS),production,96141.75121581425,0
 2390,GH2018A107,Ghana,GH,Volta,none,Volta,Rice,Main,2013,6,2013,10,All (PS),yield,4.0,0
-2391,GH2018A107,Ghana,GH,Volta,none,Volta,Rice,Main,2014,6,2014,10,All (PS),area,25633.615048977634,0
-2392,GH2018A107,Ghana,GH,Volta,none,Volta,Rice,Main,2014,6,2014,10,All (PS),production,102534.46019591053,0
+2391,GH2018A107,Ghana,GH,Volta,none,Volta,Rice,Main,2014,6,2014,10,All (PS),area,25633.615048977637,0
+2392,GH2018A107,Ghana,GH,Volta,none,Volta,Rice,Main,2014,6,2014,10,All (PS),production,102534.46019591055,0
 2393,GH2018A107,Ghana,GH,Volta,none,Volta,Rice,Main,2014,6,2014,10,All (PS),yield,4.0,0
-2394,GH2018A107,Ghana,GH,Volta,none,Volta,Rice,Main,2015,6,2015,10,All (PS),area,26687.108616404654,0
-2395,GH2018A107,Ghana,GH,Volta,none,Volta,Rice,Main,2015,6,2015,10,All (PS),production,133435.54308202327,0
-2396,GH2018A107,Ghana,GH,Volta,none,Volta,Rice,Main,2015,6,2015,10,All (PS),yield,5.0,0
-2397,GH2018A107,Ghana,GH,Volta,none,Volta,Rice,Main,2016,6,2016,10,All (PS),area,27588.736482284305,0
-2398,GH2018A107,Ghana,GH,Volta,none,Volta,Rice,Main,2016,6,2016,10,All (PS),production,137943.68241142153,0
-2399,GH2018A107,Ghana,GH,Volta,none,Volta,Rice,Main,2016,6,2016,10,All (PS),yield,5.0,0
-2400,GH2018A107,Ghana,GH,Volta,none,Volta,Rice,Main,2017,6,2017,10,All (PS),area,32884.903349633074,0
-2401,GH2018A107,Ghana,GH,Volta,none,Volta,Rice,Main,2017,6,2017,10,All (PS),production,164424.5167481654,0
-2402,GH2018A107,Ghana,GH,Volta,none,Volta,Rice,Main,2017,6,2017,10,All (PS),yield,5.000000000000001,0
-2403,GH2018A107,Ghana,GH,Volta,none,Volta,Rice,Main,2018,6,2018,10,All (PS),area,35073.802299888644,0
-2404,GH2018A107,Ghana,GH,Volta,none,Volta,Rice,Main,2018,6,2018,10,All (PS),production,175369.01149944324,0
+2394,GH2018A107,Ghana,GH,Volta,none,Volta,Rice,Main,2015,6,2015,10,All (PS),area,26687.108616404657,0
+2395,GH2018A107,Ghana,GH,Volta,none,Volta,Rice,Main,2015,6,2015,10,All (PS),production,133435.5430820233,0
+2396,GH2018A107,Ghana,GH,Volta,none,Volta,Rice,Main,2015,6,2015,10,All (PS),yield,5.000000000000001,0
+2397,GH2018A107,Ghana,GH,Volta,none,Volta,Rice,Main,2016,6,2016,10,All (PS),area,27588.73648228431,0
+2398,GH2018A107,Ghana,GH,Volta,none,Volta,Rice,Main,2016,6,2016,10,All (PS),production,137943.68241142156,0
+2399,GH2018A107,Ghana,GH,Volta,none,Volta,Rice,Main,2016,6,2016,10,All (PS),yield,5.000000000000001,0
+2400,GH2018A107,Ghana,GH,Volta,none,Volta,Rice,Main,2017,6,2017,10,All (PS),area,32884.90334963308,0
+2401,GH2018A107,Ghana,GH,Volta,none,Volta,Rice,Main,2017,6,2017,10,All (PS),production,164424.51674816542,0
+2402,GH2018A107,Ghana,GH,Volta,none,Volta,Rice,Main,2017,6,2017,10,All (PS),yield,5.0,0
+2403,GH2018A107,Ghana,GH,Volta,none,Volta,Rice,Main,2018,6,2018,10,All (PS),area,35073.80229988865,0
+2404,GH2018A107,Ghana,GH,Volta,none,Volta,Rice,Main,2018,6,2018,10,All (PS),production,175369.01149944327,0
 2405,GH2018A107,Ghana,GH,Volta,none,Volta,Rice,Main,2018,6,2018,10,All (PS),yield,5.0,0
 2406,GH2018A107,Ghana,GH,Volta,none,Volta,Rice,Main,2019,6,2019,10,All (PS),area,35824.8849646007,0
-2407,GH2018A107,Ghana,GH,Volta,none,Volta,Rice,Main,2019,6,2019,10,All (PS),production,206990.71967388998,0
-2408,GH2018A107,Ghana,GH,Volta,none,Volta,Rice,Main,2019,6,2019,10,All (PS),yield,5.77784743421847,0
+2407,GH2018A107,Ghana,GH,Volta,none,Volta,Rice,Main,2019,6,2019,10,All (PS),production,206990.71967389,0
+2408,GH2018A107,Ghana,GH,Volta,none,Volta,Rice,Main,2019,6,2019,10,All (PS),yield,5.7778474342184705,0
 2409,GH2018A107,Ghana,GH,Volta,none,Volta,Rice,Main,2020,6,2020,10,All (PS),area,33827.35,0
-2410,GH2018A107,Ghana,GH,Volta,none,Volta,Rice,Main,2020,6,2020,10,All (PS),production,181308.15499999982,0
-2411,GH2018A107,Ghana,GH,Volta,none,Volta,Rice,Main,2020,6,2020,10,All (PS),yield,5.35980959194261,0
+2410,GH2018A107,Ghana,GH,Volta,none,Volta,Rice,Main,2020,6,2020,10,All (PS),production,181308.15499999985,0
+2411,GH2018A107,Ghana,GH,Volta,none,Volta,Rice,Main,2020,6,2020,10,All (PS),yield,5.359809591942611,0
 2412,GH2018A107,Ghana,GH,Volta,none,Volta,Rice,Main,2021,6,2021,10,All (PS),area,33646.5,0
 2413,GH2018A107,Ghana,GH,Volta,none,Volta,Rice,Main,2021,6,2021,10,All (PS),production,183999.99000000017,0
 2414,GH2018A107,Ghana,GH,Volta,none,Volta,Rice,Main,2021,6,2021,10,All (PS),yield,5.46862199634435,0
 2415,GH2018A107,Ghana,GH,Volta,none,Volta,Rice,Main,2022,6,2022,10,All (PS),area,33897.67,0
-2416,GH2018A107,Ghana,GH,Volta,none,Volta,Rice,Main,2022,6,2022,10,All (PS),production,181352.53449999998,0
-2417,GH2018A107,Ghana,GH,Volta,none,Volta,Rice,Main,2022,6,2022,10,All (PS),yield,5.35,0
+2416,GH2018A107,Ghana,GH,Volta,none,Volta,Rice,Main,2022,6,2022,10,All (PS),production,181352.5345,0
+2417,GH2018A107,Ghana,GH,Volta,none,Volta,Rice,Main,2022,6,2022,10,All (PS),yield,5.3500000000000005,0
 2418,GH2018A107,Ghana,GH,Volta,none,Volta,Yams,Main,1984,6,1984,10,All (PS),area,4887.876955449043,0
 2419,GH2018A107,Ghana,GH,Volta,none,Volta,Yams,Main,1997,6,1997,10,All (PS),area,5413.806256034282,0
 2420,GH2018A107,Ghana,GH,Volta,none,Volta,Yams,Main,1997,6,1997,10,All (PS),production,69760.76061347032,0
@@ -2539,8 +2539,8 @@
 2537,GH2018A107,Ghana,GH,Volta,none,Volta,Cowpea,Main,2021,6,2021,10,All (PS),production,11664.00899999999,0
 2538,GH2018A107,Ghana,GH,Volta,none,Volta,Cowpea,Main,2021,6,2021,10,All (PS),yield,2.99745817593092,0
 2539,GH2018A107,Ghana,GH,Volta,none,Volta,Cowpea,Main,2022,6,2022,10,All (PS),area,4110.33,0
-2540,GH2018A107,Ghana,GH,Volta,none,Volta,Cowpea,Main,2022,6,2022,10,All (PS),production,10727.961299999999,0
-2541,GH2018A107,Ghana,GH,Volta,none,Volta,Cowpea,Main,2022,6,2022,10,All (PS),yield,2.61,0
+2540,GH2018A107,Ghana,GH,Volta,none,Volta,Cowpea,Main,2022,6,2022,10,All (PS),production,10727.9613,0
+2541,GH2018A107,Ghana,GH,Volta,none,Volta,Cowpea,Main,2022,6,2022,10,All (PS),yield,2.6100000000000003,0
 2542,GH2018A107,Ghana,GH,Volta,none,Volta,Groundnuts (In Shell),Main,1984,6,1984,10,All (PS),area,1012.2633913635264,0
 2543,GH2018A107,Ghana,GH,Volta,none,Volta,Cowpea,Main,2011,6,2011,10,All (PS),area,1422.1330830716925,0
 2544,GH2018A107,Ghana,GH,Volta,none,Volta,Cowpea,Main,2011,6,2011,10,All (PS),production,1422.1330830716925,0
@@ -3105,8 +3105,8 @@
 3103,GH2018A113,Ghana,GH,Bono,none,Bono,Groundnuts (In Shell),Main,2018,6,2018,10,All (PS),production,4726.414724077175,0
 3104,GH2018A113,Ghana,GH,Bono,none,Bono,Groundnuts (In Shell),Main,2018,6,2018,10,All (PS),yield,2.0,0
 3105,GH2018A113,Ghana,GH,Bono,none,Bono,Groundnuts (In Shell),Main,2019,6,2019,10,All (PS),area,2663.0,0
-3106,GH2018A113,Ghana,GH,Bono,none,Bono,Groundnuts (In Shell),Main,2019,6,2019,10,All (PS),production,3027.3000000000106,0
-3107,GH2018A113,Ghana,GH,Bono,none,Bono,Groundnuts (In Shell),Main,2019,6,2019,10,All (PS),yield,1.13680060082614,0
+3106,GH2018A113,Ghana,GH,Bono,none,Bono,Groundnuts (In Shell),Main,2019,6,2019,10,All (PS),production,3027.30000000001,0
+3107,GH2018A113,Ghana,GH,Bono,none,Bono,Groundnuts (In Shell),Main,2019,6,2019,10,All (PS),yield,1.1368006008261398,0
 3108,GH2018A113,Ghana,GH,Bono,none,Bono,Groundnuts (In Shell),Main,2020,6,2020,10,All (PS),area,2785.9,0
 3109,GH2018A113,Ghana,GH,Bono,none,Bono,Groundnuts (In Shell),Main,2020,6,2020,10,All (PS),production,3349.0999999999904,0
 3110,GH2018A113,Ghana,GH,Bono,none,Bono,Groundnuts (In Shell),Main,2020,6,2020,10,All (PS),yield,1.20216088158225,0
@@ -3422,8 +3422,8 @@
 3420,GH2018A114,Ghana,GH,Bono East,none,Bono East,Cassava,Main,2019,6,2019,10,All (PS),production,1795691.1000000022,0
 3421,GH2018A114,Ghana,GH,Bono East,none,Bono East,Cassava,Main,2019,6,2019,10,All (PS),yield,25.1807704173211,0
 3422,GH2018A114,Ghana,GH,Bono East,none,Bono East,Cassava,Main,2020,6,2020,10,All (PS),area,81410.9,0
-3423,GH2018A114,Ghana,GH,Bono East,none,Bono East,Cassava,Main,2020,6,2020,10,All (PS),production,1956766.3199999982,0
-3424,GH2018A114,Ghana,GH,Bono East,none,Bono East,Cassava,Main,2020,6,2020,10,All (PS),yield,24.0356797431302,0
+3423,GH2018A114,Ghana,GH,Bono East,none,Bono East,Cassava,Main,2020,6,2020,10,All (PS),production,1956766.3199999984,0
+3424,GH2018A114,Ghana,GH,Bono East,none,Bono East,Cassava,Main,2020,6,2020,10,All (PS),yield,24.035679743130203,0
 3425,GH2018A114,Ghana,GH,Bono East,none,Bono East,Cassava,Main,2021,6,2021,10,All (PS),area,81680.0,0
 3426,GH2018A114,Ghana,GH,Bono East,none,Bono East,Cassava,Main,2021,6,2021,10,All (PS),production,2056481.550000002,0
 3427,GH2018A114,Ghana,GH,Bono East,none,Bono East,Cassava,Main,2021,6,2021,10,All (PS),yield,25.1772961557297,0
@@ -3507,8 +3507,8 @@
 3505,GH2018A114,Ghana,GH,Bono East,none,Bono East,Maize,Main,2021,6,2021,10,All (PS),production,273592.7420195532,0
 3506,GH2018A114,Ghana,GH,Bono East,none,Bono East,Maize,Main,2021,6,2021,10,All (PS),yield,2.31980143820951,0
 3507,GH2018A114,Ghana,GH,Bono East,none,Bono East,Maize,Main,2022,6,2022,10,All (PS),area,106144.2,0
-3508,GH2018A114,Ghana,GH,Bono East,none,Bono East,Maize,Main,2022,6,2022,10,All (PS),production,250606.45620000002,0
-3509,GH2018A114,Ghana,GH,Bono East,none,Bono East,Maize,Main,2022,6,2022,10,All (PS),yield,2.361,0
+3508,GH2018A114,Ghana,GH,Bono East,none,Bono East,Maize,Main,2022,6,2022,10,All (PS),production,250606.4562,0
+3509,GH2018A114,Ghana,GH,Bono East,none,Bono East,Maize,Main,2022,6,2022,10,All (PS),yield,2.3609999999999998,0
 3510,GH2018A114,Ghana,GH,Bono East,none,Bono East,Rice,Main,1984,6,1984,10,All (PS),area,5725.264822130478,0
 3511,GH2018A114,Ghana,GH,Bono East,none,Bono East,Rice,Main,1997,6,1997,10,All (PS),area,2541.42903846755,0
 3512,GH2018A114,Ghana,GH,Bono East,none,Bono East,Rice,Main,1997,6,1997,10,All (PS),production,2512.8200811864895,0
@@ -3728,8 +3728,8 @@
 3726,GH2018A114,Ghana,GH,Bono East,none,Bono East,Cowpea,Main,2019,6,2019,10,All (PS),production,8396.717999999999,0
 3727,GH2018A114,Ghana,GH,Bono East,none,Bono East,Cowpea,Main,2019,6,2019,10,All (PS),yield,1.14135466507177,0
 3728,GH2018A114,Ghana,GH,Bono East,none,Bono East,Cowpea,Main,2020,6,2020,10,All (PS),area,8070.16,0
-3729,GH2018A114,Ghana,GH,Bono East,none,Bono East,Cowpea,Main,2020,6,2020,10,All (PS),production,9899.132800000001,0
-3730,GH2018A114,Ghana,GH,Bono East,none,Bono East,Cowpea,Main,2020,6,2020,10,All (PS),yield,1.22663401964769,0
+3729,GH2018A114,Ghana,GH,Bono East,none,Bono East,Cowpea,Main,2020,6,2020,10,All (PS),production,9899.1328,0
+3730,GH2018A114,Ghana,GH,Bono East,none,Bono East,Cowpea,Main,2020,6,2020,10,All (PS),yield,1.2266340196476897,0
 3731,GH2018A114,Ghana,GH,Bono East,none,Bono East,Cowpea,Main,2021,6,2021,10,All (PS),area,8244.0,0
 3732,GH2018A114,Ghana,GH,Bono East,none,Bono East,Cowpea,Main,2021,6,2021,10,All (PS),production,10084.31999999996,0
 3733,GH2018A114,Ghana,GH,Bono East,none,Bono East,Cowpea,Main,2021,6,2021,10,All (PS),yield,1.22323144104803,0
@@ -3775,7 +3775,7 @@
 3773,GH2018A114,Ghana,GH,Bono East,none,Bono East,Sorghum,Main,2019,6,2019,10,All (PS),production,3673.319999999993,0
 3774,GH2018A114,Ghana,GH,Bono East,none,Bono East,Sorghum,Main,2019,6,2019,10,All (PS),yield,1.522304185661,0
 3775,GH2018A114,Ghana,GH,Bono East,none,Bono East,Sorghum,Main,2020,6,2020,10,All (PS),area,1898.0,0
-3776,GH2018A114,Ghana,GH,Bono East,none,Bono East,Sorghum,Main,2020,6,2020,10,All (PS),production,3825.1681373450515,0
+3776,GH2018A114,Ghana,GH,Bono East,none,Bono East,Sorghum,Main,2020,6,2020,10,All (PS),production,3825.168137345051,0
 3777,GH2018A114,Ghana,GH,Bono East,none,Bono East,Sorghum,Main,2020,6,2020,10,All (PS),yield,2.01536782789518,0
 3778,GH2018A114,Ghana,GH,Bono East,none,Bono East,Sorghum,Main,2021,6,2021,10,All (PS),area,1953.0,0
 3779,GH2018A114,Ghana,GH,Bono East,none,Bono East,Sorghum,Main,2021,6,2021,10,All (PS),production,3953.7299999999937,0
@@ -3859,8 +3859,8 @@
 3857,GH2018A116,Ghana,GH,Oti,none,Oti,Taro,Main,2021,6,2021,10,All (PS),production,49243.97400000003,0
 3858,GH2018A116,Ghana,GH,Oti,none,Oti,Taro,Main,2021,6,2021,10,All (PS),yield,7.23878020814959,0
 3859,GH2018A116,Ghana,GH,Oti,none,Oti,Taro,Main,2022,6,2022,10,All (PS),area,7061.0,0
-3860,GH2018A116,Ghana,GH,Oti,none,Oti,Taro,Main,2022,6,2022,10,All (PS),production,51615.909999999996,0
-3861,GH2018A116,Ghana,GH,Oti,none,Oti,Taro,Main,2022,6,2022,10,All (PS),yield,7.31,0
+3860,GH2018A116,Ghana,GH,Oti,none,Oti,Taro,Main,2022,6,2022,10,All (PS),production,51615.91,0
+3861,GH2018A116,Ghana,GH,Oti,none,Oti,Taro,Main,2022,6,2022,10,All (PS),yield,7.3100000000000005,0
 3862,GH2018A116,Ghana,GH,Oti,none,Oti,Banana,Annual,1997,1,1997,12,All (PS),area,2525.0,0
 3863,GH2018A116,Ghana,GH,Oti,none,Oti,Banana,Annual,1997,1,1997,12,All (PS),production,14115.0,0
 3864,GH2018A116,Ghana,GH,Oti,none,Oti,Banana,Annual,1997,1,1997,12,All (PS),yield,5.59009900990099,0
@@ -4006,8 +4006,8 @@
 4004,GH2018A116,Ghana,GH,Oti,none,Oti,Cassava,Annual,2018,1,2018,12,All (PS),production,969793.0,0
 4005,GH2018A116,Ghana,GH,Oti,none,Oti,Cassava,Annual,2018,1,2018,12,All (PS),yield,22.0,0
 4006,GH2018A116,Ghana,GH,Oti,none,Oti,Cassava,Main,2019,6,2019,10,All (PS),area,43734.18,0
-4007,GH2018A116,Ghana,GH,Oti,none,Oti,Cassava,Main,2019,6,2019,10,All (PS),production,1037337.1805999989,0
-4008,GH2018A116,Ghana,GH,Oti,none,Oti,Cassava,Main,2019,6,2019,10,All (PS),yield,23.7191409693745,0
+4007,GH2018A116,Ghana,GH,Oti,none,Oti,Cassava,Main,2019,6,2019,10,All (PS),production,1037337.1805999988,0
+4008,GH2018A116,Ghana,GH,Oti,none,Oti,Cassava,Main,2019,6,2019,10,All (PS),yield,23.719140969374497,0
 4009,GH2018A116,Ghana,GH,Oti,none,Oti,Cassava,Main,2020,6,2020,10,All (PS),area,45860.0,0
 4010,GH2018A116,Ghana,GH,Oti,none,Oti,Cassava,Main,2020,6,2020,10,All (PS),production,1079077.290000001,0
 4011,GH2018A116,Ghana,GH,Oti,none,Oti,Cassava,Main,2020,6,2020,10,All (PS),yield,23.5298144352377,0
@@ -4017,39 +4017,39 @@
 4015,GH2018A116,Ghana,GH,Oti,none,Oti,Cassava,Main,2022,6,2022,10,All (PS),area,47047.0,0
 4016,GH2018A116,Ghana,GH,Oti,none,Oti,Cassava,Main,2022,6,2022,10,All (PS),production,1151710.56,0
 4017,GH2018A116,Ghana,GH,Oti,none,Oti,Cassava,Main,2022,6,2022,10,All (PS),yield,24.48,0
-4018,GH2018A116,Ghana,GH,Oti,none,Oti,Maize,Main,1984,6,1984,10,All (PS),area,26401.221454043905,0
-4019,GH2018A116,Ghana,GH,Oti,none,Oti,Maize,Main,1997,6,1997,10,All (PS),area,16422.20859333197,0
-4020,GH2018A116,Ghana,GH,Oti,none,Oti,Maize,Main,1997,6,1997,10,All (PS),production,32404.675582150543,0
-4021,GH2018A116,Ghana,GH,Oti,none,Oti,Maize,Main,1997,6,1997,10,All (PS),yield,1.9732227488151657,0
+4018,GH2018A116,Ghana,GH,Oti,none,Oti,Maize,Main,1984,6,1984,10,All (PS),area,26401.2214540439,0
+4019,GH2018A116,Ghana,GH,Oti,none,Oti,Maize,Main,1997,6,1997,10,All (PS),area,16422.208593331965,0
+4020,GH2018A116,Ghana,GH,Oti,none,Oti,Maize,Main,1997,6,1997,10,All (PS),production,32404.67558215054,0
+4021,GH2018A116,Ghana,GH,Oti,none,Oti,Maize,Main,1997,6,1997,10,All (PS),yield,1.973222748815166,0
 4022,GH2018A116,Ghana,GH,Oti,none,Oti,Maize,Main,1998,6,1998,10,All (PS),area,16525.333836868293,0
-4023,GH2018A116,Ghana,GH,Oti,none,Oti,Maize,Main,1998,6,1998,10,All (PS),production,28473.0743163109,0
-4024,GH2018A116,Ghana,GH,Oti,none,Oti,Maize,Main,1998,6,1998,10,All (PS),yield,1.722995407983045,0
-4025,GH2018A116,Ghana,GH,Oti,none,Oti,Maize,Main,1999,6,1999,10,All (PS),area,16714.07249013289,0
-4026,GH2018A116,Ghana,GH,Oti,none,Oti,Maize,Main,1999,6,1999,10,All (PS),production,28746.648075578967,0
-4027,GH2018A116,Ghana,GH,Oti,none,Oti,Maize,Main,1999,6,1999,10,All (PS),yield,1.719906868451688,0
-4028,GH2018A116,Ghana,GH,Oti,none,Oti,Maize,Main,2000,6,2000,10,All (PS),area,17371.739137590972,0
-4029,GH2018A116,Ghana,GH,Oti,none,Oti,Maize,Main,2000,6,2000,10,All (PS),production,24375.694357088334,0
+4023,GH2018A116,Ghana,GH,Oti,none,Oti,Maize,Main,1998,6,1998,10,All (PS),production,28473.074316310896,0
+4024,GH2018A116,Ghana,GH,Oti,none,Oti,Maize,Main,1998,6,1998,10,All (PS),yield,1.7229954079830447,0
+4025,GH2018A116,Ghana,GH,Oti,none,Oti,Maize,Main,1999,6,1999,10,All (PS),area,16714.072490132887,0
+4026,GH2018A116,Ghana,GH,Oti,none,Oti,Maize,Main,1999,6,1999,10,All (PS),production,28746.648075578963,0
+4027,GH2018A116,Ghana,GH,Oti,none,Oti,Maize,Main,1999,6,1999,10,All (PS),yield,1.7199068684516883,0
+4028,GH2018A116,Ghana,GH,Oti,none,Oti,Maize,Main,2000,6,2000,10,All (PS),area,17371.73913759097,0
+4029,GH2018A116,Ghana,GH,Oti,none,Oti,Maize,Main,2000,6,2000,10,All (PS),production,24375.69435708833,0
 4030,GH2018A116,Ghana,GH,Oti,none,Oti,Maize,Main,2000,6,2000,10,All (PS),yield,1.4031810035842294,0
-4031,GH2018A116,Ghana,GH,Oti,none,Oti,Maize,Main,2001,6,2001,10,All (PS),area,16869.733235093383,0
-4032,GH2018A116,Ghana,GH,Oti,none,Oti,Maize,Main,2001,6,2001,10,All (PS),production,24843.454895694616,0
+4031,GH2018A116,Ghana,GH,Oti,none,Oti,Maize,Main,2001,6,2001,10,All (PS),area,16869.73323509338,0
+4032,GH2018A116,Ghana,GH,Oti,none,Oti,Maize,Main,2001,6,2001,10,All (PS),production,24843.454895694613,0
 4033,GH2018A116,Ghana,GH,Oti,none,Oti,Maize,Main,2001,6,2001,10,All (PS),yield,1.4726643598615918,0
-4034,GH2018A116,Ghana,GH,Oti,none,Oti,Maize,Main,2002,6,2002,10,All (PS),area,17550.74899429554,0
-4035,GH2018A116,Ghana,GH,Oti,none,Oti,Maize,Main,2002,6,2002,10,All (PS),production,24847.34641431863,0
-4036,GH2018A116,Ghana,GH,Oti,none,Oti,Maize,Main,2002,6,2002,10,All (PS),yield,1.415742793791574,0
-4037,GH2018A116,Ghana,GH,Oti,none,Oti,Maize,Main,2003,6,2003,10,All (PS),area,17706.409739256032,0
-4038,GH2018A116,Ghana,GH,Oti,none,Oti,Maize,Main,2003,6,2003,10,All (PS),production,22815.9736925842,0
+4034,GH2018A116,Ghana,GH,Oti,none,Oti,Maize,Main,2002,6,2002,10,All (PS),area,17550.748994295536,0
+4035,GH2018A116,Ghana,GH,Oti,none,Oti,Maize,Main,2002,6,2002,10,All (PS),production,24847.346414318625,0
+4036,GH2018A116,Ghana,GH,Oti,none,Oti,Maize,Main,2002,6,2002,10,All (PS),yield,1.4157427937915743,0
+4037,GH2018A116,Ghana,GH,Oti,none,Oti,Maize,Main,2003,6,2003,10,All (PS),area,17706.40973925603,0
+4038,GH2018A116,Ghana,GH,Oti,none,Oti,Maize,Main,2003,6,2003,10,All (PS),production,22815.973692584197,0
 4039,GH2018A116,Ghana,GH,Oti,none,Oti,Maize,Main,2003,6,2003,10,All (PS),yield,1.2885714285714285,0
-4040,GH2018A116,Ghana,GH,Oti,none,Oti,Maize,Main,2004,6,2004,10,All (PS),area,15850.155355602157,0
-4041,GH2018A116,Ghana,GH,Oti,none,Oti,Maize,Main,2004,6,2004,10,All (PS),production,20962.832523829537,0
-4042,GH2018A116,Ghana,GH,Oti,none,Oti,Maize,Main,2004,6,2004,10,All (PS),yield,1.3225632212128653,0
-4043,GH2018A116,Ghana,GH,Oti,none,Oti,Maize,Main,2005,6,2005,10,All (PS),area,12828.391144056595,0
-4044,GH2018A116,Ghana,GH,Oti,none,Oti,Maize,Main,2005,6,2005,10,All (PS),production,18514.67815746339,0
-4045,GH2018A116,Ghana,GH,Oti,none,Oti,Maize,Main,2005,6,2005,10,All (PS),yield,1.4432580009100562,0
-4046,GH2018A116,Ghana,GH,Oti,none,Oti,Maize,Main,2006,6,2006,10,All (PS),area,13748.735298635507,0
-4047,GH2018A116,Ghana,GH,Oti,none,Oti,Maize,Main,2006,6,2006,10,All (PS),production,18790.586827905863,0
-4048,GH2018A116,Ghana,GH,Oti,none,Oti,Maize,Main,2006,6,2006,10,All (PS),yield,1.3667138409283897,0
-4049,GH2018A116,Ghana,GH,Oti,none,Oti,Maize,Main,2007,6,2007,10,All (PS),area,13927.745155340073,0
-4050,GH2018A116,Ghana,GH,Oti,none,Oti,Maize,Main,2007,6,2007,10,All (PS),production,19449.031779088746,0
+4040,GH2018A116,Ghana,GH,Oti,none,Oti,Maize,Main,2004,6,2004,10,All (PS),area,15850.155355602155,0
+4041,GH2018A116,Ghana,GH,Oti,none,Oti,Maize,Main,2004,6,2004,10,All (PS),production,20962.832523829533,0
+4042,GH2018A116,Ghana,GH,Oti,none,Oti,Maize,Main,2004,6,2004,10,All (PS),yield,1.322563221212865,0
+4043,GH2018A116,Ghana,GH,Oti,none,Oti,Maize,Main,2005,6,2005,10,All (PS),area,12828.391144056593,0
+4044,GH2018A116,Ghana,GH,Oti,none,Oti,Maize,Main,2005,6,2005,10,All (PS),production,18514.678157463386,0
+4045,GH2018A116,Ghana,GH,Oti,none,Oti,Maize,Main,2005,6,2005,10,All (PS),yield,1.443258000910056,0
+4046,GH2018A116,Ghana,GH,Oti,none,Oti,Maize,Main,2006,6,2006,10,All (PS),area,13748.735298635505,0
+4047,GH2018A116,Ghana,GH,Oti,none,Oti,Maize,Main,2006,6,2006,10,All (PS),production,18790.58682790586,0
+4048,GH2018A116,Ghana,GH,Oti,none,Oti,Maize,Main,2006,6,2006,10,All (PS),yield,1.3667138409283894,0
+4049,GH2018A116,Ghana,GH,Oti,none,Oti,Maize,Main,2007,6,2007,10,All (PS),area,13927.745155340072,0
+4050,GH2018A116,Ghana,GH,Oti,none,Oti,Maize,Main,2007,6,2007,10,All (PS),production,19449.031779088742,0
 4051,GH2018A116,Ghana,GH,Oti,none,Oti,Maize,Main,2007,6,2007,10,All (PS),yield,1.396423582006147,0
 4052,GH2018A116,Ghana,GH,Oti,none,Oti,Maize,Main,2008,6,2008,10,All (PS),area,17600.560432682894,0
 4053,GH2018A116,Ghana,GH,Oti,none,Oti,Maize,Main,2008,6,2008,10,All (PS),production,35201.12086536579,0
@@ -4057,17 +4057,17 @@
 4055,GH2018A116,Ghana,GH,Oti,none,Oti,Maize,Main,2009,6,2009,10,All (PS),area,20504.411629920884,0
 4056,GH2018A116,Ghana,GH,Oti,none,Oti,Maize,Main,2009,6,2009,10,All (PS),production,41008.82325984177,0
 4057,GH2018A116,Ghana,GH,Oti,none,Oti,Maize,Main,2009,6,2009,10,All (PS),yield,2.0,0
-4058,GH2018A116,Ghana,GH,Oti,none,Oti,Maize,Main,2010,6,2010,10,All (PS),area,20263.13747523212,0
-4059,GH2018A116,Ghana,GH,Oti,none,Oti,Maize,Main,2010,6,2010,10,All (PS),production,40526.27495046424,0
+4058,GH2018A116,Ghana,GH,Oti,none,Oti,Maize,Main,2010,6,2010,10,All (PS),area,20263.137475232117,0
+4059,GH2018A116,Ghana,GH,Oti,none,Oti,Maize,Main,2010,6,2010,10,All (PS),production,40526.274950464234,0
 4060,GH2018A116,Ghana,GH,Oti,none,Oti,Maize,Main,2010,6,2010,10,All (PS),yield,2.0,0
 4061,GH2018A116,Ghana,GH,Oti,none,Oti,Maize,Main,2011,6,2011,10,All (PS),area,20984.235876261602,0
 4062,GH2018A116,Ghana,GH,Oti,none,Oti,Maize,Main,2011,6,2011,10,All (PS),production,41968.471752523204,0
 4063,GH2018A116,Ghana,GH,Oti,none,Oti,Maize,Main,2011,6,2011,10,All (PS),yield,2.0,0
-4064,GH2018A116,Ghana,GH,Oti,none,Oti,Maize,Main,2012,6,2012,10,All (PS),area,18773.85329782261,0
-4065,GH2018A116,Ghana,GH,Oti,none,Oti,Maize,Main,2012,6,2012,10,All (PS),production,37547.70659564522,0
+4064,GH2018A116,Ghana,GH,Oti,none,Oti,Maize,Main,2012,6,2012,10,All (PS),area,18773.853297822607,0
+4065,GH2018A116,Ghana,GH,Oti,none,Oti,Maize,Main,2012,6,2012,10,All (PS),production,37547.70659564521,0
 4066,GH2018A116,Ghana,GH,Oti,none,Oti,Maize,Main,2012,6,2012,10,All (PS),yield,2.0,0
-4067,GH2018A116,Ghana,GH,Oti,none,Oti,Maize,Main,2013,6,2013,10,All (PS),area,19054.820942476297,0
-4068,GH2018A116,Ghana,GH,Oti,none,Oti,Maize,Main,2013,6,2013,10,All (PS),production,38109.641884952594,0
+4067,GH2018A116,Ghana,GH,Oti,none,Oti,Maize,Main,2013,6,2013,10,All (PS),area,19054.820942476294,0
+4068,GH2018A116,Ghana,GH,Oti,none,Oti,Maize,Main,2013,6,2013,10,All (PS),production,38109.64188495259,0
 4069,GH2018A116,Ghana,GH,Oti,none,Oti,Maize,Main,2013,6,2013,10,All (PS),yield,2.0,0
 4070,GH2018A116,Ghana,GH,Oti,none,Oti,Maize,Main,2014,6,2014,10,All (PS),area,20800.945349070622,0
 4071,GH2018A116,Ghana,GH,Oti,none,Oti,Maize,Main,2014,6,2014,10,All (PS),production,41601.890698141244,0
@@ -4078,11 +4078,11 @@
 4076,GH2018A116,Ghana,GH,Oti,none,Oti,Maize,Main,2016,6,2016,10,All (PS),area,20342.913607024373,0
 4077,GH2018A116,Ghana,GH,Oti,none,Oti,Maize,Main,2016,6,2016,10,All (PS),production,40685.827214048746,0
 4078,GH2018A116,Ghana,GH,Oti,none,Oti,Maize,Main,2016,6,2016,10,All (PS),yield,2.0,0
-4079,GH2018A116,Ghana,GH,Oti,none,Oti,Maize,Main,2017,6,2017,10,All (PS),area,22889.912546440435,0
-4080,GH2018A116,Ghana,GH,Oti,none,Oti,Maize,Main,2017,6,2017,10,All (PS),production,45779.82509288087,0
+4079,GH2018A116,Ghana,GH,Oti,none,Oti,Maize,Main,2017,6,2017,10,All (PS),area,22889.91254644043,0
+4080,GH2018A116,Ghana,GH,Oti,none,Oti,Maize,Main,2017,6,2017,10,All (PS),production,45779.82509288086,0
 4081,GH2018A116,Ghana,GH,Oti,none,Oti,Maize,Main,2017,6,2017,10,All (PS),yield,2.0,0
-4082,GH2018A116,Ghana,GH,Oti,none,Oti,Maize,Main,2018,6,2018,10,All (PS),area,23532.79142312727,0
-4083,GH2018A116,Ghana,GH,Oti,none,Oti,Maize,Main,2018,6,2018,10,All (PS),production,47065.58284625454,0
+4082,GH2018A116,Ghana,GH,Oti,none,Oti,Maize,Main,2018,6,2018,10,All (PS),area,23532.791423127266,0
+4083,GH2018A116,Ghana,GH,Oti,none,Oti,Maize,Main,2018,6,2018,10,All (PS),production,47065.58284625453,0
 4084,GH2018A116,Ghana,GH,Oti,none,Oti,Maize,Main,2018,6,2018,10,All (PS),yield,2.0,0
 4085,GH2018A116,Ghana,GH,Oti,none,Oti,Maize,Main,2019,6,2019,10,All (PS),area,22782.95,0
 4086,GH2018A116,Ghana,GH,Oti,none,Oti,Maize,Main,2019,6,2019,10,All (PS),production,58676.8020000001,0
@@ -4091,8 +4091,8 @@
 4089,GH2018A116,Ghana,GH,Oti,none,Oti,Maize,Main,2020,6,2020,10,All (PS),production,63066.85886505779,0
 4090,GH2018A116,Ghana,GH,Oti,none,Oti,Maize,Main,2020,6,2020,10,All (PS),yield,2.52884473575756,0
 4091,GH2018A116,Ghana,GH,Oti,none,Oti,Maize,Main,2021,6,2021,10,All (PS),area,22651.0,0
-4092,GH2018A116,Ghana,GH,Oti,none,Oti,Maize,Main,2021,6,2021,10,All (PS),production,58336.968746453036,0
-4093,GH2018A116,Ghana,GH,Oti,none,Oti,Maize,Main,2021,6,2021,10,All (PS),yield,2.57546990183449,0
+4092,GH2018A116,Ghana,GH,Oti,none,Oti,Maize,Main,2021,6,2021,10,All (PS),production,58336.96874645304,0
+4093,GH2018A116,Ghana,GH,Oti,none,Oti,Maize,Main,2021,6,2021,10,All (PS),yield,2.5754699018344906,0
 4094,GH2018A116,Ghana,GH,Oti,none,Oti,Maize,Main,2022,6,2022,10,All (PS),area,20358.9,0
 4095,GH2018A116,Ghana,GH,Oti,none,Oti,Maize,Main,2022,6,2022,10,All (PS),production,59040.810000000005,0
 4096,GH2018A116,Ghana,GH,Oti,none,Oti,Maize,Main,2022,6,2022,10,All (PS),yield,2.9,0
@@ -4255,8 +4255,8 @@
 4253,GH2018A116,Ghana,GH,Oti,none,Oti,Groundnuts (In Shell),Main,2019,6,2019,10,All (PS),production,5465.65,0
 4254,GH2018A116,Ghana,GH,Oti,none,Oti,Groundnuts (In Shell),Main,2019,6,2019,10,All (PS),yield,1.6305638424821,0
 4255,GH2018A116,Ghana,GH,Oti,none,Oti,Groundnuts (In Shell),Main,2020,6,2020,10,All (PS),area,6074.0,0
-4256,GH2018A116,Ghana,GH,Oti,none,Oti,Groundnuts (In Shell),Main,2020,6,2020,10,All (PS),production,11106.179999999993,0
-4257,GH2018A116,Ghana,GH,Oti,none,Oti,Groundnuts (In Shell),Main,2020,6,2020,10,All (PS),yield,1.82847876193612,0
+4256,GH2018A116,Ghana,GH,Oti,none,Oti,Groundnuts (In Shell),Main,2020,6,2020,10,All (PS),production,11106.179999999991,0
+4257,GH2018A116,Ghana,GH,Oti,none,Oti,Groundnuts (In Shell),Main,2020,6,2020,10,All (PS),yield,1.8284787619361198,0
 4258,GH2018A116,Ghana,GH,Oti,none,Oti,Groundnuts (In Shell),Main,2021,6,2021,10,All (PS),area,9548.92,0
 4259,GH2018A116,Ghana,GH,Oti,none,Oti,Groundnuts (In Shell),Main,2021,6,2021,10,All (PS),production,21402.351200000045,0
 4260,GH2018A116,Ghana,GH,Oti,none,Oti,Groundnuts (In Shell),Main,2021,6,2021,10,All (PS),yield,2.24133736590107,0
@@ -4566,8 +4566,8 @@
 4564,GH2018A108,Ghana,GH,Western,none,Western,Banana,Main,2021,6,2021,10,All (PS),production,358274.61481274536,0
 4565,GH2018A108,Ghana,GH,Western,none,Western,Banana,Main,2021,6,2021,10,All (PS),yield,16.0219759815551,0
 4566,GH2018A108,Ghana,GH,Western,none,Western,Banana,Main,2022,6,2022,10,All (PS),area,23202.0,0
-4567,GH2018A108,Ghana,GH,Western,none,Western,Banana,Main,2022,6,2022,10,All (PS),production,366591.60000000003,0
-4568,GH2018A108,Ghana,GH,Western,none,Western,Banana,Main,2022,6,2022,10,All (PS),yield,15.8,0
+4567,GH2018A108,Ghana,GH,Western,none,Western,Banana,Main,2022,6,2022,10,All (PS),production,366591.6,0
+4568,GH2018A108,Ghana,GH,Western,none,Western,Banana,Main,2022,6,2022,10,All (PS),yield,15.799999999999999,0
 4569,GH2018A108,Ghana,GH,Western,none,Western,Cassava,Annual,1997,1,1997,12,All (PS),area,30472.0,0
 4570,GH2018A108,Ghana,GH,Western,none,Western,Cassava,Annual,1997,1,1997,12,All (PS),production,289029.5,0
 4571,GH2018A108,Ghana,GH,Western,none,Western,Cassava,Annual,1997,1,1997,12,All (PS),yield,9.485084667891835,0
@@ -4638,11 +4638,11 @@
 4636,GH2018A108,Ghana,GH,Western,none,Western,Cassava,Main,2019,6,2019,10,All (PS),production,818313.269505765,0
 4637,GH2018A108,Ghana,GH,Western,none,Western,Cassava,Main,2019,6,2019,10,All (PS),yield,14.9559926767588,0
 4638,GH2018A108,Ghana,GH,Western,none,Western,Cassava,Main,2020,6,2020,10,All (PS),area,48236.12,0
-4639,GH2018A108,Ghana,GH,Western,none,Western,Cassava,Main,2020,6,2020,10,All (PS),production,973363.4360000023,0
-4640,GH2018A108,Ghana,GH,Western,none,Western,Cassava,Main,2020,6,2020,10,All (PS),yield,20.1791403620358,0
+4639,GH2018A108,Ghana,GH,Western,none,Western,Cassava,Main,2020,6,2020,10,All (PS),production,973363.4360000024,0
+4640,GH2018A108,Ghana,GH,Western,none,Western,Cassava,Main,2020,6,2020,10,All (PS),yield,20.179140362035803,0
 4641,GH2018A108,Ghana,GH,Western,none,Western,Cassava,Main,2021,6,2021,10,All (PS),area,52081.9356133845,0
-4642,GH2018A108,Ghana,GH,Western,none,Western,Cassava,Main,2021,6,2021,10,All (PS),production,1166942.2679725199,0
-4643,GH2018A108,Ghana,GH,Western,none,Western,Cassava,Main,2021,6,2021,10,All (PS),yield,22.4058928346094,0
+4642,GH2018A108,Ghana,GH,Western,none,Western,Cassava,Main,2021,6,2021,10,All (PS),production,1166942.26797252,0
+4643,GH2018A108,Ghana,GH,Western,none,Western,Cassava,Main,2021,6,2021,10,All (PS),yield,22.405892834609404,0
 4644,GH2018A108,Ghana,GH,Western,none,Western,Cassava,Main,2022,6,2022,10,All (PS),area,50965.0,0
 4645,GH2018A108,Ghana,GH,Western,none,Western,Cassava,Main,2022,6,2022,10,All (PS),production,1127855.45,0
 4646,GH2018A108,Ghana,GH,Western,none,Western,Cassava,Main,2022,6,2022,10,All (PS),yield,22.13,0
@@ -4793,8 +4793,8 @@
 4791,GH2018A108,Ghana,GH,Western,none,Western,Rice,Main,2018,6,2018,10,All (PS),production,11991.967093027812,0
 4792,GH2018A108,Ghana,GH,Western,none,Western,Rice,Main,2018,6,2018,10,All (PS),yield,1.0,0
 4793,GH2018A108,Ghana,GH,Western,none,Western,Rice,Main,2019,6,2019,10,All (PS),area,12813.2442595117,0
-4794,GH2018A108,Ghana,GH,Western,none,Western,Rice,Main,2019,6,2019,10,All (PS),production,25349.388331919454,0
-4795,GH2018A108,Ghana,GH,Western,none,Western,Rice,Main,2019,6,2019,10,All (PS),yield,1.9783739245509,0
+4794,GH2018A108,Ghana,GH,Western,none,Western,Rice,Main,2019,6,2019,10,All (PS),production,25349.388331919457,0
+4795,GH2018A108,Ghana,GH,Western,none,Western,Rice,Main,2019,6,2019,10,All (PS),yield,1.9783739245509002,0
 4796,GH2018A108,Ghana,GH,Western,none,Western,Rice,Main,2020,6,2020,10,All (PS),area,10985.0,0
 4797,GH2018A108,Ghana,GH,Western,none,Western,Rice,Main,2020,6,2020,10,All (PS),production,32606.320999999996,0
 4798,GH2018A108,Ghana,GH,Western,none,Western,Rice,Main,2020,6,2020,10,All (PS),yield,2.96825862539827,0
@@ -5745,8 +5745,8 @@
 5743,GH2018A106,Ghana,GH,Northern,none,Northern,Maize,Main,2020,6,2020,10,All (PS),production,175378.90966049905,0
 5744,GH2018A106,Ghana,GH,Northern,none,Northern,Maize,Main,2020,6,2020,10,All (PS),yield,1.7159214605918303,0
 5745,GH2018A106,Ghana,GH,Northern,none,Northern,Maize,Main,2021,6,2021,10,All (PS),area,130658.20764,0
-5746,GH2018A106,Ghana,GH,Northern,none,Northern,Maize,Main,2021,6,2021,10,All (PS),production,221878.80021772961,0
-5747,GH2018A106,Ghana,GH,Northern,none,Northern,Maize,Main,2021,6,2021,10,All (PS),yield,1.69816197715698,0
+5746,GH2018A106,Ghana,GH,Northern,none,Northern,Maize,Main,2021,6,2021,10,All (PS),production,221878.8002177296,0
+5747,GH2018A106,Ghana,GH,Northern,none,Northern,Maize,Main,2021,6,2021,10,All (PS),yield,1.6981619771569798,0
 5748,GH2018A106,Ghana,GH,Northern,none,Northern,Maize,Main,2022,6,2022,10,All (PS),area,159109.0,0
 5749,GH2018A106,Ghana,GH,Northern,none,Northern,Maize,Main,2022,6,2022,10,All (PS),production,391210.8701290533,0
 5750,GH2018A106,Ghana,GH,Northern,none,Northern,Maize,Main,2022,6,2022,10,All (PS),yield,2.45876015894169,0
@@ -5824,8 +5824,8 @@
 5822,GH2018A106,Ghana,GH,Northern,none,Northern,Rice,Main,2020,6,2020,10,All (PS),production,153424.67464315804,0
 5823,GH2018A106,Ghana,GH,Northern,none,Northern,Rice,Main,2020,6,2020,10,All (PS),yield,2.35202871307695,0
 5824,GH2018A106,Ghana,GH,Northern,none,Northern,Rice,Main,2021,6,2021,10,All (PS),area,77422.3396258498,0
-5825,GH2018A106,Ghana,GH,Northern,none,Northern,Rice,Main,2021,6,2021,10,All (PS),production,221797.78687754934,0
-5826,GH2018A106,Ghana,GH,Northern,none,Northern,Rice,Main,2021,6,2021,10,All (PS),yield,2.86477763329559,0
+5825,GH2018A106,Ghana,GH,Northern,none,Northern,Rice,Main,2021,6,2021,10,All (PS),production,221797.78687754937,0
+5826,GH2018A106,Ghana,GH,Northern,none,Northern,Rice,Main,2021,6,2021,10,All (PS),yield,2.8647776332955903,0
 5827,GH2018A106,Ghana,GH,Northern,none,Northern,Rice,Main,2022,6,2022,10,All (PS),area,89613.7103117891,0
 5828,GH2018A106,Ghana,GH,Northern,none,Northern,Rice,Main,2022,6,2022,10,All (PS),production,290968.3908217301,0
 5829,GH2018A106,Ghana,GH,Northern,none,Northern,Rice,Main,2022,6,2022,10,All (PS),yield,3.24691824286012,0
@@ -5897,8 +5897,8 @@
 5895,GH2018A106,Ghana,GH,Northern,none,Northern,Yams,Main,2019,6,2019,10,All (PS),production,1790083.1959999995,0
 5896,GH2018A106,Ghana,GH,Northern,none,Northern,Yams,Main,2019,6,2019,10,All (PS),yield,14.1214814507914,0
 5897,GH2018A106,Ghana,GH,Northern,none,Northern,Yams,Main,2020,6,2020,10,All (PS),area,124678.819994864,0
-5898,GH2018A106,Ghana,GH,Northern,none,Northern,Yams,Main,2020,6,2020,10,All (PS),production,1512605.5140000053,0
-5899,GH2018A106,Ghana,GH,Northern,none,Northern,Yams,Main,2020,6,2020,10,All (PS),yield,12.1320166012344,0
+5898,GH2018A106,Ghana,GH,Northern,none,Northern,Yams,Main,2020,6,2020,10,All (PS),production,1512605.514000005,0
+5899,GH2018A106,Ghana,GH,Northern,none,Northern,Yams,Main,2020,6,2020,10,All (PS),yield,12.132016601234398,0
 5900,GH2018A106,Ghana,GH,Northern,none,Northern,Yams,Main,2021,6,2021,10,All (PS),area,122594.583993837,0
 5901,GH2018A106,Ghana,GH,Northern,none,Northern,Yams,Main,2021,6,2021,10,All (PS),production,2251326.88480612,0
 5902,GH2018A106,Ghana,GH,Northern,none,Northern,Yams,Main,2021,6,2021,10,All (PS),yield,18.3639995460101,0
@@ -5975,8 +5975,8 @@
 5973,GH2018A106,Ghana,GH,Northern,none,Northern,Cowpea,Main,2021,6,2021,10,All (PS),production,74685.94463849296,0
 5974,GH2018A106,Ghana,GH,Northern,none,Northern,Cowpea,Main,2021,6,2021,10,All (PS),yield,2.23428874234248,0
 5975,GH2018A106,Ghana,GH,Northern,none,Northern,Cowpea,Main,2022,6,2022,10,All (PS),area,34550.7994267765,0
-5976,GH2018A106,Ghana,GH,Northern,none,Northern,Cowpea,Main,2022,6,2022,10,All (PS),production,123521.87859068647,0
-5977,GH2018A106,Ghana,GH,Northern,none,Northern,Cowpea,Main,2022,6,2022,10,All (PS),yield,3.57508019032863,0
+5976,GH2018A106,Ghana,GH,Northern,none,Northern,Cowpea,Main,2022,6,2022,10,All (PS),production,123521.87859068648,0
+5977,GH2018A106,Ghana,GH,Northern,none,Northern,Cowpea,Main,2022,6,2022,10,All (PS),yield,3.5750801903286304,0
 5978,GH2018A106,Ghana,GH,Northern,none,Northern,Groundnuts (In Shell),Main,1984,6,1984,10,All (PS),area,31909.321984065802,0
 5979,GH2018A106,Ghana,GH,Northern,none,Northern,Groundnuts (In Shell),Main,2003,6,2003,10,All (PS),area,124500.94008385816,0
 5980,GH2018A106,Ghana,GH,Northern,none,Northern,Groundnuts (In Shell),Main,2003,6,2003,10,All (PS),production,76008.51952087897,0
@@ -6062,72 +6062,72 @@
 6060,GH2018A106,Ghana,GH,Northern,none,Northern,Cowpea,Main,2009,6,2009,10,All (PS),area,37125.228685238864,0
 6061,GH2018A106,Ghana,GH,Northern,none,Northern,Cowpea,Main,2009,6,2009,10,All (PS),production,74250.45737047773,0
 6062,GH2018A106,Ghana,GH,Northern,none,Northern,Cowpea,Main,2009,6,2009,10,All (PS),yield,2.0,0
-6063,GH2018A106,Ghana,GH,Northern,none,Northern,Sorghum,Main,1984,6,1984,10,All (PS),area,100576.98505612352,0
-6064,GH2018A106,Ghana,GH,Northern,none,Northern,Sorghum,Main,1997,6,1997,10,All (PS),area,69613.97902794936,0
-6065,GH2018A106,Ghana,GH,Northern,none,Northern,Sorghum,Main,1997,6,1997,10,All (PS),production,76575.3769307443,0
+6063,GH2018A106,Ghana,GH,Northern,none,Northern,Sorghum,Main,1984,6,1984,10,All (PS),area,100576.9850561235,0
+6064,GH2018A106,Ghana,GH,Northern,none,Northern,Sorghum,Main,1997,6,1997,10,All (PS),area,69613.97902794935,0
+6065,GH2018A106,Ghana,GH,Northern,none,Northern,Sorghum,Main,1997,6,1997,10,All (PS),production,76575.37693074429,0
 6066,GH2018A106,Ghana,GH,Northern,none,Northern,Sorghum,Main,1997,6,1997,10,All (PS),yield,1.1,0
-6067,GH2018A106,Ghana,GH,Northern,none,Northern,Sorghum,Main,1998,6,1998,10,All (PS),area,72992.67947527657,0
-6068,GH2018A106,Ghana,GH,Northern,none,Northern,Sorghum,Main,1998,6,1998,10,All (PS),production,80674.4418130677,0
+6067,GH2018A106,Ghana,GH,Northern,none,Northern,Sorghum,Main,1998,6,1998,10,All (PS),area,72992.67947527656,0
+6068,GH2018A106,Ghana,GH,Northern,none,Northern,Sorghum,Main,1998,6,1998,10,All (PS),production,80674.44181306768,0
 6069,GH2018A106,Ghana,GH,Northern,none,Northern,Sorghum,Main,1998,6,1998,10,All (PS),yield,1.1052401746724891,0
-6070,GH2018A106,Ghana,GH,Northern,none,Northern,Sorghum,Main,1999,6,1999,10,All (PS),area,70060.22248325673,0
-6071,GH2018A106,Ghana,GH,Northern,none,Northern,Sorghum,Main,1999,6,1999,10,All (PS),production,77066.2447315824,0
+6070,GH2018A106,Ghana,GH,Northern,none,Northern,Sorghum,Main,1999,6,1999,10,All (PS),area,70060.22248325672,0
+6071,GH2018A106,Ghana,GH,Northern,none,Northern,Sorghum,Main,1999,6,1999,10,All (PS),production,77066.24473158238,0
 6072,GH2018A106,Ghana,GH,Northern,none,Northern,Sorghum,Main,1999,6,1999,10,All (PS),yield,1.0999999999999999,0
-6073,GH2018A106,Ghana,GH,Northern,none,Northern,Sorghum,Main,2000,6,2000,10,All (PS),area,61199.102442153286,0
-6074,GH2018A106,Ghana,GH,Northern,none,Northern,Sorghum,Main,2000,6,2000,10,All (PS),production,45899.32683161496,0
+6073,GH2018A106,Ghana,GH,Northern,none,Northern,Sorghum,Main,2000,6,2000,10,All (PS),area,61199.10244215327,0
+6074,GH2018A106,Ghana,GH,Northern,none,Northern,Sorghum,Main,2000,6,2000,10,All (PS),production,45899.326831614955,0
 6075,GH2018A106,Ghana,GH,Northern,none,Northern,Sorghum,Main,2000,6,2000,10,All (PS),yield,0.75,0
-6076,GH2018A106,Ghana,GH,Northern,none,Northern,Sorghum,Main,2001,6,2001,10,All (PS),area,63144.7239072934,0
-6077,GH2018A106,Ghana,GH,Northern,none,Northern,Sorghum,Main,2001,6,2001,10,All (PS),production,34006.30125702317,0
-6078,GH2018A106,Ghana,GH,Northern,none,Northern,Sorghum,Main,2001,6,2001,10,All (PS),yield,0.5385454104914591,0
-6079,GH2018A106,Ghana,GH,Northern,none,Northern,Sorghum,Main,2002,6,2002,10,All (PS),area,60676.360108793226,0
-6080,GH2018A106,Ghana,GH,Northern,none,Northern,Sorghum,Main,2002,6,2002,10,All (PS),production,42310.254469642845,0
-6081,GH2018A106,Ghana,GH,Northern,none,Northern,Sorghum,Main,2002,6,2002,10,All (PS),yield,0.6973103593191846,0
-6082,GH2018A106,Ghana,GH,Northern,none,Northern,Sorghum,Main,2003,6,2003,10,All (PS),area,61709.09496250456,0
-6083,GH2018A106,Ghana,GH,Northern,none,Northern,Sorghum,Main,2003,6,2003,10,All (PS),production,39715.667522355725,0
+6076,GH2018A106,Ghana,GH,Northern,none,Northern,Sorghum,Main,2001,6,2001,10,All (PS),area,63144.723907293395,0
+6077,GH2018A106,Ghana,GH,Northern,none,Northern,Sorghum,Main,2001,6,2001,10,All (PS),production,34006.301257023166,0
+6078,GH2018A106,Ghana,GH,Northern,none,Northern,Sorghum,Main,2001,6,2001,10,All (PS),yield,0.538545410491459,0
+6079,GH2018A106,Ghana,GH,Northern,none,Northern,Sorghum,Main,2002,6,2002,10,All (PS),area,60676.36010879321,0
+6080,GH2018A106,Ghana,GH,Northern,none,Northern,Sorghum,Main,2002,6,2002,10,All (PS),production,42310.25446964284,0
+6081,GH2018A106,Ghana,GH,Northern,none,Northern,Sorghum,Main,2002,6,2002,10,All (PS),yield,0.6973103593191847,0
+6082,GH2018A106,Ghana,GH,Northern,none,Northern,Sorghum,Main,2003,6,2003,10,All (PS),area,61709.09496250455,0
+6083,GH2018A106,Ghana,GH,Northern,none,Northern,Sorghum,Main,2003,6,2003,10,All (PS),production,39715.66752235572,0
 6084,GH2018A106,Ghana,GH,Northern,none,Northern,Sorghum,Main,2003,6,2003,10,All (PS),yield,0.643595041322314,0
-6085,GH2018A106,Ghana,GH,Northern,none,Northern,Sorghum,Main,2004,6,2004,10,All (PS),area,49851.76886433736,0
-6086,GH2018A106,Ghana,GH,Northern,none,Northern,Sorghum,Main,2004,6,2004,10,All (PS),production,46128.823465773035,0
+6085,GH2018A106,Ghana,GH,Northern,none,Northern,Sorghum,Main,2004,6,2004,10,All (PS),area,49851.768864337355,0
+6086,GH2018A106,Ghana,GH,Northern,none,Northern,Sorghum,Main,2004,6,2004,10,All (PS),production,46128.82346577303,0
 6087,GH2018A106,Ghana,GH,Northern,none,Northern,Sorghum,Main,2004,6,2004,10,All (PS),yield,0.9253196930946291,0
-6088,GH2018A106,Ghana,GH,Northern,none,Northern,Sorghum,Main,2005,6,2005,10,All (PS),area,56846.31628095513,0
-6089,GH2018A106,Ghana,GH,Northern,none,Northern,Sorghum,Main,2005,6,2005,10,All (PS),production,47916.9847402547,0
+6088,GH2018A106,Ghana,GH,Northern,none,Northern,Sorghum,Main,2005,6,2005,10,All (PS),area,56846.31628095512,0
+6089,GH2018A106,Ghana,GH,Northern,none,Northern,Sorghum,Main,2005,6,2005,10,All (PS),production,47916.984740254695,0
 6090,GH2018A106,Ghana,GH,Northern,none,Northern,Sorghum,Main,2005,6,2005,10,All (PS),yield,0.8429215448795586,0
-6091,GH2018A106,Ghana,GH,Northern,none,Northern,Sorghum,Main,2006,6,2006,10,All (PS),area,59642.35027378101,0
-6092,GH2018A106,Ghana,GH,Northern,none,Northern,Sorghum,Main,2006,6,2006,10,All (PS),production,49488.39919358708,0
+6091,GH2018A106,Ghana,GH,Northern,none,Northern,Sorghum,Main,2006,6,2006,10,All (PS),area,59642.350273781,0
+6092,GH2018A106,Ghana,GH,Northern,none,Northern,Sorghum,Main,2006,6,2006,10,All (PS),production,49488.399193587065,0
 6093,GH2018A106,Ghana,GH,Northern,none,Northern,Sorghum,Main,2006,6,2006,10,All (PS),yield,0.8297526667949293,0
-6094,GH2018A106,Ghana,GH,Northern,none,Northern,Sorghum,Main,2007,6,2007,10,All (PS),area,42664.44427502681,0
-6095,GH2018A106,Ghana,GH,Northern,none,Northern,Sorghum,Main,2007,6,2007,10,All (PS),production,32169.690693108136,0
+6094,GH2018A106,Ghana,GH,Northern,none,Northern,Sorghum,Main,2007,6,2007,10,All (PS),area,42664.444275026806,0
+6095,GH2018A106,Ghana,GH,Northern,none,Northern,Sorghum,Main,2007,6,2007,10,All (PS),production,32169.690693108132,0
 6096,GH2018A106,Ghana,GH,Northern,none,Northern,Sorghum,Main,2007,6,2007,10,All (PS),yield,0.75401640030123,0
-6097,GH2018A106,Ghana,GH,Northern,none,Northern,Sorghum,Main,2008,6,2008,10,All (PS),area,47609.07675609262,0
-6098,GH2018A106,Ghana,GH,Northern,none,Northern,Sorghum,Main,2008,6,2008,10,All (PS),production,47609.07675609262,0
+6097,GH2018A106,Ghana,GH,Northern,none,Northern,Sorghum,Main,2008,6,2008,10,All (PS),area,47609.07675609261,0
+6098,GH2018A106,Ghana,GH,Northern,none,Northern,Sorghum,Main,2008,6,2008,10,All (PS),production,47609.07675609261,0
 6099,GH2018A106,Ghana,GH,Northern,none,Northern,Sorghum,Main,2008,6,2008,10,All (PS),yield,1.0,0
-6100,GH2018A106,Ghana,GH,Northern,none,Northern,Sorghum,Main,2009,6,2009,10,All (PS),area,49990.10433548265,0
-6101,GH2018A106,Ghana,GH,Northern,none,Northern,Sorghum,Main,2009,6,2009,10,All (PS),production,99980.2086709653,0
+6100,GH2018A106,Ghana,GH,Northern,none,Northern,Sorghum,Main,2009,6,2009,10,All (PS),area,49990.10433548264,0
+6101,GH2018A106,Ghana,GH,Northern,none,Northern,Sorghum,Main,2009,6,2009,10,All (PS),production,99980.20867096528,0
 6102,GH2018A106,Ghana,GH,Northern,none,Northern,Sorghum,Main,2009,6,2009,10,All (PS),yield,2.0,0
-6103,GH2018A106,Ghana,GH,Northern,none,Northern,Sorghum,Main,2010,6,2010,10,All (PS),area,37847.81991656917,0
-6104,GH2018A106,Ghana,GH,Northern,none,Northern,Sorghum,Main,2010,6,2010,10,All (PS),production,75695.63983313834,0
+6103,GH2018A106,Ghana,GH,Northern,none,Northern,Sorghum,Main,2010,6,2010,10,All (PS),area,37847.81991656916,0
+6104,GH2018A106,Ghana,GH,Northern,none,Northern,Sorghum,Main,2010,6,2010,10,All (PS),production,75695.63983313832,0
 6105,GH2018A106,Ghana,GH,Northern,none,Northern,Sorghum,Main,2010,6,2010,10,All (PS),yield,2.0,0
-6106,GH2018A106,Ghana,GH,Northern,none,Northern,Sorghum,Main,2011,6,2011,10,All (PS),area,45121.58823807926,0
-6107,GH2018A106,Ghana,GH,Northern,none,Northern,Sorghum,Main,2011,6,2011,10,All (PS),production,90243.17647615852,0
+6106,GH2018A106,Ghana,GH,Northern,none,Northern,Sorghum,Main,2011,6,2011,10,All (PS),area,45121.588238079254,0
+6107,GH2018A106,Ghana,GH,Northern,none,Northern,Sorghum,Main,2011,6,2011,10,All (PS),production,90243.17647615851,0
 6108,GH2018A106,Ghana,GH,Northern,none,Northern,Sorghum,Main,2011,6,2011,10,All (PS),yield,2.0,0
-6109,GH2018A106,Ghana,GH,Northern,none,Northern,Sorghum,Main,2012,6,2012,10,All (PS),area,45440.97105394925,0
-6110,GH2018A106,Ghana,GH,Northern,none,Northern,Sorghum,Main,2012,6,2012,10,All (PS),production,90881.9421078985,0
+6109,GH2018A106,Ghana,GH,Northern,none,Northern,Sorghum,Main,2012,6,2012,10,All (PS),area,45440.971053949244,0
+6110,GH2018A106,Ghana,GH,Northern,none,Northern,Sorghum,Main,2012,6,2012,10,All (PS),production,90881.94210789849,0
 6111,GH2018A106,Ghana,GH,Northern,none,Northern,Sorghum,Main,2012,6,2012,10,All (PS),yield,2.0,0
-6112,GH2018A106,Ghana,GH,Northern,none,Northern,Sorghum,Main,2013,6,2013,10,All (PS),area,41944.97232694124,0
-6113,GH2018A106,Ghana,GH,Northern,none,Northern,Sorghum,Main,2013,6,2013,10,All (PS),production,83889.94465388248,0
+6112,GH2018A106,Ghana,GH,Northern,none,Northern,Sorghum,Main,2013,6,2013,10,All (PS),area,41944.972326941235,0
+6113,GH2018A106,Ghana,GH,Northern,none,Northern,Sorghum,Main,2013,6,2013,10,All (PS),production,83889.94465388247,0
 6114,GH2018A106,Ghana,GH,Northern,none,Northern,Sorghum,Main,2013,6,2013,10,All (PS),yield,2.0,0
-6115,GH2018A106,Ghana,GH,Northern,none,Northern,Sorghum,Main,2014,6,2014,10,All (PS),area,42011.27135458691,0
-6116,GH2018A106,Ghana,GH,Northern,none,Northern,Sorghum,Main,2014,6,2014,10,All (PS),production,84022.54270917382,0
+6115,GH2018A106,Ghana,GH,Northern,none,Northern,Sorghum,Main,2014,6,2014,10,All (PS),area,42011.271354586905,0
+6116,GH2018A106,Ghana,GH,Northern,none,Northern,Sorghum,Main,2014,6,2014,10,All (PS),production,84022.54270917381,0
 6117,GH2018A106,Ghana,GH,Northern,none,Northern,Sorghum,Main,2014,6,2014,10,All (PS),yield,2.0,0
-6118,GH2018A106,Ghana,GH,Northern,none,Northern,Sorghum,Main,2015,6,2015,10,All (PS),area,42324.27926395251,0
-6119,GH2018A106,Ghana,GH,Northern,none,Northern,Sorghum,Main,2015,6,2015,10,All (PS),production,42324.27926395251,0
+6118,GH2018A106,Ghana,GH,Northern,none,Northern,Sorghum,Main,2015,6,2015,10,All (PS),area,42324.2792639525,0
+6119,GH2018A106,Ghana,GH,Northern,none,Northern,Sorghum,Main,2015,6,2015,10,All (PS),production,42324.2792639525,0
 6120,GH2018A106,Ghana,GH,Northern,none,Northern,Sorghum,Main,2015,6,2015,10,All (PS),yield,1.0,0
-6121,GH2018A106,Ghana,GH,Northern,none,Northern,Sorghum,Main,2016,6,2016,10,All (PS),area,27869.81625589643,0
-6122,GH2018A106,Ghana,GH,Northern,none,Northern,Sorghum,Main,2016,6,2016,10,All (PS),production,55739.63251179286,0
+6121,GH2018A106,Ghana,GH,Northern,none,Northern,Sorghum,Main,2016,6,2016,10,All (PS),area,27869.816255896425,0
+6122,GH2018A106,Ghana,GH,Northern,none,Northern,Sorghum,Main,2016,6,2016,10,All (PS),production,55739.63251179285,0
 6123,GH2018A106,Ghana,GH,Northern,none,Northern,Sorghum,Main,2016,6,2016,10,All (PS),yield,2.0,0
-6124,GH2018A106,Ghana,GH,Northern,none,Northern,Sorghum,Main,2017,6,2017,10,All (PS),area,41584.152618792716,0
-6125,GH2018A106,Ghana,GH,Northern,none,Northern,Sorghum,Main,2017,6,2017,10,All (PS),production,83168.30523758543,0
+6124,GH2018A106,Ghana,GH,Northern,none,Northern,Sorghum,Main,2017,6,2017,10,All (PS),area,41584.15261879271,0
+6125,GH2018A106,Ghana,GH,Northern,none,Northern,Sorghum,Main,2017,6,2017,10,All (PS),production,83168.30523758542,0
 6126,GH2018A106,Ghana,GH,Northern,none,Northern,Sorghum,Main,2017,6,2017,10,All (PS),yield,2.0,0
-6127,GH2018A106,Ghana,GH,Northern,none,Northern,Sorghum,Main,2018,6,2018,10,All (PS),area,44186.38945388511,0
-6128,GH2018A106,Ghana,GH,Northern,none,Northern,Sorghum,Main,2018,6,2018,10,All (PS),production,88372.77890777022,0
+6127,GH2018A106,Ghana,GH,Northern,none,Northern,Sorghum,Main,2018,6,2018,10,All (PS),area,44186.3894538851,0
+6128,GH2018A106,Ghana,GH,Northern,none,Northern,Sorghum,Main,2018,6,2018,10,All (PS),production,88372.7789077702,0
 6129,GH2018A106,Ghana,GH,Northern,none,Northern,Sorghum,Main,2018,6,2018,10,All (PS),yield,2.0,0
 6130,GH2018A106,Ghana,GH,Northern,none,Northern,Sorghum,Main,2019,6,2019,10,All (PS),area,47768.865714985,0
 6131,GH2018A106,Ghana,GH,Northern,none,Northern,Sorghum,Main,2019,6,2019,10,All (PS),production,84661.74392107996,0
@@ -6139,7 +6139,7 @@
 6137,GH2018A106,Ghana,GH,Northern,none,Northern,Sorghum,Main,2021,6,2021,10,All (PS),production,89813.89451043383,0
 6138,GH2018A106,Ghana,GH,Northern,none,Northern,Sorghum,Main,2021,6,2021,10,All (PS),yield,1.94327542551813,0
 6139,GH2018A106,Ghana,GH,Northern,none,Northern,Sorghum,Main,2022,6,2022,10,All (PS),area,45442.2367427276,0
-6140,GH2018A106,Ghana,GH,Northern,none,Northern,Sorghum,Main,2022,6,2022,10,All (PS),production,114170.24697854585,0
+6140,GH2018A106,Ghana,GH,Northern,none,Northern,Sorghum,Main,2022,6,2022,10,All (PS),production,114170.24697854584,0
 6141,GH2018A106,Ghana,GH,Northern,none,Northern,Sorghum,Main,2022,6,2022,10,All (PS),yield,2.5124257774749,0
 6142,GH2018A106,Ghana,GH,Northern,none,Northern,Soybean,Main,2004,6,2004,10,All (PS),area,19713.876876792376,0
 6143,GH2018A106,Ghana,GH,Northern,none,Northern,Soybean,Main,2004,6,2004,10,All (PS),production,23329.611483413482,0
@@ -6187,8 +6187,8 @@
 6185,GH2018A106,Ghana,GH,Northern,none,Northern,Soybean,Main,2018,6,2018,10,All (PS),production,96411.6186237764,0
 6186,GH2018A106,Ghana,GH,Northern,none,Northern,Soybean,Main,2018,6,2018,10,All (PS),yield,2.0,0
 6187,GH2018A106,Ghana,GH,Northern,none,Northern,Soybean,Main,2020,6,2020,10,All (PS),area,51380.1934995876,0
-6188,GH2018A106,Ghana,GH,Northern,none,Northern,Soybean,Main,2020,6,2020,10,All (PS),production,97424.01452362255,0
-6189,GH2018A106,Ghana,GH,Northern,none,Northern,Soybean,Main,2020,6,2020,10,All (PS),yield,1.89613950216837,0
+6188,GH2018A106,Ghana,GH,Northern,none,Northern,Soybean,Main,2020,6,2020,10,All (PS),production,97424.01452362257,0
+6189,GH2018A106,Ghana,GH,Northern,none,Northern,Soybean,Main,2020,6,2020,10,All (PS),yield,1.8961395021683702,0
 6190,GH2018A106,Ghana,GH,Northern,none,Northern,Soybean,Main,2021,6,2021,10,All (PS),area,54021.6721995051,0
 6191,GH2018A106,Ghana,GH,Northern,none,Northern,Soybean,Main,2021,6,2021,10,All (PS),production,110932.4811912131,0
 6192,GH2018A106,Ghana,GH,Northern,none,Northern,Soybean,Main,2021,6,2021,10,All (PS),yield,2.05348106925556,0
@@ -6353,72 +6353,72 @@
 6351,GH2018A115,Ghana,GH,North East,none,North East,Cassava,Main,2022,6,2022,10,All (PS),area,6102.58848022681,0
 6352,GH2018A115,Ghana,GH,North East,none,North East,Cassava,Main,2022,6,2022,10,All (PS),production,28682.165857066007,0
 6353,GH2018A115,Ghana,GH,North East,none,North East,Cassava,Main,2022,6,2022,10,All (PS),yield,4.7,0
-6354,GH2018A115,Ghana,GH,North East,none,North East,Maize,Main,1984,6,1984,10,All (PS),area,18139.101608125788,0
-6355,GH2018A115,Ghana,GH,North East,none,North East,Maize,Main,1997,6,1997,10,All (PS),area,16491.923737614732,0
-6356,GH2018A115,Ghana,GH,North East,none,North East,Maize,Main,1997,6,1997,10,All (PS),production,16491.923737614732,0
+6354,GH2018A115,Ghana,GH,North East,none,North East,Maize,Main,1984,6,1984,10,All (PS),area,18139.10160812579,0
+6355,GH2018A115,Ghana,GH,North East,none,North East,Maize,Main,1997,6,1997,10,All (PS),area,16491.923737614736,0
+6356,GH2018A115,Ghana,GH,North East,none,North East,Maize,Main,1997,6,1997,10,All (PS),production,16491.923737614736,0
 6357,GH2018A115,Ghana,GH,North East,none,North East,Maize,Main,1997,6,1997,10,All (PS),yield,1.0,0
-6358,GH2018A115,Ghana,GH,North East,none,North East,Maize,Main,1998,6,1998,10,All (PS),area,18458.850421917406,0
-6359,GH2018A115,Ghana,GH,North East,none,North East,Maize,Main,1998,6,1998,10,All (PS),production,18458.850421917406,0
+6358,GH2018A115,Ghana,GH,North East,none,North East,Maize,Main,1998,6,1998,10,All (PS),area,18458.85042191741,0
+6359,GH2018A115,Ghana,GH,North East,none,North East,Maize,Main,1998,6,1998,10,All (PS),production,18458.85042191741,0
 6360,GH2018A115,Ghana,GH,North East,none,North East,Maize,Main,1998,6,1998,10,All (PS),yield,1.0,0
 6361,GH2018A115,Ghana,GH,North East,none,North East,Maize,Main,1999,6,1999,10,All (PS),area,16948.85593658351,0
-6362,GH2018A115,Ghana,GH,North East,none,North East,Maize,Main,1999,6,1999,10,All (PS),production,16226.842541391788,0
-6363,GH2018A115,Ghana,GH,North East,none,North East,Maize,Main,1999,6,1999,10,All (PS),yield,0.9574004642028209,0
-6364,GH2018A115,Ghana,GH,North East,none,North East,Maize,Main,2000,6,2000,10,All (PS),area,14903.252184908726,0
-6365,GH2018A115,Ghana,GH,North East,none,North East,Maize,Main,2000,6,2000,10,All (PS),production,11922.601747926981,0
-6366,GH2018A115,Ghana,GH,North East,none,North East,Maize,Main,2000,6,2000,10,All (PS),yield,0.8,0
-6367,GH2018A115,Ghana,GH,North East,none,North East,Maize,Main,2001,6,2001,10,All (PS),area,15748.7280550536,0
-6368,GH2018A115,Ghana,GH,North East,none,North East,Maize,Main,2001,6,2001,10,All (PS),production,10572.684834284792,0
-6369,GH2018A115,Ghana,GH,North East,none,North East,Maize,Main,2001,6,2001,10,All (PS),yield,0.6713357927907155,0
-6370,GH2018A115,Ghana,GH,North East,none,North East,Maize,Main,2002,6,2002,10,All (PS),area,23757.448305323534,0
-6371,GH2018A115,Ghana,GH,North East,none,North East,Maize,Main,2002,6,2002,10,All (PS),production,14307.122097512378,0
-6372,GH2018A115,Ghana,GH,North East,none,North East,Maize,Main,2002,6,2002,10,All (PS),yield,0.6022162781811234,0
-6373,GH2018A115,Ghana,GH,North East,none,North East,Maize,Main,2003,6,2003,10,All (PS),area,13474.960807999707,0
-6374,GH2018A115,Ghana,GH,North East,none,North East,Maize,Main,2003,6,2003,10,All (PS),production,11960.427261086648,0
-6375,GH2018A115,Ghana,GH,North East,none,North East,Maize,Main,2003,6,2003,10,All (PS),yield,0.8876038625645633,0
-6376,GH2018A115,Ghana,GH,North East,none,North East,Maize,Main,2004,6,2004,10,All (PS),area,10024.5174975749,0
-6377,GH2018A115,Ghana,GH,North East,none,North East,Maize,Main,2004,6,2004,10,All (PS),production,11281.988857054865,0
-6378,GH2018A115,Ghana,GH,North East,none,North East,Maize,Main,2004,6,2004,10,All (PS),yield,1.1254395894649463,0
-6379,GH2018A115,Ghana,GH,North East,none,North East,Maize,Main,2005,6,2005,10,All (PS),area,12092.060046882289,0
-6380,GH2018A115,Ghana,GH,North East,none,North East,Maize,Main,2005,6,2005,10,All (PS),production,14633.480625053982,0
+6362,GH2018A115,Ghana,GH,North East,none,North East,Maize,Main,1999,6,1999,10,All (PS),production,16226.842541391792,0
+6363,GH2018A115,Ghana,GH,North East,none,North East,Maize,Main,1999,6,1999,10,All (PS),yield,0.9574004642028211,0
+6364,GH2018A115,Ghana,GH,North East,none,North East,Maize,Main,2000,6,2000,10,All (PS),area,14903.25218490873,0
+6365,GH2018A115,Ghana,GH,North East,none,North East,Maize,Main,2000,6,2000,10,All (PS),production,11922.601747926983,0
+6366,GH2018A115,Ghana,GH,North East,none,North East,Maize,Main,2000,6,2000,10,All (PS),yield,0.7999999999999999,0
+6367,GH2018A115,Ghana,GH,North East,none,North East,Maize,Main,2001,6,2001,10,All (PS),area,15748.728055053603,0
+6368,GH2018A115,Ghana,GH,North East,none,North East,Maize,Main,2001,6,2001,10,All (PS),production,10572.684834284793,0
+6369,GH2018A115,Ghana,GH,North East,none,North East,Maize,Main,2001,6,2001,10,All (PS),yield,0.6713357927907154,0
+6370,GH2018A115,Ghana,GH,North East,none,North East,Maize,Main,2002,6,2002,10,All (PS),area,23757.44830532354,0
+6371,GH2018A115,Ghana,GH,North East,none,North East,Maize,Main,2002,6,2002,10,All (PS),production,14307.12209751238,0
+6372,GH2018A115,Ghana,GH,North East,none,North East,Maize,Main,2002,6,2002,10,All (PS),yield,0.6022162781811233,0
+6373,GH2018A115,Ghana,GH,North East,none,North East,Maize,Main,2003,6,2003,10,All (PS),area,13474.96080799971,0
+6374,GH2018A115,Ghana,GH,North East,none,North East,Maize,Main,2003,6,2003,10,All (PS),production,11960.42726108665,0
+6375,GH2018A115,Ghana,GH,North East,none,North East,Maize,Main,2003,6,2003,10,All (PS),yield,0.8876038625645631,0
+6376,GH2018A115,Ghana,GH,North East,none,North East,Maize,Main,2004,6,2004,10,All (PS),area,10024.517497574903,0
+6377,GH2018A115,Ghana,GH,North East,none,North East,Maize,Main,2004,6,2004,10,All (PS),production,11281.988857054866,0
+6378,GH2018A115,Ghana,GH,North East,none,North East,Maize,Main,2004,6,2004,10,All (PS),yield,1.125439589464946,0
+6379,GH2018A115,Ghana,GH,North East,none,North East,Maize,Main,2005,6,2005,10,All (PS),area,12092.06004688229,0
+6380,GH2018A115,Ghana,GH,North East,none,North East,Maize,Main,2005,6,2005,10,All (PS),production,14633.480625053986,0
 6381,GH2018A115,Ghana,GH,North East,none,North East,Maize,Main,2005,6,2005,10,All (PS),yield,1.2101726726726727,0
-6382,GH2018A115,Ghana,GH,North East,none,North East,Maize,Main,2006,6,2006,10,All (PS),area,12958.11299618602,0
-6383,GH2018A115,Ghana,GH,North East,none,North East,Maize,Main,2006,6,2006,10,All (PS),production,14851.355580853664,0
-6384,GH2018A115,Ghana,GH,North East,none,North East,Maize,Main,2006,6,2006,10,All (PS),yield,1.1461048059408714,0
-6385,GH2018A115,Ghana,GH,North East,none,North East,Maize,Main,2007,6,2007,10,All (PS),area,10904.853360647721,0
-6386,GH2018A115,Ghana,GH,North East,none,North East,Maize,Main,2007,6,2007,10,All (PS),production,13320.178808150351,0
+6382,GH2018A115,Ghana,GH,North East,none,North East,Maize,Main,2006,6,2006,10,All (PS),area,12958.112996186022,0
+6383,GH2018A115,Ghana,GH,North East,none,North East,Maize,Main,2006,6,2006,10,All (PS),production,14851.355580853668,0
+6384,GH2018A115,Ghana,GH,North East,none,North East,Maize,Main,2006,6,2006,10,All (PS),yield,1.1461048059408716,0
+6385,GH2018A115,Ghana,GH,North East,none,North East,Maize,Main,2007,6,2007,10,All (PS),area,10904.853360647723,0
+6386,GH2018A115,Ghana,GH,North East,none,North East,Maize,Main,2007,6,2007,10,All (PS),production,13320.178808150353,0
 6387,GH2018A115,Ghana,GH,North East,none,North East,Maize,Main,2007,6,2007,10,All (PS),yield,1.2214908690307382,0
-6388,GH2018A115,Ghana,GH,North East,none,North East,Maize,Main,2008,6,2008,10,All (PS),area,11703.365073653553,0
-6389,GH2018A115,Ghana,GH,North East,none,North East,Maize,Main,2008,6,2008,10,All (PS),production,23406.730147307106,0
+6388,GH2018A115,Ghana,GH,North East,none,North East,Maize,Main,2008,6,2008,10,All (PS),area,11703.365073653555,0
+6389,GH2018A115,Ghana,GH,North East,none,North East,Maize,Main,2008,6,2008,10,All (PS),production,23406.73014730711,0
 6390,GH2018A115,Ghana,GH,North East,none,North East,Maize,Main,2008,6,2008,10,All (PS),yield,2.0,0
-6391,GH2018A115,Ghana,GH,North East,none,North East,Maize,Main,2009,6,2009,10,All (PS),area,15227.189879608113,0
-6392,GH2018A115,Ghana,GH,North East,none,North East,Maize,Main,2009,6,2009,10,All (PS),production,30454.379759216226,0
+6391,GH2018A115,Ghana,GH,North East,none,North East,Maize,Main,2009,6,2009,10,All (PS),area,15227.189879608117,0
+6392,GH2018A115,Ghana,GH,North East,none,North East,Maize,Main,2009,6,2009,10,All (PS),production,30454.379759216234,0
 6393,GH2018A115,Ghana,GH,North East,none,North East,Maize,Main,2009,6,2009,10,All (PS),yield,2.0,0
 6394,GH2018A115,Ghana,GH,North East,none,North East,Maize,Main,2010,6,2010,10,All (PS),area,16708.28567288803,0
 6395,GH2018A115,Ghana,GH,North East,none,North East,Maize,Main,2010,6,2010,10,All (PS),production,33416.57134577606,0
 6396,GH2018A115,Ghana,GH,North East,none,North East,Maize,Main,2010,6,2010,10,All (PS),yield,2.0,0
-6397,GH2018A115,Ghana,GH,North East,none,North East,Maize,Main,2011,6,2011,10,All (PS),area,20383.86643763917,0
-6398,GH2018A115,Ghana,GH,North East,none,North East,Maize,Main,2011,6,2011,10,All (PS),production,20383.86643763917,0
+6397,GH2018A115,Ghana,GH,North East,none,North East,Maize,Main,2011,6,2011,10,All (PS),area,20383.866437639175,0
+6398,GH2018A115,Ghana,GH,North East,none,North East,Maize,Main,2011,6,2011,10,All (PS),production,20383.866437639175,0
 6399,GH2018A115,Ghana,GH,North East,none,North East,Maize,Main,2011,6,2011,10,All (PS),yield,1.0,0
-6400,GH2018A115,Ghana,GH,North East,none,North East,Maize,Main,2012,6,2012,10,All (PS),area,21063.363956039426,0
-6401,GH2018A115,Ghana,GH,North East,none,North East,Maize,Main,2012,6,2012,10,All (PS),production,42126.72791207885,0
+6400,GH2018A115,Ghana,GH,North East,none,North East,Maize,Main,2012,6,2012,10,All (PS),area,21063.36395603943,0
+6401,GH2018A115,Ghana,GH,North East,none,North East,Maize,Main,2012,6,2012,10,All (PS),production,42126.72791207886,0
 6402,GH2018A115,Ghana,GH,North East,none,North East,Maize,Main,2012,6,2012,10,All (PS),yield,2.0,0
-6403,GH2018A115,Ghana,GH,North East,none,North East,Maize,Main,2013,6,2013,10,All (PS),area,18091.337736058085,0
-6404,GH2018A115,Ghana,GH,North East,none,North East,Maize,Main,2013,6,2013,10,All (PS),production,18091.337736058085,0
+6403,GH2018A115,Ghana,GH,North East,none,North East,Maize,Main,2013,6,2013,10,All (PS),area,18091.33773605809,0
+6404,GH2018A115,Ghana,GH,North East,none,North East,Maize,Main,2013,6,2013,10,All (PS),production,18091.33773605809,0
 6405,GH2018A115,Ghana,GH,North East,none,North East,Maize,Main,2013,6,2013,10,All (PS),yield,1.0,0
-6406,GH2018A115,Ghana,GH,North East,none,North East,Maize,Main,2014,6,2014,10,All (PS),area,18006.911190685707,0
-6407,GH2018A115,Ghana,GH,North East,none,North East,Maize,Main,2014,6,2014,10,All (PS),production,18006.911190685707,0
+6406,GH2018A115,Ghana,GH,North East,none,North East,Maize,Main,2014,6,2014,10,All (PS),area,18006.91119068571,0
+6407,GH2018A115,Ghana,GH,North East,none,North East,Maize,Main,2014,6,2014,10,All (PS),production,18006.91119068571,0
 6408,GH2018A115,Ghana,GH,North East,none,North East,Maize,Main,2014,6,2014,10,All (PS),yield,1.0,0
-6409,GH2018A115,Ghana,GH,North East,none,North East,Maize,Main,2015,6,2015,10,All (PS),area,13640.182649481132,0
-6410,GH2018A115,Ghana,GH,North East,none,North East,Maize,Main,2015,6,2015,10,All (PS),production,27280.365298962264,0
+6409,GH2018A115,Ghana,GH,North East,none,North East,Maize,Main,2015,6,2015,10,All (PS),area,13640.182649481136,0
+6410,GH2018A115,Ghana,GH,North East,none,North East,Maize,Main,2015,6,2015,10,All (PS),production,27280.36529896227,0
 6411,GH2018A115,Ghana,GH,North East,none,North East,Maize,Main,2015,6,2015,10,All (PS),yield,2.0,0
-6412,GH2018A115,Ghana,GH,North East,none,North East,Maize,Main,2016,6,2016,10,All (PS),area,13784.827411803699,0
-6413,GH2018A115,Ghana,GH,North East,none,North East,Maize,Main,2016,6,2016,10,All (PS),production,27569.654823607398,0
+6412,GH2018A115,Ghana,GH,North East,none,North East,Maize,Main,2016,6,2016,10,All (PS),area,13784.8274118037,0
+6413,GH2018A115,Ghana,GH,North East,none,North East,Maize,Main,2016,6,2016,10,All (PS),production,27569.6548236074,0
 6414,GH2018A115,Ghana,GH,North East,none,North East,Maize,Main,2016,6,2016,10,All (PS),yield,2.0,0
-6415,GH2018A115,Ghana,GH,North East,none,North East,Maize,Main,2017,6,2017,10,All (PS),area,22422.661596945214,0
-6416,GH2018A115,Ghana,GH,North East,none,North East,Maize,Main,2017,6,2017,10,All (PS),production,44845.32319389043,0
+6415,GH2018A115,Ghana,GH,North East,none,North East,Maize,Main,2017,6,2017,10,All (PS),area,22422.661596945218,0
+6416,GH2018A115,Ghana,GH,North East,none,North East,Maize,Main,2017,6,2017,10,All (PS),production,44845.323193890436,0
 6417,GH2018A115,Ghana,GH,North East,none,North East,Maize,Main,2017,6,2017,10,All (PS),yield,2.0,0
-6418,GH2018A115,Ghana,GH,North East,none,North East,Maize,Main,2018,6,2018,10,All (PS),area,21397.741492370882,0
-6419,GH2018A115,Ghana,GH,North East,none,North East,Maize,Main,2018,6,2018,10,All (PS),production,42795.482984741764,0
+6418,GH2018A115,Ghana,GH,North East,none,North East,Maize,Main,2018,6,2018,10,All (PS),area,21397.741492370886,0
+6419,GH2018A115,Ghana,GH,North East,none,North East,Maize,Main,2018,6,2018,10,All (PS),production,42795.48298474177,0
 6420,GH2018A115,Ghana,GH,North East,none,North East,Maize,Main,2018,6,2018,10,All (PS),yield,2.0,0
 6421,GH2018A115,Ghana,GH,North East,none,North East,Maize,Main,2019,6,2019,10,All (PS),area,24209.564,0
 6422,GH2018A115,Ghana,GH,North East,none,North East,Maize,Main,2019,6,2019,10,All (PS),production,37315.23800000007,0
@@ -6582,8 +6582,8 @@
 6580,GH2018A115,Ghana,GH,North East,none,North East,Yams,Main,2020,6,2020,10,All (PS),production,26906.019999999997,0
 6581,GH2018A115,Ghana,GH,North East,none,North East,Yams,Main,2020,6,2020,10,All (PS),yield,5.33109173766594,0
 6582,GH2018A115,Ghana,GH,North East,none,North East,Yams,Main,2021,6,2021,10,All (PS),area,4490.5,0
-6583,GH2018A115,Ghana,GH,North East,none,North East,Yams,Main,2021,6,2021,10,All (PS),production,16242.059999999981,0
-6584,GH2018A115,Ghana,GH,North East,none,North East,Yams,Main,2021,6,2021,10,All (PS),yield,3.61698251865048,0
+6583,GH2018A115,Ghana,GH,North East,none,North East,Yams,Main,2021,6,2021,10,All (PS),production,16242.05999999998,0
+6584,GH2018A115,Ghana,GH,North East,none,North East,Yams,Main,2021,6,2021,10,All (PS),yield,3.6169825186504796,0
 6585,GH2018A115,Ghana,GH,North East,none,North East,Yams,Main,2022,6,2022,10,All (PS),area,17052.9037619799,0
 6586,GH2018A115,Ghana,GH,North East,none,North East,Yams,Main,2022,6,2022,10,All (PS),production,61390.45354312764,0
 6587,GH2018A115,Ghana,GH,North East,none,North East,Yams,Main,2022,6,2022,10,All (PS),yield,3.6,0
@@ -7024,8 +7024,8 @@
 7022,GH2018A117,Ghana,GH,Savannah,none,Savannah,Cassava,Annual,2018,1,2018,12,All (PS),production,472588.6666666666,0
 7023,GH2018A117,Ghana,GH,Savannah,none,Savannah,Cassava,Annual,2018,1,2018,12,All (PS),yield,14.0,0
 7024,GH2018A117,Ghana,GH,Savannah,none,Savannah,Cassava,Main,2019,6,2019,10,All (PS),area,33823.0,0
-7025,GH2018A117,Ghana,GH,Savannah,none,Savannah,Cassava,Main,2019,6,2019,10,All (PS),production,520848.96499999997,0
-7026,GH2018A117,Ghana,GH,Savannah,none,Savannah,Cassava,Main,2019,6,2019,10,All (PS),yield,15.3992539100612,0
+7025,GH2018A117,Ghana,GH,Savannah,none,Savannah,Cassava,Main,2019,6,2019,10,All (PS),production,520848.965,0
+7026,GH2018A117,Ghana,GH,Savannah,none,Savannah,Cassava,Main,2019,6,2019,10,All (PS),yield,15.399253910061201,0
 7027,GH2018A117,Ghana,GH,Savannah,none,Savannah,Cassava,Main,2020,6,2020,10,All (PS),area,34632.0,0
 7028,GH2018A117,Ghana,GH,Savannah,none,Savannah,Cassava,Main,2020,6,2020,10,All (PS),production,551045.8900000005,0
 7029,GH2018A117,Ghana,GH,Savannah,none,Savannah,Cassava,Main,2020,6,2020,10,All (PS),yield,15.911465985216,0
@@ -7036,71 +7036,71 @@
 7034,GH2018A117,Ghana,GH,Savannah,none,Savannah,Cassava,Main,2022,6,2022,10,All (PS),production,1018014.699999999,0
 7035,GH2018A117,Ghana,GH,Savannah,none,Savannah,Cassava,Main,2022,6,2022,10,All (PS),yield,18.519122810209,0
 7036,GH2018A117,Ghana,GH,Savannah,none,Savannah,Maize,Main,1984,6,1984,10,All (PS),area,23567.00793639517,0
-7037,GH2018A117,Ghana,GH,Savannah,none,Savannah,Maize,Main,1997,6,1997,10,All (PS),area,21426.932050299536,0
-7038,GH2018A117,Ghana,GH,Savannah,none,Savannah,Maize,Main,1997,6,1997,10,All (PS),production,21426.932050299536,0
+7037,GH2018A117,Ghana,GH,Savannah,none,Savannah,Maize,Main,1997,6,1997,10,All (PS),area,21426.93205029954,0
+7038,GH2018A117,Ghana,GH,Savannah,none,Savannah,Maize,Main,1997,6,1997,10,All (PS),production,21426.93205029954,0
 7039,GH2018A117,Ghana,GH,Savannah,none,Savannah,Maize,Main,1997,6,1997,10,All (PS),yield,1.0,0
-7040,GH2018A117,Ghana,GH,Savannah,none,Savannah,Maize,Main,1998,6,1998,10,All (PS),area,23982.43770767471,0
-7041,GH2018A117,Ghana,GH,Savannah,none,Savannah,Maize,Main,1998,6,1998,10,All (PS),production,23982.43770767471,0
+7040,GH2018A117,Ghana,GH,Savannah,none,Savannah,Maize,Main,1998,6,1998,10,All (PS),area,23982.437707674715,0
+7041,GH2018A117,Ghana,GH,Savannah,none,Savannah,Maize,Main,1998,6,1998,10,All (PS),production,23982.437707674715,0
 7042,GH2018A117,Ghana,GH,Savannah,none,Savannah,Maize,Main,1998,6,1998,10,All (PS),yield,1.0,0
-7043,GH2018A117,Ghana,GH,Savannah,none,Savannah,Maize,Main,1999,6,1999,10,All (PS),area,22020.595672243613,0
-7044,GH2018A117,Ghana,GH,Savannah,none,Savannah,Maize,Main,1999,6,1999,10,All (PS),production,21082.528518628667,0
+7043,GH2018A117,Ghana,GH,Savannah,none,Savannah,Maize,Main,1999,6,1999,10,All (PS),area,22020.595672243617,0
+7044,GH2018A117,Ghana,GH,Savannah,none,Savannah,Maize,Main,1999,6,1999,10,All (PS),production,21082.52851862867,0
 7045,GH2018A117,Ghana,GH,Savannah,none,Savannah,Maize,Main,1999,6,1999,10,All (PS),yield,0.9574004642028211,0
-7046,GH2018A117,Ghana,GH,Savannah,none,Savannah,Maize,Main,2000,6,2000,10,All (PS),area,19362.869788573433,0
-7047,GH2018A117,Ghana,GH,Savannah,none,Savannah,Maize,Main,2000,6,2000,10,All (PS),production,15490.295830858748,0
+7046,GH2018A117,Ghana,GH,Savannah,none,Savannah,Maize,Main,2000,6,2000,10,All (PS),area,19362.869788573436,0
+7047,GH2018A117,Ghana,GH,Savannah,none,Savannah,Maize,Main,2000,6,2000,10,All (PS),production,15490.29583085875,0
 7048,GH2018A117,Ghana,GH,Savannah,none,Savannah,Maize,Main,2000,6,2000,10,All (PS),yield,0.8,0
-7049,GH2018A117,Ghana,GH,Savannah,none,Savannah,Maize,Main,2001,6,2001,10,All (PS),area,20461.34406652824,0
-7050,GH2018A117,Ghana,GH,Savannah,none,Savannah,Maize,Main,2001,6,2001,10,All (PS),production,13736.432640466339,0
+7049,GH2018A117,Ghana,GH,Savannah,none,Savannah,Maize,Main,2001,6,2001,10,All (PS),area,20461.344066528243,0
+7050,GH2018A117,Ghana,GH,Savannah,none,Savannah,Maize,Main,2001,6,2001,10,All (PS),production,13736.43264046634,0
 7051,GH2018A117,Ghana,GH,Savannah,none,Savannah,Maize,Main,2001,6,2001,10,All (PS),yield,0.6713357927907155,0
-7052,GH2018A117,Ghana,GH,Savannah,none,Savannah,Maize,Main,2002,6,2002,10,All (PS),area,30866.57679392691,0
-7053,GH2018A117,Ghana,GH,Savannah,none,Savannah,Maize,Main,2002,6,2002,10,All (PS),production,18588.354997030496,0
+7052,GH2018A117,Ghana,GH,Savannah,none,Savannah,Maize,Main,2002,6,2002,10,All (PS),area,30866.576793926914,0
+7053,GH2018A117,Ghana,GH,Savannah,none,Savannah,Maize,Main,2002,6,2002,10,All (PS),production,18588.3549970305,0
 7054,GH2018A117,Ghana,GH,Savannah,none,Savannah,Maize,Main,2002,6,2002,10,All (PS),yield,0.6022162781811234,0
-7055,GH2018A117,Ghana,GH,Savannah,none,Savannah,Maize,Main,2003,6,2003,10,All (PS),area,17507.179526602536,0
-7056,GH2018A117,Ghana,GH,Savannah,none,Savannah,Maize,Main,2003,6,2003,10,All (PS),production,15539.440170423655,0
-7057,GH2018A117,Ghana,GH,Savannah,none,Savannah,Maize,Main,2003,6,2003,10,All (PS),yield,0.8876038625645634,0
-7058,GH2018A117,Ghana,GH,Savannah,none,Savannah,Maize,Main,2004,6,2004,10,All (PS),area,13024.232871491704,0
-7059,GH2018A117,Ghana,GH,Savannah,none,Savannah,Maize,Main,2004,6,2004,10,All (PS),production,14657.98729598748,0
+7055,GH2018A117,Ghana,GH,Savannah,none,Savannah,Maize,Main,2003,6,2003,10,All (PS),area,17507.17952660254,0
+7056,GH2018A117,Ghana,GH,Savannah,none,Savannah,Maize,Main,2003,6,2003,10,All (PS),production,15539.440170423657,0
+7057,GH2018A117,Ghana,GH,Savannah,none,Savannah,Maize,Main,2003,6,2003,10,All (PS),yield,0.8876038625645633,0
+7058,GH2018A117,Ghana,GH,Savannah,none,Savannah,Maize,Main,2004,6,2004,10,All (PS),area,13024.232871491706,0
+7059,GH2018A117,Ghana,GH,Savannah,none,Savannah,Maize,Main,2004,6,2004,10,All (PS),production,14657.987295987481,0
 7060,GH2018A117,Ghana,GH,Savannah,none,Savannah,Maize,Main,2004,6,2004,10,All (PS),yield,1.125439589464946,0
-7061,GH2018A117,Ghana,GH,Savannah,none,Savannah,Maize,Main,2005,6,2005,10,All (PS),area,15710.462472109532,0
-7062,GH2018A117,Ghana,GH,Savannah,none,Savannah,Maize,Main,2005,6,2005,10,All (PS),production,19012.372358796514,0
-7063,GH2018A117,Ghana,GH,Savannah,none,Savannah,Maize,Main,2005,6,2005,10,All (PS),yield,1.2101726726726725,0
-7064,GH2018A117,Ghana,GH,Savannah,none,Savannah,Maize,Main,2006,6,2006,10,All (PS),area,16835.671270787647,0
+7061,GH2018A117,Ghana,GH,Savannah,none,Savannah,Maize,Main,2005,6,2005,10,All (PS),area,15710.462472109533,0
+7062,GH2018A117,Ghana,GH,Savannah,none,Savannah,Maize,Main,2005,6,2005,10,All (PS),production,19012.372358796518,0
+7063,GH2018A117,Ghana,GH,Savannah,none,Savannah,Maize,Main,2005,6,2005,10,All (PS),yield,1.2101726726726727,0
+7064,GH2018A117,Ghana,GH,Savannah,none,Savannah,Maize,Main,2006,6,2006,10,All (PS),area,16835.67127078765,0
 7065,GH2018A117,Ghana,GH,Savannah,none,Savannah,Maize,Main,2006,6,2006,10,All (PS),production,19295.443754690383,0
-7066,GH2018A117,Ghana,GH,Savannah,none,Savannah,Maize,Main,2006,6,2006,10,All (PS),yield,1.1461048059408716,0
-7067,GH2018A117,Ghana,GH,Savannah,none,Savannah,Maize,Main,2007,6,2007,10,All (PS),area,14167.998572789527,0
-7068,GH2018A117,Ghana,GH,Savannah,none,Savannah,Maize,Main,2007,6,2007,10,All (PS),production,17306.080889102937,0
+7066,GH2018A117,Ghana,GH,Savannah,none,Savannah,Maize,Main,2006,6,2006,10,All (PS),yield,1.1461048059408714,0
+7067,GH2018A117,Ghana,GH,Savannah,none,Savannah,Maize,Main,2007,6,2007,10,All (PS),area,14167.99857278953,0
+7068,GH2018A117,Ghana,GH,Savannah,none,Savannah,Maize,Main,2007,6,2007,10,All (PS),production,17306.08088910294,0
 7069,GH2018A117,Ghana,GH,Savannah,none,Savannah,Maize,Main,2007,6,2007,10,All (PS),yield,1.2214908690307382,0
-7070,GH2018A117,Ghana,GH,Savannah,none,Savannah,Maize,Main,2008,6,2008,10,All (PS),area,15205.455238740546,0
-7071,GH2018A117,Ghana,GH,Savannah,none,Savannah,Maize,Main,2008,6,2008,10,All (PS),production,30410.91047748109,0
+7070,GH2018A117,Ghana,GH,Savannah,none,Savannah,Maize,Main,2008,6,2008,10,All (PS),area,15205.455238740547,0
+7071,GH2018A117,Ghana,GH,Savannah,none,Savannah,Maize,Main,2008,6,2008,10,All (PS),production,30410.910477481095,0
 7072,GH2018A117,Ghana,GH,Savannah,none,Savannah,Maize,Main,2008,6,2008,10,All (PS),yield,2.0,0
-7073,GH2018A117,Ghana,GH,Savannah,none,Savannah,Maize,Main,2009,6,2009,10,All (PS),area,19783.7419126073,0
-7074,GH2018A117,Ghana,GH,Savannah,none,Savannah,Maize,Main,2009,6,2009,10,All (PS),production,39567.4838252146,0
+7073,GH2018A117,Ghana,GH,Savannah,none,Savannah,Maize,Main,2009,6,2009,10,All (PS),area,19783.741912607304,0
+7074,GH2018A117,Ghana,GH,Savannah,none,Savannah,Maize,Main,2009,6,2009,10,All (PS),production,39567.48382521461,0
 7075,GH2018A117,Ghana,GH,Savannah,none,Savannah,Maize,Main,2009,6,2009,10,All (PS),yield,2.0,0
-7076,GH2018A117,Ghana,GH,Savannah,none,Savannah,Maize,Main,2010,6,2010,10,All (PS),area,21708.037672610804,0
-7077,GH2018A117,Ghana,GH,Savannah,none,Savannah,Maize,Main,2010,6,2010,10,All (PS),production,43416.07534522161,0
+7076,GH2018A117,Ghana,GH,Savannah,none,Savannah,Maize,Main,2010,6,2010,10,All (PS),area,21708.037672610808,0
+7077,GH2018A117,Ghana,GH,Savannah,none,Savannah,Maize,Main,2010,6,2010,10,All (PS),production,43416.075345221616,0
 7078,GH2018A117,Ghana,GH,Savannah,none,Savannah,Maize,Main,2010,6,2010,10,All (PS),yield,2.0,0
-7079,GH2018A117,Ghana,GH,Savannah,none,Savannah,Maize,Main,2011,6,2011,10,All (PS),area,26483.491436811968,0
-7080,GH2018A117,Ghana,GH,Savannah,none,Savannah,Maize,Main,2011,6,2011,10,All (PS),production,26483.491436811968,0
+7079,GH2018A117,Ghana,GH,Savannah,none,Savannah,Maize,Main,2011,6,2011,10,All (PS),area,26483.49143681197,0
+7080,GH2018A117,Ghana,GH,Savannah,none,Savannah,Maize,Main,2011,6,2011,10,All (PS),production,26483.49143681197,0
 7081,GH2018A117,Ghana,GH,Savannah,none,Savannah,Maize,Main,2011,6,2011,10,All (PS),yield,1.0,0
-7082,GH2018A117,Ghana,GH,Savannah,none,Savannah,Maize,Main,2012,6,2012,10,All (PS),area,27366.32035275596,0
-7083,GH2018A117,Ghana,GH,Savannah,none,Savannah,Maize,Main,2012,6,2012,10,All (PS),production,54732.64070551192,0
+7082,GH2018A117,Ghana,GH,Savannah,none,Savannah,Maize,Main,2012,6,2012,10,All (PS),area,27366.320352755964,0
+7083,GH2018A117,Ghana,GH,Savannah,none,Savannah,Maize,Main,2012,6,2012,10,All (PS),production,54732.64070551193,0
 7084,GH2018A117,Ghana,GH,Savannah,none,Savannah,Maize,Main,2012,6,2012,10,All (PS),yield,2.0,0
-7085,GH2018A117,Ghana,GH,Savannah,none,Savannah,Maize,Main,2013,6,2013,10,All (PS),area,23504.951304462073,0
-7086,GH2018A117,Ghana,GH,Savannah,none,Savannah,Maize,Main,2013,6,2013,10,All (PS),production,23504.951304462073,0
+7085,GH2018A117,Ghana,GH,Savannah,none,Savannah,Maize,Main,2013,6,2013,10,All (PS),area,23504.951304462076,0
+7086,GH2018A117,Ghana,GH,Savannah,none,Savannah,Maize,Main,2013,6,2013,10,All (PS),production,23504.951304462076,0
 7087,GH2018A117,Ghana,GH,Savannah,none,Savannah,Maize,Main,2013,6,2013,10,All (PS),yield,1.0,0
-7088,GH2018A117,Ghana,GH,Savannah,none,Savannah,Maize,Main,2014,6,2014,10,All (PS),area,23395.2611385532,0
-7089,GH2018A117,Ghana,GH,Savannah,none,Savannah,Maize,Main,2014,6,2014,10,All (PS),production,23395.2611385532,0
+7088,GH2018A117,Ghana,GH,Savannah,none,Savannah,Maize,Main,2014,6,2014,10,All (PS),area,23395.261138553204,0
+7089,GH2018A117,Ghana,GH,Savannah,none,Savannah,Maize,Main,2014,6,2014,10,All (PS),production,23395.261138553204,0
 7090,GH2018A117,Ghana,GH,Savannah,none,Savannah,Maize,Main,2014,6,2014,10,All (PS),yield,1.0,0
-7091,GH2018A117,Ghana,GH,Savannah,none,Savannah,Maize,Main,2015,6,2015,10,All (PS),area,17721.842001822053,0
-7092,GH2018A117,Ghana,GH,Savannah,none,Savannah,Maize,Main,2015,6,2015,10,All (PS),production,35443.684003644106,0
+7091,GH2018A117,Ghana,GH,Savannah,none,Savannah,Maize,Main,2015,6,2015,10,All (PS),area,17721.842001822057,0
+7092,GH2018A117,Ghana,GH,Savannah,none,Savannah,Maize,Main,2015,6,2015,10,All (PS),production,35443.68400364411,0
 7093,GH2018A117,Ghana,GH,Savannah,none,Savannah,Maize,Main,2015,6,2015,10,All (PS),yield,2.0,0
-7094,GH2018A117,Ghana,GH,Savannah,none,Savannah,Maize,Main,2016,6,2016,10,All (PS),area,17909.769956318258,0
-7095,GH2018A117,Ghana,GH,Savannah,none,Savannah,Maize,Main,2016,6,2016,10,All (PS),production,35819.539912636516,0
+7094,GH2018A117,Ghana,GH,Savannah,none,Savannah,Maize,Main,2016,6,2016,10,All (PS),area,17909.76995631826,0
+7095,GH2018A117,Ghana,GH,Savannah,none,Savannah,Maize,Main,2016,6,2016,10,All (PS),production,35819.53991263652,0
 7096,GH2018A117,Ghana,GH,Savannah,none,Savannah,Maize,Main,2016,6,2016,10,All (PS),yield,2.0,0
-7097,GH2018A117,Ghana,GH,Savannah,none,Savannah,Maize,Main,2017,6,2017,10,All (PS),area,29132.371339360463,0
-7098,GH2018A117,Ghana,GH,Savannah,none,Savannah,Maize,Main,2017,6,2017,10,All (PS),production,58264.742678720926,0
+7097,GH2018A117,Ghana,GH,Savannah,none,Savannah,Maize,Main,2017,6,2017,10,All (PS),area,29132.37133936047,0
+7098,GH2018A117,Ghana,GH,Savannah,none,Savannah,Maize,Main,2017,6,2017,10,All (PS),production,58264.74267872094,0
 7099,GH2018A117,Ghana,GH,Savannah,none,Savannah,Maize,Main,2017,6,2017,10,All (PS),yield,2.0,0
-7100,GH2018A117,Ghana,GH,Savannah,none,Savannah,Maize,Main,2018,6,2018,10,All (PS),area,27800.75631450974,0
-7101,GH2018A117,Ghana,GH,Savannah,none,Savannah,Maize,Main,2018,6,2018,10,All (PS),production,55601.51262901948,0
+7100,GH2018A117,Ghana,GH,Savannah,none,Savannah,Maize,Main,2018,6,2018,10,All (PS),area,27800.756314509745,0
+7101,GH2018A117,Ghana,GH,Savannah,none,Savannah,Maize,Main,2018,6,2018,10,All (PS),production,55601.51262901949,0
 7102,GH2018A117,Ghana,GH,Savannah,none,Savannah,Maize,Main,2018,6,2018,10,All (PS),yield,2.0,0
 7103,GH2018A117,Ghana,GH,Savannah,none,Savannah,Maize,Main,2019,6,2019,10,All (PS),area,32976.6,0
 7104,GH2018A117,Ghana,GH,Savannah,none,Savannah,Maize,Main,2019,6,2019,10,All (PS),production,54778.69199999995,0
@@ -7303,8 +7303,8 @@
 7301,GH2018A117,Ghana,GH,Savannah,none,Savannah,Groundnuts (In Shell),Main,2021,6,2021,10,All (PS),production,59613.58899999995,0
 7302,GH2018A117,Ghana,GH,Savannah,none,Savannah,Groundnuts (In Shell),Main,2021,6,2021,10,All (PS),yield,2.07320605961543,0
 7303,GH2018A117,Ghana,GH,Savannah,none,Savannah,Groundnuts (In Shell),Main,2022,6,2022,10,All (PS),area,51580.0,0
-7304,GH2018A117,Ghana,GH,Savannah,none,Savannah,Groundnuts (In Shell),Main,2022,6,2022,10,All (PS),production,99814.50000000001,0
-7305,GH2018A117,Ghana,GH,Savannah,none,Savannah,Groundnuts (In Shell),Main,2022,6,2022,10,All (PS),yield,1.93513958898798,0
+7304,GH2018A117,Ghana,GH,Savannah,none,Savannah,Groundnuts (In Shell),Main,2022,6,2022,10,All (PS),production,99814.5,0
+7305,GH2018A117,Ghana,GH,Savannah,none,Savannah,Groundnuts (In Shell),Main,2022,6,2022,10,All (PS),yield,1.9351395889879799,0
 7306,GH2018A117,Ghana,GH,Savannah,none,Savannah,Cowpea,Main,2010,6,2010,10,All (PS),area,8823.04064078276,0
 7307,GH2018A117,Ghana,GH,Savannah,none,Savannah,Cowpea,Main,2010,6,2010,10,All (PS),production,17646.08128156552,0
 7308,GH2018A117,Ghana,GH,Savannah,none,Savannah,Cowpea,Main,2010,6,2010,10,All (PS),yield,2.0,0
@@ -7554,8 +7554,8 @@
 7552,GH2018A117,Ghana,GH,Savannah,none,Savannah,Soybean,Main,2020,6,2020,10,All (PS),production,15921.719999999972,0
 7553,GH2018A117,Ghana,GH,Savannah,none,Savannah,Soybean,Main,2020,6,2020,10,All (PS),yield,1.95911406423034,0
 7554,GH2018A117,Ghana,GH,Savannah,none,Savannah,Soybean,Main,2021,6,2021,10,All (PS),area,9183.0,0
-7555,GH2018A117,Ghana,GH,Savannah,none,Savannah,Soybean,Main,2021,6,2021,10,All (PS),production,15113.649999999967,0
-7556,GH2018A117,Ghana,GH,Savannah,none,Savannah,Soybean,Main,2021,6,2021,10,All (PS),yield,1.64582924970053,0
+7555,GH2018A117,Ghana,GH,Savannah,none,Savannah,Soybean,Main,2021,6,2021,10,All (PS),production,15113.649999999969,0
+7556,GH2018A117,Ghana,GH,Savannah,none,Savannah,Soybean,Main,2021,6,2021,10,All (PS),yield,1.6458292497005302,0
 7557,GH2018A117,Ghana,GH,Savannah,none,Savannah,Soybean,Main,2022,6,2022,10,All (PS),area,14954.0,0
 7558,GH2018A117,Ghana,GH,Savannah,none,Savannah,Soybean,Main,2022,6,2022,10,All (PS),production,29313.99999999998,0
 7559,GH2018A117,Ghana,GH,Savannah,none,Savannah,Soybean,Main,2022,6,2022,10,All (PS),yield,1.96027818643841,0
@@ -7786,16 +7786,16 @@
 7784,GH2018A110,Ghana,GH,Upper East,none,Upper East,Rice,Main,2018,6,2018,10,All (PS),production,112590.0,0
 7785,GH2018A110,Ghana,GH,Upper East,none,Upper East,Rice,Main,2018,6,2018,10,All (PS),yield,3.0,0
 7786,GH2018A110,Ghana,GH,Upper East,none,Upper East,Rice,Main,2019,6,2019,10,All (PS),area,42796.9773297352,0
-7787,GH2018A110,Ghana,GH,Upper East,none,Upper East,Rice,Main,2019,6,2019,10,All (PS),production,127149.87568982733,0
-7788,GH2018A110,Ghana,GH,Upper East,none,Upper East,Rice,Main,2019,6,2019,10,All (PS),yield,2.97100130951267,0
+7787,GH2018A110,Ghana,GH,Upper East,none,Upper East,Rice,Main,2019,6,2019,10,All (PS),production,127149.87568982731,0
+7788,GH2018A110,Ghana,GH,Upper East,none,Upper East,Rice,Main,2019,6,2019,10,All (PS),yield,2.9710013095126695,0
 7789,GH2018A110,Ghana,GH,Upper East,none,Upper East,Rice,Main,2020,6,2020,10,All (PS),area,43239.0,0
-7790,GH2018A110,Ghana,GH,Upper East,none,Upper East,Rice,Main,2020,6,2020,10,All (PS),production,129781.95000000013,0
-7791,GH2018A110,Ghana,GH,Upper East,none,Upper East,Rice,Main,2020,6,2020,10,All (PS),yield,3.00150211614515,0
+7790,GH2018A110,Ghana,GH,Upper East,none,Upper East,Rice,Main,2020,6,2020,10,All (PS),production,129781.95000000011,0
+7791,GH2018A110,Ghana,GH,Upper East,none,Upper East,Rice,Main,2020,6,2020,10,All (PS),yield,3.0015021161451494,0
 7792,GH2018A110,Ghana,GH,Upper East,none,Upper East,Rice,Main,2021,6,2021,10,All (PS),area,43095.01,0
 7793,GH2018A110,Ghana,GH,Upper East,none,Upper East,Rice,Main,2021,6,2021,10,All (PS),production,127152.51400000014,0
 7794,GH2018A110,Ghana,GH,Upper East,none,Upper East,Rice,Main,2021,6,2021,10,All (PS),yield,2.95051594140482,0
 7795,GH2018A110,Ghana,GH,Upper East,none,Upper East,Rice,Main,2022,6,2022,10,All (PS),area,43435.0,0
-7796,GH2018A110,Ghana,GH,Upper East,none,Upper East,Rice,Main,2022,6,2022,10,All (PS),production,126544.60000000015,0
+7796,GH2018A110,Ghana,GH,Upper East,none,Upper East,Rice,Main,2022,6,2022,10,All (PS),production,126544.60000000017,0
 7797,GH2018A110,Ghana,GH,Upper East,none,Upper East,Rice,Main,2022,6,2022,10,All (PS),yield,2.91342465753425,0
 7798,GH2018A110,Ghana,GH,Upper East,none,Upper East,Yams,Main,2000,6,2000,10,All (PS),production,263416.0,0
 7799,GH2018A110,Ghana,GH,Upper East,none,Upper East,Yams,Main,2001,6,2001,10,All (PS),production,283284.0,0
@@ -7839,8 +7839,8 @@
 7837,GH2018A110,Ghana,GH,Upper East,none,Upper East,Groundnuts (In Shell),Main,2021,6,2021,10,All (PS),production,55391.17999999986,0
 7838,GH2018A110,Ghana,GH,Upper East,none,Upper East,Groundnuts (In Shell),Main,2021,6,2021,10,All (PS),yield,1.32066138953793,0
 7839,GH2018A110,Ghana,GH,Upper East,none,Upper East,Groundnuts (In Shell),Main,2022,6,2022,10,All (PS),area,42470.0,0
-7840,GH2018A110,Ghana,GH,Upper East,none,Upper East,Groundnuts (In Shell),Main,2022,6,2022,10,All (PS),production,57048.639999999956,0
-7841,GH2018A110,Ghana,GH,Upper East,none,Upper East,Groundnuts (In Shell),Main,2022,6,2022,10,All (PS),yield,1.3432691311514,0
+7840,GH2018A110,Ghana,GH,Upper East,none,Upper East,Groundnuts (In Shell),Main,2022,6,2022,10,All (PS),production,57048.63999999995,0
+7841,GH2018A110,Ghana,GH,Upper East,none,Upper East,Groundnuts (In Shell),Main,2022,6,2022,10,All (PS),yield,1.3432691311513998,0
 7842,GH2018A110,Ghana,GH,Upper East,none,Upper East,Cowpea,Main,2010,6,2010,10,All (PS),area,29403.0,0
 7843,GH2018A110,Ghana,GH,Upper East,none,Upper East,Cowpea,Main,2010,6,2010,10,All (PS),production,29403.0,0
 7844,GH2018A110,Ghana,GH,Upper East,none,Upper East,Cowpea,Main,2010,6,2010,10,All (PS),yield,1.0,0
@@ -8076,7 +8076,7 @@
 8074,GH2018A110,Ghana,GH,Upper East,none,Upper East,Soybean,Main,2021,6,2021,10,All (PS),production,29037.679999999906,0
 8075,GH2018A110,Ghana,GH,Upper East,none,Upper East,Soybean,Main,2021,6,2021,10,All (PS),yield,1.39537145603075,0
 8076,GH2018A110,Ghana,GH,Upper East,none,Upper East,Soybean,Main,2022,6,2022,10,All (PS),area,21750.0,0
-8077,GH2018A110,Ghana,GH,Upper East,none,Upper East,Soybean,Main,2022,6,2022,10,All (PS),production,30400.990000000074,0
+8077,GH2018A110,Ghana,GH,Upper East,none,Upper East,Soybean,Main,2022,6,2022,10,All (PS),production,30400.99000000007,0
 8078,GH2018A110,Ghana,GH,Upper East,none,Upper East,Soybean,Main,2022,6,2022,10,All (PS),yield,1.39774666666667,0
 8079,GH2018A110,Ghana,GH,Upper East,none,Upper East,Millet,Main,1984,6,1984,10,All (PS),area,91525.698097936,0
 8080,GH2018A110,Ghana,GH,Upper East,none,Upper East,Millet,Main,1997,6,1997,10,All (PS),area,43100.0,0
@@ -8407,8 +8407,8 @@
 8405,GH2018A111,Ghana,GH,Upper West,none,Upper West,Groundnuts (In Shell),Main,2020,6,2020,10,All (PS),production,128082.89999999998,0
 8406,GH2018A111,Ghana,GH,Upper West,none,Upper West,Groundnuts (In Shell),Main,2020,6,2020,10,All (PS),yield,1.7569670781893,0
 8407,GH2018A111,Ghana,GH,Upper West,none,Upper West,Groundnuts (In Shell),Main,2021,6,2021,10,All (PS),area,77354.0,0
-8408,GH2018A111,Ghana,GH,Upper West,none,Upper West,Groundnuts (In Shell),Main,2021,6,2021,10,All (PS),production,136885.81999999975,0
-8409,GH2018A111,Ghana,GH,Upper West,none,Upper West,Groundnuts (In Shell),Main,2021,6,2021,10,All (PS),yield,1.76960234764847,0
+8408,GH2018A111,Ghana,GH,Upper West,none,Upper West,Groundnuts (In Shell),Main,2021,6,2021,10,All (PS),production,136885.81999999977,0
+8409,GH2018A111,Ghana,GH,Upper West,none,Upper West,Groundnuts (In Shell),Main,2021,6,2021,10,All (PS),yield,1.7696023476484704,0
 8410,GH2018A111,Ghana,GH,Upper West,none,Upper West,Groundnuts (In Shell),Main,2022,6,2022,10,All (PS),area,81222.0,0
 8411,GH2018A111,Ghana,GH,Upper West,none,Upper West,Groundnuts (In Shell),Main,2022,6,2022,10,All (PS),production,146207.49999999994,0
 8412,GH2018A111,Ghana,GH,Upper West,none,Upper West,Groundnuts (In Shell),Main,2022,6,2022,10,All (PS),yield,1.800097264288,0

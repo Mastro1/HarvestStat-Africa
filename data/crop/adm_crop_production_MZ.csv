@@ -988,7 +988,7 @@
 5689,MZ2021A104,Mozambique,MZ,Manica,none,Manica,Pigeon Pea,Main,2001,10,2002,6,All (PS),production,4431.0,0
 5688,MZ2021A104,Mozambique,MZ,Manica,none,Manica,Pigeon Pea,Main,2001,10,2002,6,All (PS),area,7200.0,0
 10112,MZ2021A105,Mozambique,MZ,Maputo,none,Maputo,Maize,Main,2001,10,2002,6,All (PS),area,43994.0,0
-3324,MZ2021A109,Mozambique,MZ,Sofala,none,Sofala,Cassava,Annual,2001,10,2002,6,All (PS),yield,18.522771022433695,0
+3324,MZ2021A109,Mozambique,MZ,Sofala,none,Sofala,Cassava,Annual,2001,10,2002,6,All (PS),yield,18.522771022433698,0
 498,MZ2021A101,Mozambique,MZ,Cabo Delgado,none,Cabo Delgado,Millet,Main,2001,10,2002,6,All (PS),area,2000.0,0
 499,MZ2021A101,Mozambique,MZ,Cabo Delgado,none,Cabo Delgado,Millet,Main,2001,10,2002,6,All (PS),production,1968.0,0
 500,MZ2021A101,Mozambique,MZ,Cabo Delgado,none,Cabo Delgado,Millet,Main,2001,10,2002,6,All (PS),yield,0.984,0
@@ -1069,7 +1069,7 @@
 411,MZ2021A101,Mozambique,MZ,Cabo Delgado,none,Cabo Delgado,Tobacco,Main,2001,10,2002,6,All (PS),yield,0.36857142857142855,0
 3322,MZ2021A109,Mozambique,MZ,Sofala,none,Sofala,Cassava,Annual,2001,10,2002,6,All (PS),area,13056.85456574,0
 10432,MZ2021A105,Mozambique,MZ,Maputo,none,Maputo,Beans (mixed),Main,2001,10,2002,6,All (PS),area,11577.9526086,0
-3323,MZ2021A109,Mozambique,MZ,Sofala,none,Sofala,Cassava,Annual,2001,10,2002,6,All (PS),production,241849.12739441998,0
+3323,MZ2021A109,Mozambique,MZ,Sofala,none,Sofala,Cassava,Annual,2001,10,2002,6,All (PS),production,241849.12739442,0
 7995,MZ2021A108,Mozambique,MZ,Niassa,none,Niassa,Green Bean,Main,2001,10,2002,6,All (PS),production,16800.0,0
 10433,MZ2021A105,Mozambique,MZ,Maputo,none,Maputo,Beans (mixed),Main,2001,10,2002,6,All (PS),production,4283.00668711,0
 6688,MZ2021A103,Mozambique,MZ,Inhambane,none,Inhambane,Cowpea,Main,2001,10,2002,6,All (PS),area,53400.0,0
@@ -1156,7 +1156,7 @@
 9603,MZ2021A110,Mozambique,MZ,Tete,none,Tete,Cowpea,Main,2002,10,2003,6,All (PS),production,16323.0,0
 178,MZ2021A101,Mozambique,MZ,Cabo Delgado,none,Cabo Delgado,Cassava,Annual,2002,10,2003,6,All (PS),production,1203283.64194132,0
 5284,MZ2021A111,Mozambique,MZ,Zambezia,none,Zambezia,Sesame Seed,Main,2002,10,2003,6,All (PS),production,123.0,0
-3581,MZ2021A109,Mozambique,MZ,Sofala,none,Sofala,Sorghum,Main,2002,10,2003,6,All (PS),production,118770.91624677999,0
+3581,MZ2021A109,Mozambique,MZ,Sofala,none,Sofala,Sorghum,Main,2002,10,2003,6,All (PS),production,118770.91624678,0
 5119,MZ2021A111,Mozambique,MZ,Zambezia,none,Zambezia,Beans (mixed),Main,2002,10,2003,6,All (PS),area,54875.03282344,0
 5120,MZ2021A111,Mozambique,MZ,Zambezia,none,Zambezia,Beans (mixed),Main,2002,10,2003,6,All (PS),production,35163.442407,0
 4051,MZ2021A109,Mozambique,MZ,Sofala,none,Sofala,Beans (mixed),Main,2002,10,2003,6,All (PS),area,18629.43767671,0
@@ -1181,7 +1181,7 @@
 177,MZ2021A101,Mozambique,MZ,Cabo Delgado,none,Cabo Delgado,Cassava,Annual,2002,10,2003,6,All (PS),area,171897.66313447,0
 1418,MZ2021A102,Mozambique,MZ,Gaza,none,Gaza,Sorghum,Main,2002,10,2003,6,All (PS),yield,0.5418154447053192,0
 9613,MZ2021A110,Mozambique,MZ,Tete,none,Tete,Bambara groundnut,Main,2002,10,2003,6,All (PS),production,735.0,0
-3582,MZ2021A109,Mozambique,MZ,Sofala,none,Sofala,Sorghum,Main,2002,10,2003,6,All (PS),yield,1.962435629691286,0
+3582,MZ2021A109,Mozambique,MZ,Sofala,none,Sofala,Sorghum,Main,2002,10,2003,6,All (PS),yield,1.9624356296912862,0
 10575,MZ2021A105,Mozambique,MZ,Maputo,none,Maputo,Green Bean,Main,2002,10,2003,6,All (PS),production,200.0,0
 7351,MZ2021A103,Mozambique,MZ,Inhambane,none,Inhambane,Maize,Main,2002,10,2003,6,All (PS),yield,0.7115936125107993,0
 7350,MZ2021A103,Mozambique,MZ,Inhambane,none,Inhambane,Maize,Main,2002,10,2003,6,All (PS),production,61587.847808310005,0
@@ -1211,7 +1211,7 @@
 8976,MZ2021A110,Mozambique,MZ,Tete,none,Tete,Sorghum,Main,2002,10,2003,6,All (PS),production,50686.40395455,0
 8975,MZ2021A110,Mozambique,MZ,Tete,none,Tete,Sorghum,Main,2002,10,2003,6,All (PS),area,58404.65643854,0
 6587,MZ2021A103,Mozambique,MZ,Inhambane,none,Inhambane,Cassava,Annual,2002,10,2003,6,All (PS),area,66909.32617392,0
-2465,MZ2021A107,Mozambique,MZ,Nampula,none,Nampula,Sorghum,Main,2002,10,2003,6,All (PS),yield,1.076896133378972,0
+2465,MZ2021A107,Mozambique,MZ,Nampula,none,Nampula,Sorghum,Main,2002,10,2003,6,All (PS),yield,1.0768961333789722,0
 8352,MZ2021A108,Mozambique,MZ,Niassa,none,Niassa,Beans (mixed),Main,2002,10,2003,6,All (PS),area,62517.5904335,0
 8354,MZ2021A108,Mozambique,MZ,Niassa,none,Niassa,Beans (mixed),Main,2002,10,2003,6,All (PS),yield,0.4514063881764369,0
 4153,MZ2021A109,Mozambique,MZ,Sofala,none,Sofala,Rice,Rice season,2002,10,2003,6,All (PS),production,36618.0,0
@@ -1220,7 +1220,7 @@
 437,MZ2021A101,Mozambique,MZ,Cabo Delgado,none,Cabo Delgado,Sorghum,Main,2002,10,2003,6,All (PS),area,67517.29897426,0
 6405,MZ2021A104,Mozambique,MZ,Manica,none,Manica,Bambara groundnut,Main,2002,10,2003,6,All (PS),production,4551.0,0
 8353,MZ2021A108,Mozambique,MZ,Niassa,none,Niassa,Beans (mixed),Main,2002,10,2003,6,All (PS),production,28220.83969508,0
-2464,MZ2021A107,Mozambique,MZ,Nampula,none,Nampula,Sorghum,Main,2002,10,2003,6,All (PS),production,134988.31847286999,0
+2464,MZ2021A107,Mozambique,MZ,Nampula,none,Nampula,Sorghum,Main,2002,10,2003,6,All (PS),production,134988.31847287,0
 2463,MZ2021A107,Mozambique,MZ,Nampula,none,Nampula,Sorghum,Main,2002,10,2003,6,All (PS),area,125349.4318429,0
 7875,MZ2021A108,Mozambique,MZ,Niassa,none,Niassa,Sorghum,Main,2002,10,2003,6,All (PS),area,40054.7252556,0
 6396,MZ2021A104,Mozambique,MZ,Manica,none,Manica,Pigeon Pea,Main,2002,10,2003,6,All (PS),production,1689.0,0
@@ -1231,7 +1231,7 @@
 7,MZ2021A101,Mozambique,MZ,Cabo Delgado,none,Cabo Delgado,Cotton,Cotton season,2002,10,2003,6,All (PS),area,29265.0,0
 94,MZ2021A101,Mozambique,MZ,Cabo Delgado,none,Cabo Delgado,Groundnuts (In Shell),Main,2002,10,2003,6,All (PS),area,45058.66961311,0
 7877,MZ2021A108,Mozambique,MZ,Niassa,none,Niassa,Sorghum,Main,2002,10,2003,6,All (PS),yield,1.1860623080920534,0
-7876,MZ2021A108,Mozambique,MZ,Niassa,none,Niassa,Sorghum,Main,2002,10,2003,6,All (PS),production,47507.399886650004,0
+7876,MZ2021A108,Mozambique,MZ,Niassa,none,Niassa,Sorghum,Main,2002,10,2003,6,All (PS),production,47507.39988665,0
 6428,MZ2021A104,Mozambique,MZ,Manica,none,Manica,Maize,Main,2002,10,2003,6,Small_and_medium_scale,production,172190.0,1
 95,MZ2021A101,Mozambique,MZ,Cabo Delgado,none,Cabo Delgado,Groundnuts (In Shell),Main,2002,10,2003,6,All (PS),production,18049.78384524,0
 96,MZ2021A101,Mozambique,MZ,Cabo Delgado,none,Cabo Delgado,Groundnuts (In Shell),Main,2002,10,2003,6,All (PS),yield,0.40058403854845154,0
@@ -2443,8 +2443,8 @@
 5063,MZ2021A111,Mozambique,MZ,Zambezia,none,Zambezia,Spanish Peanut,Main,2005,10,2006,6,All (PS),production,5577.0,0
 5062,MZ2021A111,Mozambique,MZ,Zambezia,none,Zambezia,Spanish Peanut,Main,2005,10,2006,6,All (PS),area,22200.0,0
 5774,MZ2021A104,Mozambique,MZ,Manica,none,Manica,Sorghum,Main,2005,10,2006,6,All (PS),area,56949.94501396,0
-5775,MZ2021A104,Mozambique,MZ,Manica,none,Manica,Sorghum,Main,2005,10,2006,6,All (PS),production,125017.01103098999,0
-5776,MZ2021A104,Mozambique,MZ,Manica,none,Manica,Sorghum,Main,2005,10,2006,6,All (PS),yield,2.1952086345359048,0
+5775,MZ2021A104,Mozambique,MZ,Manica,none,Manica,Sorghum,Main,2005,10,2006,6,All (PS),production,125017.01103099,0
+5776,MZ2021A104,Mozambique,MZ,Manica,none,Manica,Sorghum,Main,2005,10,2006,6,All (PS),yield,2.195208634535905,0
 1713,MZ2021A102,Mozambique,MZ,Gaza,none,Gaza,Sweet Potatoes (Orange),Main,2005,10,2006,6,All (PS),area,5300.0,0
 1714,MZ2021A102,Mozambique,MZ,Gaza,none,Gaza,Sweet Potatoes (Orange),Main,2005,10,2006,6,All (PS),production,12841.0,0
 9746,MZ2021A105,Mozambique,MZ,Maputo,none,Maputo,Sunflower Seed,Main,2005,10,2006,6,All (PS),area,100.0,0
@@ -2745,7 +2745,7 @@
 2134,MZ2021A107,Mozambique,MZ,Nampula,none,Nampula,Groundnuts (In Shell),Main,2005,10,2006,6,All (PS),area,66838.62431969,0
 6554,MZ2021A103,Mozambique,MZ,Inhambane,none,Inhambane,Sesame Seed,Main,2005,10,2006,6,All (PS),yield,0.12,0
 144,MZ2021A101,Mozambique,MZ,Cabo Delgado,none,Cabo Delgado,Sunflower Seed,Main,2005,10,2006,6,All (PS),area,200.0,0
-6825,MZ2021A103,Mozambique,MZ,Inhambane,none,Inhambane,Sorghum,Main,2005,10,2006,6,All (PS),production,19017.996218599998,0
+6825,MZ2021A103,Mozambique,MZ,Inhambane,none,Inhambane,Sorghum,Main,2005,10,2006,6,All (PS),production,19017.9962186,0
 2027,MZ2021A102,Mozambique,MZ,Gaza,none,Gaza,"Groundnuts (In Shell, Large)",Main,2005,10,2006,6,All (PS),production,48.0,0
 6824,MZ2021A103,Mozambique,MZ,Inhambane,none,Inhambane,Sorghum,Main,2005,10,2006,6,All (PS),area,25921.58651913,0
 2030,MZ2021A102,Mozambique,MZ,Gaza,none,Gaza,"Groundnuts (In Shell, Small)",Main,2005,10,2006,6,All (PS),production,4372.0,0
@@ -2755,7 +2755,7 @@
 2052,MZ2021A107,Mozambique,MZ,Nampula,none,Nampula,Cotton,Cotton season,2005,10,2006,6,All (PS),area,35500.0,0
 2136,MZ2021A107,Mozambique,MZ,Nampula,none,Nampula,Groundnuts (In Shell),Main,2005,10,2006,6,All (PS),yield,0.6772278669427279,0
 2054,MZ2021A107,Mozambique,MZ,Nampula,none,Nampula,Cotton,Cotton season,2005,10,2006,6,All (PS),yield,1.1344788732394366,0
-6826,MZ2021A103,Mozambique,MZ,Inhambane,none,Inhambane,Sorghum,Main,2005,10,2006,6,All (PS),yield,0.7336740829719204,0
+6826,MZ2021A103,Mozambique,MZ,Inhambane,none,Inhambane,Sorghum,Main,2005,10,2006,6,All (PS),yield,0.7336740829719206,0
 8545,MZ2021A108,Mozambique,MZ,Niassa,none,Niassa,"Groundnuts (In Shell, Small)",Main,2005,10,2006,6,All (PS),production,5170.0,0
 4843,MZ2021A111,Mozambique,MZ,Zambezia,none,Zambezia,Bambara groundnut,Main,2005,10,2006,6,All (PS),production,3186.0,0
 4842,MZ2021A111,Mozambique,MZ,Zambezia,none,Zambezia,Bambara groundnut,Main,2005,10,2006,6,All (PS),area,5800.0,0
@@ -2765,8 +2765,8 @@
 2076,MZ2021A107,Mozambique,MZ,Nampula,none,Nampula,Rice,Rice season,2005,10,2006,6,All (PS),area,31800.0,0
 2077,MZ2021A107,Mozambique,MZ,Nampula,none,Nampula,Rice,Rice season,2005,10,2006,6,All (PS),production,28524.0,0
 2078,MZ2021A107,Mozambique,MZ,Nampula,none,Nampula,Rice,Rice season,2005,10,2006,6,All (PS),yield,0.8969811320754717,0
-6595,MZ2021A103,Mozambique,MZ,Inhambane,none,Inhambane,Cassava,Annual,2005,10,2006,6,All (PS),yield,14.768819836124603,0
-6594,MZ2021A103,Mozambique,MZ,Inhambane,none,Inhambane,Cassava,Annual,2005,10,2006,6,All (PS),production,1078966.0573674599,0
+6595,MZ2021A103,Mozambique,MZ,Inhambane,none,Inhambane,Cassava,Annual,2005,10,2006,6,All (PS),yield,14.768819836124607,0
+6594,MZ2021A103,Mozambique,MZ,Inhambane,none,Inhambane,Cassava,Annual,2005,10,2006,6,All (PS),production,1078966.05736746,0
 6593,MZ2021A103,Mozambique,MZ,Inhambane,none,Inhambane,Cassava,Annual,2005,10,2006,6,All (PS),area,73057.02617675,0
 10558,MZ2021A105,Mozambique,MZ,Maputo,none,Maputo,Rice,Rice season,2005,10,2006,6,Small_and_medium_scale,production,472.0,0
 4844,MZ2021A111,Mozambique,MZ,Zambezia,none,Zambezia,Bambara groundnut,Main,2005,10,2006,6,All (PS),yield,0.5493103448275862,0

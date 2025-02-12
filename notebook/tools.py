@@ -14,6 +14,8 @@ import os
 import random
 import requests
 from scipy import ndimage
+import papermill as pm
+import concurrent.futures
 # Suppress specific RuntimeWarning from shapely
 warnings.filterwarnings("ignore", message="invalid value encountered in intersection", category=RuntimeWarning, module="shapely.set_operations")
 
@@ -204,6 +206,41 @@ product_name_dict = {
     'Wheat Grain': 'Wheat',
     'Yams': 'Yams'
 }
+
+def retreive_fdw_data(country_name, country_iso2, use_api_data=True, requires_authentication=False):
+    if use_api_data:
+        # FDW API host address -------------------------- #
+        host = 'https://fdw.fews.net'
+        endpoint = '/api/cropproductionindicatorvalue/'
+        parameters = {
+            'format': 'json',
+            'country': country_name,
+            'product': ['R011','R012','R013','R014','R015','R016','R017','R018','R019'],
+            'survey_type': 'crop:best'
+        }
+        if requires_authentication:
+            # Requires authentication
+            auth = tuple(json.loads(open('token.json', "r").read()))
+            response = requests.get(host + endpoint, params=parameters, auth=auth)
+        else:
+            # No authentication
+            response = requests.get(host + endpoint,params=parameters, proxies={})
+        response.raise_for_status()
+        df = pd.DataFrame.from_records(response.json())
+        # Save data
+        fn_data_raw = f'../data/crop_raw_data/adm_crop_data_raw_{country_iso2}.csv'
+        print('Data is retrieved from the FDW API.')
+        df.to_csv(fn_data_raw); print(f'{fn_data_raw} is saved.')
+        # ----------------------------------------------- #
+    else:
+        # Load data from local file --------------------- #
+        fn_data_raw = f'../data/crop_raw_data/adm_crop_data_raw_{country_iso2}.csv'
+        df = pd.read_csv(fn_data_raw, index_col=0, low_memory=False)
+        print('Data is loaded from the local file.')
+        print(f'{fn_data_raw} is loaded.')
+        # ----------------------------------------------- #
+    return df
+
 
 def get_product_name_dict():
     return product_name_dict
@@ -1584,3 +1621,61 @@ def Low_Variance_QC(outlierCount, df):
                 outlierCount.loc[((outlierCount.country==country)&(outlierCount.crop==crop)),'low_variance_pct'] = \
                 100*len(crDF[crDF['low_variance']=='outlier']) / len(crDF)
     return outlierCount, df
+
+
+def execute_notebook(notebook_path):
+    """Execute a single notebook and return its path if there's an error"""
+    try:
+        pm.execute_notebook(
+            notebook_path,
+            notebook_path,
+            parameters={},
+            progress_bar=False
+        )
+        return None
+    except Exception:
+        return notebook_path
+
+def execute_all_notebooks(country_list, excluded_countries=None):
+    """
+    Execute all country notebooks in parallel
+    
+    Args:
+        country_list (list): List of country codes
+        excluded_countries (list, optional): List of country codes to exclude
+        
+    Returns:
+        tuple: (failed_notebooks, execution_summary)
+    """
+    if excluded_countries is None:
+        excluded_countries = []
+    
+    # Filter out excluded countries that are not in country_list
+    excluded_countries = [c for c in excluded_countries if c in country_list]
+    included_countries = [c for c in country_list if c not in excluded_countries]
+    notebook_list = [f"CropData_{country}_Profile.ipynb" for country in included_countries]
+    
+    # Execute notebooks in parallel
+    print('Executing all notebooks...')
+    with concurrent.futures.ThreadPoolExecutor() as executor:
+        results = list(executor.map(execute_notebook, notebook_list))
+    print('Notebooks execution complete.')
+    
+    # Filter out None values to get failed notebooks
+    failed_notebooks = [nb for nb in results if nb is not None]
+    
+    # Generate execution summary
+    summary = {
+        "total_countries": len(country_list),
+        "excluded_countries": excluded_countries,
+        "successful_countries": len(included_countries) - len(failed_notebooks),
+        "failed_countries": [nb.replace("CropData_", "").replace("_Profile.ipynb", "") for nb in failed_notebooks]
+    }
+
+    # Print the summary
+    for item, msg in summary.items():
+        print(f'{item}: {msg}')
+    if failed_notebooks == []:
+        print('All notebooks executed successfully.')
+    
+    return failed_notebooks, summary
