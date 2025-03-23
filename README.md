@@ -17,7 +17,7 @@ The data in this repository is compiled from various sources, including:
 - Famine Early Warning Systems Network (FEWS NET) of the United States Agency for International Development (USAID). This is the primary source of information
     - [FEWS NET Data Warehouse (FDW)](https://fews.net/data)
 - Food and Agriculture Organization (FAO)
-    - [FAO-STAT](https://www.fao.org/faostat/en/#home)
+    - [FAOSTAT](https://www.fao.org/faostat/en/#home)
 - National agricultural agencies
 
 ## Repository structure
@@ -51,10 +51,45 @@ To set up the environment using `environment.yml`, follow these steps:
 ## Current data status
 HarvetStat currently contains subnational crop statistics for **`35`** countries.
 <!-- (see [current data status per country](/docs/data_status_per_country.md)):</br> -->
-- Admin-1 level: Afghanistan, Angola, Burundi, Central African Republic, Chad, DRC, Ghana, Kenya, Lesotho, Liberia, Mali, Mauritania, Mozambique, Nigeria, South Africa, South Sudan, Sudan, Tanzania, Yemen, Zimbabwe
+- Admin-1 level: Angola, Burundi, Central African Republic, Chad, DRC, Ghana, Kenya, Lesotho, Liberia, Mali, Mauritania, Mozambique, Nigeria, South Africa, South Sudan, Sudan, Tanzania, Zimbabwe
 - Admin-2 level: Benin, Burkina Faso, Cameroon, Ethiopia, Guinea, Madagascar, Malawi, Niger, Rwanda, Senegal, Sierra Leone, Somalia, Togo, Uganda, Zambia
 
-<img src="./docs/current_status_map.png" alt="drawing" width="900"/>
+<img src="./docs/current_status_map.png" alt="drawing" width="400"/>
+
+## Data access
+The data in this repository is available in the `public` folder in CSV and GeoPackage formats.
+
+To access the data, download the files from the `public` folder.
+- hvstat_africa_data_{version}.csv: The final processed crop statistics dataset.
+- hvstat_africa_boundary_{version}.gpkg: Boundary data for subnational administrative units.
+
+The version of the dataset is specified in the filename. The current version is `v1.0`.
+
+The official release version is available on [Dryad - HarvestStat Africa](https://datadryad.org/dataset/doi:10.5061/dryad.vq83bk42w).
+
+## Data structure
+The dataset contains the following columns:
+
+| Column Name             | Description                                                     |
+| ----------------------- | --------------------------------------------------------------- |
+| `fnid`                  | FEWS NET's unique geographic unit identifier                    |
+| `country`               | Name of the country                                             |
+| `country_code`          | ISO 3166-1 alpha-2 country code                                 |
+| `admin_1`               | Name of the first-level administrative unit                     |
+| `admin_2`               | Name of the second-level administrative unit (if applicable)    |
+| `product`               | Name of the crop product                                        |
+| `season_name`           | Name of the growing season                                      |
+| `planting_year`         | Year when planting begins                                       |
+| `planting_month`        | Month when planting begins                                      |
+| `harvest_year`          | Year when harvesting ends                                       |
+| `harvest_month`         | Month when harvesting ends                                      |
+| `crop_production_system`| Type of crop production system (e.g., irrigated, rainfed, etc.) |
+| `qc_flag`               | Quality control flag (0 = no flag, 1 = outlier, 2 = low variance)|
+| `area`                  | Cropped area (hectares; ha)                                     |
+| `production`            | Crop quantity produced (metric tonnes; mt)                      |
+| `yield`                 | Crop yield (metric tonnes per hectare; mt/ha)                   |
+
+For details, please see the paper in the [Citation](#citation) section.
 
 ## Citation
 The data in this repository is available for free and unrestricted use. Users are encouraged to cite the following:
