@@ -49,7 +49,7 @@ To set up the environment using `environment.yml`, follow these steps:
 4. Start your preferred development environment (e.g., Jupyter Notebook, VSCode):
 
 ## Current data status
-HarvetStat currently contains subnational crop statistics for **`35`** countries.
+HarvetStat currently contains subnational crop statistics for **`33`** countries.
 <!-- (see [current data status per country](/docs/data_status_per_country.md)):</br> -->
 - Admin-1 level: Angola, Burundi, Central African Republic, Chad, DRC, Ghana, Kenya, Lesotho, Liberia, Mali, Mauritania, Mozambique, Nigeria, South Africa, South Sudan, Sudan, Tanzania, Zimbabwe
 - Admin-2 level: Benin, Burkina Faso, Cameroon, Ethiopia, Guinea, Madagascar, Malawi, Niger, Rwanda, Senegal, Sierra Leone, Somalia, Togo, Uganda, Zambia

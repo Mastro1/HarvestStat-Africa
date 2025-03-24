@@ -1,4 +1,5 @@
 # HarvestStat ---------------------------------------- #
+fdw_raw_data_*.zip
 # FEWS Only
 figures/yld_detrend
 data_FEWS_Only
