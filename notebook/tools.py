@@ -1459,8 +1459,8 @@ def combine(df,crop_list, duplicate_positions,non_repeated_positions):
 #Define the three quality control algorithms to choose from
 
 def detect_anomalies(timeseries, threshold):
-    mean = np.mean(timeseries)
-    std = np.std(timeseries)
+    mean = np.nanmean(timeseries)
+    std = np.nanstd(timeseries)
     lower_bound = mean - (threshold * std)
     upper_bound = mean + (threshold * std)
     anomalies = [(idx, value) for idx, value in enumerate(timeseries) if   value > upper_bound]
@@ -1475,9 +1475,9 @@ def posOutlier(outlierCount, df):
     #   Buttons and knobs for the high outlier QC algorithm             #
 
     OutThrsh = 3 #outlier (in std) to use to identify outlier
-    maxYldThrsh = 1.5 #what yield level to use below which not to identify outliers
+    maxYldThrsh = 0.5 #what yield level to use below which not to identify outliers
     numYrs = 5 #minimum number of years to require
-    xThrsh = 3 #minimum multiplicative threshold to use for the preceding or following value to identify an outlier
+    xThrsh = 2.5 #minimum multiplicative threshold to use for the preceding or following value to identify an outlier
                 # a value of 3 means that either the outlier must be 3x larger than the preceding or following value to be an outlier
 
     #~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#
@@ -1560,9 +1560,8 @@ def Low_Variance_QC(outlierCount, df):
     #            Buttons and knobs for the QC algorithm                 #
 
     numYrs = 5  # minimum number of years to require
-    maxYldThrsh = 1.5  # what yield level to use below which not to identify outliers
     numRepeats = 3  # set the number of repeated values (or values that follow a trend) to requrie
-    diffThresh = 0.05  # set the threshold to be used for variance differences
+    diffThresh = 0.015  # set the threshold to be used for variance differences as a percent of the median
 
     # ~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#
     df['low_variance'] = ' '
@@ -1586,18 +1585,20 @@ def Low_Variance_QC(outlierCount, df):
                     for name in names:
                         rDF = csDF[csDF.name == name]
                         rDF = rDF.sort_values(by='year', axis=0)
-                        if rDF['yield'].isna().all():
-                            continue
+                        #if rDF['yield'].isna().all():
+                        #    continue
                         if len(rDF['yield']) < numYrs:  # check for the minimum number of years
-                            continue
-                        if rDF['yield'].max() < maxYldThrsh:
                             continue
 
                         fd = np.append(np.nan, np.array(rDF['yield'][~np.isnan(rDF['yield'])][1:]) - np.array(
                             rDF['yield'][~np.isnan(rDF['yield'])][:-1]))  # first difference
                         sd = np.append(np.nan, np.array(fd[1:]) - np.array(fd[:-1]))  # second difference
                         # determine the QA flag based on lack of deviation from a trend
-                        qaFlag = np.array(np.abs(sd) < diffThresh).astype(int)
+
+                        #determine the mean and std of the time series
+                        yldMedian = np.nanmedian(rDF['yield'][~np.isnan(rDF['yield'])])
+                        
+                        qaFlag = np.array(np.abs(sd) < diffThresh*yldMedian).astype(int)
                         for iL in range(qaFlag.size - (
                                 numRepeats - 1)):  # look for three consecutive values that don't deviate from the trend
                             if np.sum(qaFlag[iL:iL + numRepeats] > 0) == numRepeats:
