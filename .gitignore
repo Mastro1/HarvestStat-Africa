@@ -1,5 +1,6 @@
 # HarvestStat ---------------------------------------- #
 fdw_raw_data_*.zip
+Share_CropData_AgML.ipynb
 # FEWS Only
 figures/QCplts
 figures/yld_detrend
