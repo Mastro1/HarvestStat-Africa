@@ -1,0 +1,317 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f4f7f6;
+  color: #333;
+  line-height: 1.5; /* Improved default line height */
+}
+
+.App {
+  text-align: center;
+}
+
+.App-header {
+  background-color: #004d40; /* Dark teal */
+  padding: 25px 20px;
+  color: white;
+  margin-bottom: 30px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.App-header h1 {
+  margin: 0;
+  font-size: 2em;
+  font-weight: 500;
+}
+
+main {
+  padding: 0 20px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.controls {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  gap: 15px; /* Slightly reduced gap */
+  margin-bottom: 30px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  flex-wrap: wrap;
+}
+
+.control-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-grow: 1; /* Allow control groups to grow */
+  min-width: 180px; /* Ensure a minimum width before wrapping */
+}
+
+.control-group label {
+  margin-bottom: 8px;
+  font-size: 0.9em;
+  color: #555;
+  font-weight: bold;
+}
+
+.controls select,
+.controls input[type="text"],
+.controls button {
+  padding: 10px 12px; /* Adjusted padding */
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 0.95em; /* Slightly adjusted font size */
+  width: 100%; /* Make inputs take full width of their group */
+  box-sizing: border-box;
+}
+
+.controls input[type="text"] {
+  /* Ensure consistent height with select if needed, though box-sizing helps */
+}
+
+.button-group {
+  display: flex;
+  gap: 10px; /* Gap between buttons */
+  align-items: flex-end; /* Align with other controls */
+  flex-grow: 1;
+  min-width: 150px; /* Min width for button group */
+}
+
+.controls button {
+  background-color: #00796b; /* Medium teal */
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease;
+  font-weight: 500;
+  border: none;
+  flex-grow: 1; /* Allow buttons to grow if space */
+}
+.controls button.reset-button {
+  background-color: #cfd8dc; /* Light grey-blue */
+  color: #37474f; /* Darker text for contrast */
+}
+
+.controls button:hover {
+  background-color: #005a4f;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.controls button.reset-button:hover {
+  background-color: #b0bec5; /* Darker grey-blue */
+}
+
+.controls button:disabled {
+  background-color: #9e9e9e;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.loading-indicator {
+  text-align: center;
+  padding: 30px;
+  font-size: 1.2em;
+  color: #00796b;
+}
+.loading-indicator p {
+  margin: 0;
+}
+
+.error-message {
+  color: #b71c1c; /* Stronger red */
+  background-color: #ffcdd2;
+  padding: 12px 18px; /* More padding */
+  border-radius: 6px;
+  margin: 20px 0;
+  border: 1px solid #e57373; /* Softer red border */
+  text-align: left; /* Align text left for readability */
+  font-size: 1em;
+}
+
+.no-data-message {
+  text-align: center;
+  padding: 20px;
+  font-size: 1.1em;
+  color: #555;
+  background-color: #eceff1; /* Light grey background */
+  border-radius: 6px;
+  margin-top: 20px;
+}
+.controls-info { /* For the initial message in controls area */
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+  font-size: 1em;
+  color: #78909c; /* Softer color */
+}
+
+
+.data-display {
+  margin-top: 20px;
+  padding: 25px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 1px 5px rgba(0,0,0,0.08);
+  text-align: left;
+}
+
+.data-display h2, .data-display h3, .data-display h4, .data-display h5 {
+  color: #004d40;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+.data-display h2 { font-size: 1.8em; border-bottom: 2px solid #e0e0e0; padding-bottom: 10px; }
+.data-display h3 { font-size: 1.5em; margin-top: 25px; }
+.data-display h3.chart-title { text-align: center; margin-bottom: 20px; font-size: 1.4em; color: #00695c;}
+.data-display h4 { font-size: 1.3em; margin-top: 20px; color: #00695c; }
+.data-display h5 { font-size: 1.1em; margin-top: 15px; color: #00796b; }
+
+
+.report-summary p {
+  font-size: 1.05em;
+  line-height: 1.6;
+  margin: 8px 0;
+}
+
+.report-summary strong {
+  color: #333;
+}
+
+.missing-years {
+  color: #d32f2f;
+  font-style: italic;
+  font-size: 0.9em;
+}
+
+.chart-container {
+  width: 100%;
+  min-height: 400px;
+  margin-top: 10px; /* Reduced top margin */
+  margin-bottom: 30px;
+}
+
+.crop-details {
+  margin-bottom: 30px;
+  padding: 20px;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  background-color: #f9f9f9;
+}
+
+.crop-details p {
+  margin: 6px 0;
+  font-size: 1em;
+}
+
+.season-table-container {
+  margin-top: 15px;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  font-size: 0.95em;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 10px 12px;
+  text-align: left;
+  vertical-align: middle;
+  word-break: break-word; /* Help break long words if necessary */
+}
+
+th {
+  background-color: #e0f2f1;
+  color: #004d40;
+  font-weight: bold;
+}
+
+tr:nth-child(even) {
+  background-color: #f7f7f7;
+}
+
+tr:hover {
+  background-color: #e8f5e9;
+}
+
+pre {
+  background-color: #212121;
+  color: #f0f0f0;
+  padding: 15px;
+  border-radius: 6px;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  font-size: 0.9em;
+  border: 1px solid #424242;
+}
+
+/* Responsive Design Adjustments */
+@media (max-width: 768px) {
+  .controls {
+    flex-direction: column;
+    align-items: stretch; /* Make control groups take full width */
+  }
+  .control-group, .button-group {
+    width: 100%; /* Ensure full width on smaller screens */
+    margin-bottom: 15px; /* Add space between stacked items */
+  }
+  .controls input[type="text"], .controls select, .controls button {
+    min-width: 0; /* Remove min-width to allow full stretch */
+  }
+  .button-group {
+    flex-direction: column; /* Stack buttons in the group */
+  }
+  .button-group button {
+    width: 100%; /* Full width buttons */
+    margin-bottom: 10px; /* Space between stacked buttons */
+  }
+  .button-group button:last-child {
+    margin-bottom: 0;
+  }
+
+  .App-header h1 {
+    font-size: 1.6em;
+  }
+  .data-display h2 { font-size: 1.5em; }
+  .data-display h3 { font-size: 1.3em; }
+  .data-display h4 { font-size: 1.15em; }
+
+  .chart-container {
+    min-height: 300px; /* Reduce height on smaller screens */
+  }
+  /* Adjust XAxis tick font size for smaller screens if needed */
+  /* Recharts Text component might not directly respond to CSS,
+     so direct prop adjustment in JS is more reliable for tick font size */
+}
+
+@media (max-width: 480px) {
+  .App-header {
+    padding: 20px 15px;
+  }
+  main {
+    padding: 0 10px 10px;
+  }
+  .controls {
+    padding: 15px;
+  }
+  .data-display {
+    padding: 15px;
+  }
+  th, td {
+    padding: 8px; /* Reduce padding in table cells */
+    font-size: 0.9em; /* Slightly smaller font in tables */
+  }
+  .data-display h2 { font-size: 1.3em; }
+  .data-display h3 { font-size: 1.1em; }
+  .data-display h3.chart-title { font-size: 1.1em; }
+}
