@@ -21,12 +21,5 @@ export const fetchData = async () => {
   });
 };
 
-export const filterByCountry = (data, country) => {
-  if (!data) return [];
-  return data.filter(item => item.Country === country);
-};
-
-export const filterByCrop = (data, crop) => {
-  if (!data) return [];
-  return data.filter(item => item.Crop === crop);
-};
+// Removed filterByCountry and filterByCrop functions as they are unused.
+// App.js implements its own filtering logic directly.
