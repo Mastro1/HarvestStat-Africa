@@ -1,0 +1,90 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "ADM0_EN": "Nigeria",
+        "ADM0_PCODE": "NG",
+        "ADM0_A3": "NGA",
+        "ADMIN1NAME_SAMPLE": ["Lagos", "Kano", "Abuja"]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [2.666, 13.999], [14.000, 13.999], [14.000, 4.000], [2.666, 4.000], [2.666, 13.999]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ADM0_EN": "Egypt",
+        "ADM0_PCODE": "EG",
+        "ADM0_A3": "EGY",
+        "ADMIN1NAME_SAMPLE": ["Cairo", "Alexandria", "Giza"]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [25.000, 31.500], [35.000, 31.500], [35.000, 22.000], [25.000, 22.000], [25.000, 31.500]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ADM0_EN": "Kenya",
+        "ADM0_PCODE": "KE",
+        "ADM0_A3": "KEN",
+        "ADMIN1NAME_SAMPLE": ["Nairobi", "Mombasa", "Kisumu"]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [34.000, 5.000], [41.000, 5.000], [41.000, -4.000], [34.000, -4.000], [34.000, 5.000]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ADM0_EN": "Ethiopia",
+        "ADM0_PCODE": "ET",
+        "ADM0_A3": "ETH",
+        "ADMIN1NAME_SAMPLE": ["Addis Ababa", "Oromia", "Amhara"]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [33.000, 15.000], [48.000, 15.000], [48.000, 3.000], [33.000, 3.000], [33.000, 15.000]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ADM0_EN": "South Africa",
+        "ADM0_PCODE": "ZA",
+        "ADM0_A3": "ZAF",
+        "ADMIN1NAME_SAMPLE": ["Gauteng", "Western Cape", "KwaZulu-Natal"]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [16.000, -22.000], [33.000, -22.000], [33.000, -35.000], [16.000, -35.000], [16.000, -22.000]
+          ]
+        ]
+      }
+    }
+  ]
+}

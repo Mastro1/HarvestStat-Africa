@@ -1,0 +1,38 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "ADMIN1NAME": "Nairobi Province",
+        "ADM0_A3": "KEN"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[36.70, -1.20], [37.00, -1.20], [37.00, -1.40], [36.70, -1.40], [36.70, -1.20]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ADMIN1NAME": "Rift Valley Province",
+        "ADM0_A3": "KEN"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[35.00, 0.00], [36.50, 0.00], [36.50, -1.00], [35.00, -1.00], [35.00, 0.00]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ADMIN1NAME": "Coast Province",
+        "ADM0_A3": "KEN"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[39.00, -3.00], [40.00, -3.00], [40.00, -4.00], [39.00, -4.00], [39.00, -3.00]]]
+      }
+    }
+  ]
+}

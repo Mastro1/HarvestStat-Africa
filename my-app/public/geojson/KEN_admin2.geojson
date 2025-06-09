@@ -1,0 +1,53 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "ADMIN2NAME": "Nakuru County",
+        "ADMIN1NAME": "Rift Valley Province",
+        "ADM0_A3": "KEN"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[35.80, -0.20], [36.20, -0.20], [36.20, -0.50], [35.80, -0.50], [35.80, -0.20]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ADMIN2NAME": "Uasin Gishu County",
+        "ADMIN1NAME": "Rift Valley Province",
+        "ADM0_A3": "KEN"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[35.00, 0.40], [35.50, 0.40], [35.50, 0.10], [35.00, 0.10], [35.00, 0.40]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ADMIN2NAME": "Nairobi West",
+        "ADMIN1NAME": "Nairobi Province",
+        "ADM0_A3": "KEN"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[36.75, -1.28], [36.80, -1.28], [36.80, -1.32], [36.75, -1.32], [36.75, -1.28]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ADMIN2NAME": "Nairobi East",
+        "ADMIN1NAME": "Nairobi Province",
+        "ADM0_A3": "KEN"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[36.82, -1.27], [36.87, -1.27], [36.87, -1.31], [36.82, -1.31], [36.82, -1.27]]]
+      }
+    }
+  ]
+}

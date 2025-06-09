@@ -1,0 +1,106 @@
+.admin1-dashboard {
+  padding: 20px;
+  background-color: #f0f4f8; /* Slightly different background */
+  border-radius: 8px;
+  margin-top: 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  text-align: left;
+}
+
+.admin1-dashboard h2 {
+  color: #2c3e50; /* Darker heading */
+  border-bottom: 2px solid #dde;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  font-size: 1.7em;
+}
+
+.admin1-dashboard h3 {
+  color: #34495e;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  font-size: 1.4em;
+}
+
+.admin1-dashboard h4 {
+  color: #555;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-size: 1.2em;
+}
+
+.admin1-dashboard h5 {
+  color: #666;
+  margin-top: 15px;
+  margin-bottom: 5px;
+  font-size: 1.0em;
+}
+
+.admin1-dashboard-loading {
+  padding: 20px;
+  text-align: center;
+  font-style: italic;
+  color: #777;
+}
+
+.admin1-overview .overview-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Slightly smaller minmax */
+  gap: 10px;
+}
+
+.admin1-overview p,
+.admin1-dashboard .overall-stats p { /* Specific to admin1-dashboard to avoid conflict if nested */
+  margin: 5px 0;
+  padding: 5px;
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+}
+
+.admin1-dashboard .crop-item { /* Specific to admin1-dashboard */
+  margin-bottom: 30px;
+  padding: 15px;
+  border: 1px solid #ccd;
+  border-radius: 6px;
+  background-color: #fff;
+}
+
+.admin1-dashboard table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  font-size: 0.9em;
+}
+
+.admin1-dashboard th,
+.admin1-dashboard td {
+  border: 1px solid #ccd;
+  padding: 8px 10px;
+  text-align: left;
+  vertical-align: top;
+}
+
+.admin1-dashboard th {
+  background-color: #e8eaf6; /* Lighter blueish header */
+  font-weight: bold;
+}
+
+.admin1-dashboard tr:nth-child(even) {
+  background-color: #f7f9fc;
+}
+
+@media (max-width: 768px) {
+  .admin1-dashboard h2 {
+    font-size: 1.4em;
+  }
+  .admin1-dashboard h3 {
+    font-size: 1.2em;
+  }
+  .admin1-dashboard h4 {
+    font-size: 1.0em;
+  }
+  .admin1-overview .overview-grid {
+    grid-template-columns: 1fr; /* Stack grid items */
+  }
+}

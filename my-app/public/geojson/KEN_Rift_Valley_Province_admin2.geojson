@@ -1,0 +1,29 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "ADMIN2NAME": "Nakuru County",
+        "ADMIN1NAME": "Rift Valley Province",
+        "ADM0_A3": "KEN"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[35.80, -0.20], [36.20, -0.20], [36.20, -0.50], [35.80, -0.50], [35.80, -0.20]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ADMIN2NAME": "Uasin Gishu County",
+        "ADMIN1NAME": "Rift Valley Province",
+        "ADM0_A3": "KEN"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[35.00, 0.40], [35.50, 0.40], [35.50, 0.10], [35.00, 0.10], [35.00, 0.40]]]
+      }
+    }
+  ]
+}

@@ -1,0 +1,107 @@
+.admin2-dashboard {
+  padding: 20px;
+  background-color: #eef2f7; /* A slightly different background for Admin2 */
+  border-radius: 8px;
+  margin-top: 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  text-align: left;
+}
+
+.admin2-dashboard h2 {
+  color: #1a237e; /* A deeper blue for Admin2 title */
+  border-bottom: 2px solid #c5cae9;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  font-size: 1.6em; /* Slightly smaller than Admin1 */
+}
+
+.admin2-dashboard h3 {
+  color: #283593;
+  margin-top: 25px;
+  margin-bottom: 12px;
+  font-size: 1.3em;
+}
+
+.admin2-dashboard h4 {
+  color: #3949ab;
+  margin-top: 18px;
+  margin-bottom: 8px;
+  font-size: 1.15em;
+}
+
+.admin2-dashboard h5 {
+  color: #3f51b5;
+  margin-top: 12px;
+  margin-bottom: 4px;
+  font-size: 1.0em;
+  font-weight: bold;
+}
+
+.admin2-dashboard-loading {
+  padding: 20px;
+  text-align: center;
+  font-style: italic;
+  color: #777;
+}
+
+.admin2-overview .overview-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 10px;
+}
+
+.admin2-overview p,
+.admin2-dashboard .overall-stats p {
+  margin: 4px 0;
+  padding: 4px;
+  background-color: #fff;
+  border: 1px solid: #e8eaf6;
+  border-radius: 3px;
+}
+
+.admin2-dashboard .crop-item {
+  margin-bottom: 25px;
+  padding: 12px;
+  border: 1px solid #c5cae9;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+.admin2-dashboard table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 8px;
+  font-size: 0.85em; /* Slightly smaller table font */
+}
+
+.admin2-dashboard th,
+.admin2-dashboard td {
+  border: 1px solid #d0d9ff; /* Lighter border for table cells */
+  padding: 7px 9px;
+  text-align: left;
+  vertical-align: top;
+}
+
+.admin2-dashboard th {
+  background-color: #dce4f9;
+  font-weight: bold;
+}
+
+.admin2-dashboard tr:nth-child(even) {
+  background-color: #f0f2f5;
+}
+
+@media (max-width: 768px) {
+  .admin2-dashboard h2 {
+    font-size: 1.3em;
+  }
+  .admin2-dashboard h3 {
+    font-size: 1.15em;
+  }
+  .admin2-dashboard h4 {
+    font-size: 1.0em;
+  }
+  .admin2-overview .overview-grid {
+    grid-template-columns: 1fr; /* Stack grid items */
+  }
+}

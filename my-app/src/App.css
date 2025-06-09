@@ -109,22 +109,46 @@ main {
   box-shadow: 0 1px 3px rgba(0,0,0,0.1);
 }
 
+/* Main Content Layout */
+.main-content-area {
+  display: flex;
+  flex-direction: column; /* Stack map/insights and dashboard */
+  gap: 20px;
+}
+
+.map-and-insights {
+  display: flex;
+  flex-direction: row; /* Map beside insights */
+  flex-wrap: wrap; /* Allow to wrap on smaller screens */
+  gap: 20px;
+}
+
+.map-container {
+  flex: 2; /* Map takes more space */
+  min-width: 300px; /* Ensure map is usable */
+}
+
 /* Insights Container (for Summary and Charts) */
 .insights-container {
+  flex: 1; /* Insights take less space */
   display: flex;
-  flex-wrap: wrap; /* Allow summary and chart to wrap */
+  flex-direction: column; /* Stack summary and chart */
   gap: 20px; /* Space between summary and chart */
-  margin-bottom: 20px;
+  /* margin-bottom: 20px; /* Removed as parent gap handles it */
 }
 
 .summary-container,
 .chart-container {
-  flex: 1; /* Allow them to share space */
-  min-width: 300px; /* Minimum width before wrapping */
+  /* flex: 1; */ /* They will stack, so flex:1 is not needed for width distribution here */
+  min-width: 250px; /* Minimum width before wrapping for parent */
   padding: 20px;
   background-color: #ffffff;
   border-radius: 8px;
   box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.dashboard-container { /* Styles for the new dashboard area */
+  width: 100%;
 }
 
 .summary-container h3,
@@ -167,18 +191,25 @@ main {
     width: 100%;
   }
 
+  .map-and-insights {
+    flex-direction: column; /* Stack map and insights */
+  }
+
   .insights-container {
-    flex-direction: column; /* Stack summary and chart */
+    flex-direction: row; /* Side-by-side summary/chart if space, or wrap */
+    flex-wrap: wrap;
   }
 
   .summary-container,
   .chart-container {
-    min-width: unset; /* Remove min-width for stacked items */
-    width: 100%;
+    flex: 1; /* Allow them to share space when side-by-side */
+    min-width: 250px;
+    /* width: 100%; */ /* Take full width if they wrap */
   }
 
   .map-container {
     height: 400px; /* Reduce map height on smaller screens */
+    min-width: unset; /* Remove min-width for map when stacked */
   }
 }
 
