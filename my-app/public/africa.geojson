@@ -1,0 +1,50 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Nigeria",
+        "iso_a2": "NG"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [2.666, 13.999], [14.000, 13.999], [14.000, 4.000], [2.666, 4.000], [2.666, 13.999]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Egypt",
+        "iso_a2": "EG"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [25.000, 31.500], [35.000, 31.500], [35.000, 22.000], [25.000, 22.000], [25.000, 31.500]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Kenya",
+        "iso_a2": "KE"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [34.000, 5.000], [41.000, 5.000], [41.000, -4.000], [34.000, -4.000], [34.000, 5.000]
+          ]
+        ]
+      }
+    }
+  ]
+}
