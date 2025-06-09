@@ -1,20 +1,211 @@
 import React, { useState, useEffect, useRef } from 'react';
 import axios from 'axios';
-import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, Text } from 'recharts';
+import { BarChart, Bar, LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, Text } from 'recharts';
 import './App.css';
 
 // Custom Tick for XAxis to prevent overlap and improve readability
 const CustomXAxisTick = (props) => {
   const { x, y, payload } = props;
-  // Tries to fit the label in a 70px width box, angling it.
-  // Adjust width, angle, or textAnchor as needed for your data.
+  // Rotates labels 90 degrees for better readability
   return (
-    <Text x={x} y={y} width={75} textAnchor="middle" verticalAnchor="start" angle={-40} fontSize="0.9em">
+    <Text x={x} y={y} width={100} textAnchor="end" verticalAnchor="middle" angle={-90} fontSize="0.9em">
       {payload.value}
     </Text>
   );
 };
 
+
+// Crop Time Series Component with independent admin level control
+const CropTimeSeriesComponent = ({ 
+  crop, 
+  initialTimeSeriesData, 
+  selectedCountry, 
+  selectedAdminLevel, 
+  selectedAdmin1Name, 
+  selectedAdmin2Name 
+}) => {
+  const [timeSeriesData, setTimeSeriesData] = useState(initialTimeSeriesData || []);
+  const [metric, setMetric] = useState('yield');
+  const [adminLevel, setAdminLevel] = useState('0');
+  const [loading, setLoading] = useState(false);
+
+  const fetchCropTimeSeriesData = async (cropName, cropAdminLevel) => {
+    if (!selectedCountry || !cropName) return null;
+
+    try {
+      const params = {
+        country: selectedCountry,
+        admin_level: selectedAdminLevel,
+        crop_name: cropName,
+        timeseries_admin_level: cropAdminLevel
+      };
+
+      if (selectedAdminLevel === '1') {
+        params.admin_1_name = selectedAdmin1Name.trim();
+      } else if (selectedAdminLevel === '2') {
+        params.admin_1_name = selectedAdmin1Name.trim();
+        params.admin_2_name = selectedAdmin2Name.trim();
+      }
+
+      const response = await axios.get('/api/crop-timeseries', { params });
+      return response.data.time_series_data;
+    } catch (error) {
+      console.error('Error fetching crop time series data:', error);
+      return null;
+    }
+  };
+
+  const handleAdminLevelChange = async (newAdminLevel) => {
+    setAdminLevel(newAdminLevel);
+    setLoading(true);
+    
+    const newData = await fetchCropTimeSeriesData(crop, newAdminLevel);
+    if (newData) {
+      setTimeSeriesData(newData);
+    }
+    setLoading(false);
+  };
+
+  const getTimeSeriesConfig = () => {
+    switch (metric) {
+      case 'production':
+        return {
+          dataKey: 'production',
+          unit: 't',
+          yAxisLabel: 'Production (t)',
+          lineName: 'Production',
+          color: '#00796b'
+        };
+      case 'area':
+        return {
+          dataKey: 'area',
+          unit: 'ha',
+          yAxisLabel: 'Area Harvested (ha)',
+          lineName: 'Area Harvested',
+          color: '#ff9800'
+        };
+      case 'yield':
+        return {
+          dataKey: 'yield',
+          unit: 't/ha',
+          yAxisLabel: 'Yield (t/ha)',
+          lineName: 'Yield',
+          color: '#4caf50'
+        };
+      default:
+        return {
+          dataKey: 'yield',
+          unit: 't/ha',
+          yAxisLabel: 'Yield (t/ha)',
+          lineName: 'Yield',
+          color: '#4caf50'
+        };
+    }
+  };
+
+  if (!timeSeriesData || timeSeriesData.length === 0) {
+    return <p>No time series data available for this crop.</p>;
+  }
+
+  return (
+    <div className="crop-timeseries-section">
+      <div className="crop-chart-controls">
+        <h5>Time Series Analysis</h5>
+        <div className="crop-selectors">
+          <div className="crop-metric-selector">
+            <label htmlFor={`crop-metric-${crop}`}>Metric:</label>
+            <select
+              id={`crop-metric-${crop}`}
+              value={metric}
+              onChange={(e) => setMetric(e.target.value)}
+            >
+              <option value="yield">Yield</option>
+              <option value="production">Production</option>
+              <option value="area">Area Harvested</option>
+            </select>
+          </div>
+          <div className="crop-admin-selector">
+            <label htmlFor={`crop-admin-${crop}`}>Time Series Level:</label>
+            <select
+              id={`crop-admin-${crop}`}
+              value={adminLevel}
+              onChange={(e) => handleAdminLevelChange(e.target.value)}
+              disabled={loading}
+            >
+              <option value="0">Aggregated</option>
+              <option value="1">Admin-1 Regions</option>
+              <option value="2">Admin-2 Regions</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div className="crop-chart-container">
+        {loading ? (
+          <div style={{ height: 300, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+            Loading time series data...
+          </div>
+        ) : (
+          <ResponsiveContainer width="100%" height={300}>
+            <LineChart 
+              data={(() => {
+                // Combine all time series data into a single dataset for multiple lines
+                const allYears = new Set();
+                timeSeriesData.forEach(series => {
+                  series.data.forEach(point => allYears.add(point.year));
+                });
+                
+                return Array.from(allYears).sort().map(year => {
+                  const point = { year };
+                  timeSeriesData.forEach(series => {
+                    const dataPoint = series.data.find(d => d.year === year);
+                    if (dataPoint) {
+                      point[series.admin_unit] = dataPoint[getTimeSeriesConfig().dataKey];
+                    }
+                  });
+                  return point;
+                });
+              })()} 
+              margin={{ top: 5, right: 30, left: 20, bottom: 5 }}
+            >
+              <CartesianGrid strokeDasharray="3 3" />
+              <XAxis 
+                dataKey="year" 
+                type="number"
+                scale="linear"
+                domain={['dataMin', 'dataMax']}
+              />
+              <YAxis
+                label={{ value: getTimeSeriesConfig().yAxisLabel, angle: -90, position: 'insideLeft' }}
+                tickFormatter={(value) => metric === 'yield' ? value.toFixed(2) : value.toLocaleString()}
+              />
+              <Tooltip 
+                formatter={(value, name) => [
+                  metric === 'yield' ? 
+                    `${value.toFixed(2)} ${getTimeSeriesConfig().unit}` : 
+                    `${value.toLocaleString()} ${getTimeSeriesConfig().unit}`,
+                  name
+                ]}
+                labelFormatter={(value) => `Year: ${value}`}
+              />
+              <Legend />
+              {timeSeriesData.map((series, index) => (
+                <Line 
+                  key={series.admin_unit}
+                  type="monotone" 
+                  dataKey={series.admin_unit}
+                  stroke={`hsl(${(index * 137.5) % 360}, 70%, 45%)`}
+                  strokeWidth={2}
+                  dot={{ r: 3 }}
+                  name={series.admin_unit}
+                />
+              ))}
+            </LineChart>
+          </ResponsiveContainer>
+        )}
+      </div>
+    </div>
+  );
+};
 
 function App() {
   const [countries, setCountries] = useState([]);
@@ -22,10 +213,17 @@ function App() {
   const [selectedAdminLevel, setSelectedAdminLevel] = useState('0'); // Default to National
   const [selectedAdmin1Name, setSelectedAdmin1Name] = useState('');
   const [selectedAdmin2Name, setSelectedAdmin2Name] = useState('');
+  const [admin1Options, setAdmin1Options] = useState([]);
+  const [admin2Options, setAdmin2Options] = useState([]);
+  const [expandedCrops, setExpandedCrops] = useState(new Set());
+  const [selectedChartMetric, setSelectedChartMetric] = useState('yield');
+  const [timeSeriesAdminLevel, setTimeSeriesAdminLevel] = useState('0');
 
   const [data, setData] = useState(null);
   const [loadingCountries, setLoadingCountries] = useState(true);
   const [loadingData, setLoadingData] = useState(false);
+  const [loadingAdmin1, setLoadingAdmin1] = useState(false);
+  const [loadingAdmin2, setLoadingAdmin2] = useState(false);
   const [error, setError] = useState(null);
 
   const dataDisplayRef = useRef(null); // For scrolling to data section
@@ -43,11 +241,87 @@ function App() {
       });
   }, []);
 
+  const fetchAdmin1Options = (country) => {
+    if (!country) {
+      setAdmin1Options([]);
+      return;
+    }
+    
+    setLoadingAdmin1(true);
+    axios.get('/api/admin1', { params: { country } })
+      .then(response => {
+        setAdmin1Options(response.data || []);
+        setLoadingAdmin1(false);
+      })
+      .catch(err => {
+        console.error("Error fetching admin1 options:", err);
+        setAdmin1Options([]);
+        setLoadingAdmin1(false);
+      });
+  };
+
+  const fetchAdmin2Options = (country, admin1Name) => {
+    if (!country || !admin1Name) {
+      setAdmin2Options([]);
+      return;
+    }
+    
+    setLoadingAdmin2(true);
+    axios.get('/api/admin2', { params: { country, admin_1_name: admin1Name } })
+      .then(response => {
+        setAdmin2Options(response.data || []);
+        setLoadingAdmin2(false);
+      })
+      .catch(err => {
+        console.error("Error fetching admin2 options:", err);
+        setAdmin2Options([]);
+        setLoadingAdmin2(false);
+      });
+  };
+
+  // Fetch admin1 options when country changes
+  useEffect(() => {
+    if (selectedCountry && (selectedAdminLevel === '1' || selectedAdminLevel === '2')) {
+      fetchAdmin1Options(selectedCountry);
+    } else {
+      setAdmin1Options([]);
+    }
+    setSelectedAdmin1Name('');
+    setSelectedAdmin2Name('');
+    setAdmin2Options([]);
+  }, [selectedCountry, selectedAdminLevel]);
+
+  // Fetch admin2 options when admin1 selection changes
+  useEffect(() => {
+    if (selectedCountry && selectedAdmin1Name && selectedAdminLevel === '2') {
+      fetchAdmin2Options(selectedCountry, selectedAdmin1Name);
+    } else {
+      setAdmin2Options([]);
+    }
+    setSelectedAdmin2Name('');
+  }, [selectedCountry, selectedAdmin1Name, selectedAdminLevel]);
+
+  const toggleCropExpansion = (cropName) => {
+    setExpandedCrops(prev => {
+      const newSet = new Set(prev);
+      if (newSet.has(cropName)) {
+        newSet.delete(cropName);
+      } else {
+        newSet.add(cropName);
+      }
+      return newSet;
+    });
+  };
+
   const handleCountryChange = (event) => {
     setSelectedCountry(event.target.value);
     setData(null);
     setSelectedAdmin1Name('');
     setSelectedAdmin2Name('');
+    setAdmin1Options([]);
+    setAdmin2Options([]);
+    setExpandedCrops(new Set());
+    setTimeSeriesAdminLevel('0');
     setError(null); // Clear error on new selection
   };
 
@@ -56,6 +330,10 @@ function App() {
     setData(null);
     setSelectedAdmin1Name('');
     setSelectedAdmin2Name('');
+    setAdmin1Options([]);
+    setAdmin2Options([]);
+    setExpandedCrops(new Set());
+    setTimeSeriesAdminLevel('0');
     setError(null); // Clear error on new selection
   };
 
@@ -64,6 +342,10 @@ function App() {
     setSelectedAdminLevel('0');
     setSelectedAdmin1Name('');
     setSelectedAdmin2Name('');
+    setAdmin1Options([]);
+    setAdmin2Options([]);
+    setExpandedCrops(new Set());
+    setTimeSeriesAdminLevel('0');
     setData(null);
     setError(null);
   };
@@ -96,7 +378,8 @@ function App() {
 
     let params = {
       country: selectedCountry,
-      admin_level: selectedAdminLevel
+      admin_level: selectedAdminLevel,
+      timeseries_admin_level: timeSeriesAdminLevel
     };
 
     if (selectedAdminLevel === '1') {
@@ -138,11 +421,62 @@ function App() {
     if (!data || !data.crops_summary) {
       return [];
     }
-    return Object.entries(data.crops_summary).map(([crop, details]) => ({
-      name: crop,
-      production: details.total_production || 0,
-    }));
+    return Object.entries(data.crops_summary).map(([crop, details]) => {
+      const production = details.total_production || 0;
+      const area = details.total_area_harvested || 0;
+      const yield_value = area > 0 ? production / area : 0;
+      
+      return {
+        name: crop,
+        production: production,
+        area: area,
+        yield: yield_value,
+      };
+    });
   };
+
+  const getChartConfig = () => {
+    const baseTitle = data?.country ? `Crop ${selectedChartMetric === 'production' ? 'Production' : selectedChartMetric === 'area' ? 'Area Harvested' : 'Yield'} in ${data.country} ${data.admin_level === 1 && data.admin_1_name ? `(${data.admin_1_name})` : data.admin_level === 2 && data.admin_1_name && data.admin_2_name ? `(${data.admin_2_name} / ${data.admin_1_name})` : '(National)'}` : `Crop ${selectedChartMetric === 'production' ? 'Production' : selectedChartMetric === 'area' ? 'Area Harvested' : 'Yield'}`;
+    
+    switch (selectedChartMetric) {
+      case 'production':
+        return {
+          title: baseTitle,
+          dataKey: 'production',
+          unit: 't',
+          yAxisLabel: 'Production (t)',
+          barName: 'Total Production'
+        };
+      case 'area':
+        return {
+          title: baseTitle,
+          dataKey: 'area',
+          unit: 'ha',
+          yAxisLabel: 'Area Harvested (ha)',
+          barName: 'Total Area Harvested'
+        };
+      case 'yield':
+        return {
+          title: baseTitle,
+          dataKey: 'yield',
+          unit: 't/ha',
+          yAxisLabel: 'Yield (t/ha)',
+          barName: 'Average Yield'
+        };
+      default:
+        return {
+          title: baseTitle,
+          dataKey: 'yield',
+          unit: 't/ha',
+          yAxisLabel: 'Yield (t/ha)',
+          barName: 'Average Yield'
+        };
+    }
+  };
+
+
+
+
 
   const renderAdminLevelSpecificSummary = () => {
     if (!data) return null;
@@ -192,8 +526,6 @@ function App() {
     );
   };
 
-  const chartTitle = data?.country ? `Crop Production in ${data.country} ${data.admin_level === 1 && data.admin_1_name ? `(${data.admin_1_name})` : data.admin_level === 2 && data.admin_1_name && data.admin_2_name ? `(${data.admin_2_name} / ${data.admin_1_name})` : '(National)'}` : "Crop Production";
-
   return (
     <div className="App">
       <header className="App-header">
@@ -232,14 +564,34 @@ function App() {
 
           { (selectedAdminLevel === '1' || selectedAdminLevel === '2') && (
             <div className="control-group">
-              <label htmlFor="admin1-name">Admin-1 Name:</label>
-              <input type="text" id="admin1-name" value={selectedAdmin1Name} onChange={e => setSelectedAdmin1Name(e.target.value)} placeholder="Required for Level 1 & 2" disabled={loadingData}/>
+              <label htmlFor="admin1-select">Admin-1 Region:</label>
+              <select
+                id="admin1-select"
+                value={selectedAdmin1Name}
+                onChange={e => setSelectedAdmin1Name(e.target.value)}
+                disabled={loadingData || loadingAdmin1}
+              >
+                <option value="">{loadingAdmin1 ? 'Loading...' : '-- Select Admin-1 Region --'}</option>
+                {admin1Options.map(admin1 => (
+                  <option key={admin1} value={admin1}>{admin1}</option>
+                ))}
+              </select>
             </div>
           )}
           {selectedAdminLevel === '2' && (
             <div className="control-group">
-              <label htmlFor="admin2-name">Admin-2 Name:</label>
-              <input type="text" id="admin2-name" value={selectedAdmin2Name} onChange={e => setSelectedAdmin2Name(e.target.value)} placeholder="Required for Level 2" disabled={loadingData}/>
+              <label htmlFor="admin2-select">Admin-2 Region:</label>
+              <select
+                id="admin2-select"
+                value={selectedAdmin2Name}
+                onChange={e => setSelectedAdmin2Name(e.target.value)}
+                disabled={loadingData || loadingAdmin2 || !selectedAdmin1Name}
+              >
+                <option value="">{loadingAdmin2 ? 'Loading...' : '-- Select Admin-2 Region --'}</option>
+                {admin2Options.map(admin2 => (
+                  <option key={admin2} value={admin2}>{admin2}</option>
+                ))}
+              </select>
             </div>
           )}
           <div className="button-group">
@@ -264,7 +616,35 @@ function App() {
 
             {data.crops_summary && Object.keys(data.crops_summary).length > 0 ? (
               <>
-                <h3 className="chart-title">{chartTitle}</h3>
+                <div className="chart-controls">
+                  <h3 className="chart-title">{getChartConfig().title}</h3>
+                  <div className="chart-selectors">
+                    <div className="metric-selector">
+                      <label htmlFor="metric-select">Chart Metric:</label>
+                      <select
+                        id="metric-select"
+                        value={selectedChartMetric}
+                        onChange={(e) => setSelectedChartMetric(e.target.value)}
+                      >
+                        <option value="yield">Yield</option>
+                        <option value="production">Production</option>
+                        <option value="area">Area Harvested</option>
+                      </select>
+                    </div>
+                    <div className="timeseries-admin-selector">
+                      <label htmlFor="timeseries-admin-select">Time Series Level:</label>
+                      <select
+                        id="timeseries-admin-select"
+                        value={timeSeriesAdminLevel}
+                        onChange={(e) => setTimeSeriesAdminLevel(e.target.value)}
+                      >
+                        <option value="0">Aggregated</option>
+                        <option value="1">Admin-1 Regions</option>
+                        <option value="2">Admin-2 Regions</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
                 <div className="chart-container">
                   <ResponsiveContainer width="100%" height={400}>
                     {/* Increased bottom margin for XAxis labels if they are long or numerous */}
@@ -272,57 +652,81 @@ function App() {
                       <CartesianGrid strokeDasharray="3 3" />
                       <XAxis dataKey="name" tick={<CustomXAxisTick />} interval={0} />
                       <YAxis
-                        label={{ value: 'Production (t)', angle: -90, position: 'insideLeft', offset:-5 }}
-                        tickFormatter={(value) => value.toLocaleString()}
+                        label={{ value: getChartConfig().yAxisLabel, angle: -90, position: 'insideLeft', offset:-5 }}
+                        tickFormatter={(value) => selectedChartMetric === 'yield' ? value.toFixed(2) : value.toLocaleString()}
                       />
-                      <Tooltip formatter={(value) => `${value.toLocaleString()} t`} />
+                      <Tooltip formatter={(value) => selectedChartMetric === 'yield' ? `${value.toFixed(2)} ${getChartConfig().unit}` : `${value.toLocaleString()} ${getChartConfig().unit}`} />
                       <Legend wrapperStyle={{ paddingTop: '20px' }}/>
-                      <Bar dataKey="production" fill="#00796b" name="Total Production" />
+                      <Bar dataKey={getChartConfig().dataKey} fill="#00796b" name={getChartConfig().barName} />
                     </BarChart>
                   </ResponsiveContainer>
                 </div>
 
                 <h3>Crop Specific Analysis</h3>
                 {Object.entries(data.crops_summary).map(([crop, details]) => (
-                  <div key={crop} className="crop-details">
-                    <h4>{crop}</h4>
-                    <p><strong>Total Production:</strong> {details.total_production !== undefined ? details.total_production?.toLocaleString() : 'N/A'} (t)</p>
-                    <p><strong>Total Area Harvested:</strong> {details.total_area_harvested !== undefined ? details.total_area_harvested?.toLocaleString() : 'N/A'} (ha)</p>
-                    <p><strong>Average Yield:</strong> {details.average_yield !== undefined ? details.average_yield?.toFixed(2) : 'N/A'} (t/ha)</p>
+                  <div key={crop} className="crop-collapsible">
+                    <div 
+                      className="crop-header" 
+                      onClick={() => toggleCropExpansion(crop)}
+                      style={{ cursor: 'pointer' }}
+                    >
+                      <span className="crop-name">{crop}</span>
+                      <span className="dropdown-arrow">
+                        {expandedCrops.has(crop) ? '▼' : '▶'}
+                      </span>
+                    </div>
+                    
+                    {expandedCrops.has(crop) && (
+                      <div className="crop-content">
+                        <p><strong>Total Production:</strong> {details.total_production !== undefined ? details.total_production?.toLocaleString() : 'N/A'} (t)</p>
+                        <p><strong>Total Area Harvested:</strong> {details.total_area_harvested !== undefined ? details.total_area_harvested?.toLocaleString() : 'N/A'} (ha)</p>
+                        <p><strong>Average Yield:</strong> {details.average_yield !== undefined ? details.average_yield?.toFixed(2) : 'N/A'} (t/ha)</p>
+                        
+                        {/* Time Series Chart */}
+                        <CropTimeSeriesComponent 
+                          crop={crop} 
+                          initialTimeSeriesData={details.time_series_data}
+                          selectedCountry={selectedCountry}
+                          selectedAdminLevel={selectedAdminLevel}
+                          selectedAdmin1Name={selectedAdmin1Name}
+                          selectedAdmin2Name={selectedAdmin2Name}
+                        />
 
-                    {details.season_specific_breakdown && details.season_specific_breakdown.length > 0 ? (
-                      <div className="season-table-container">
-                        <h5>Seasonal Breakdown:</h5>
-                        <table>
-                          <thead>
-                            <tr>
-                              <th>Season</th>
-                              <th>Production (t)</th>
-                              <th>Prod. (% of Crop Total)</th>
-                              <th>Area (ha)</th>
-                              <th>Yield (t/ha)</th>
-                              <th>Prod. Systems</th>
-                              <th>Planting Months</th>
-                              <th>Harvest Months</th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            {details.season_specific_breakdown.map(season => (
-                              <tr key={season.season_name}>
-                                <td>{season.season_name || 'N/A'}</td>
-                                <td>{season.production_absolute !== undefined ? season.production_absolute?.toLocaleString() : 'N/A'}</td>
-                                <td>{season.production_percentage_of_crop !== undefined ? `${season.production_percentage_of_crop?.toFixed(1)}%` : 'N/A'}</td>
-                                <td>{season.area_harvested !== undefined ? season.area_harvested?.toLocaleString() : 'N/A'}</td>
-                                <td>{season.yield !== undefined ? season.yield?.toFixed(2) : 'N/A'}</td>
-                                <td>{season.production_systems?.join(', ') || 'N/A'}</td>
-                                <td>{season.planting_months?.join(', ') || 'N/A'}</td>
-                                <td>{season.harvest_months?.join(', ') || 'N/A'}</td>
-                              </tr>
-                            ))}
-                          </tbody>
-                        </table>
+                        {details.season_specific_breakdown && details.season_specific_breakdown.length > 0 ? (
+                          <div className="season-table-container">
+                            <h5>Seasonal Breakdown:</h5>
+                            <table>
+                              <thead>
+                                <tr>
+                                  <th>Season</th>
+                                  <th>Production (t)</th>
+                                  <th>Prod. (% of Crop Total)</th>
+                                  <th>Area (ha)</th>
+                                  <th>Yield (t/ha)</th>
+                                  <th>Prod. Systems</th>
+                                  <th>Planting Months</th>
+                                  <th>Harvest Months</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                {details.season_specific_breakdown.map(season => (
+                                  <tr key={season.season_name}>
+                                    <td>{season.season_name || 'N/A'}</td>
+                                    <td>{season.production_absolute !== undefined ? season.production_absolute?.toLocaleString() : 'N/A'}</td>
+                                    <td>{season.production_percentage_of_crop !== undefined ? `${season.production_percentage_of_crop?.toFixed(1)}%` : 'N/A'}</td>
+                                    <td>{season.area_harvested !== undefined ? season.area_harvested?.toLocaleString() : 'N/A'}</td>
+                                    <td>{season.yield !== undefined ? season.yield?.toFixed(2) : 'N/A'}</td>
+                                    <td>{season.production_systems?.join(', ') || 'N/A'}</td>
+                                    <td>{season.planting_months?.join(', ') || 'N/A'}</td>
+                                    <td>{season.harvest_months?.join(', ') || 'N/A'}</td>
+                                  </tr>
+                                ))}
+                              </tbody>
+                            </table>
+                          </div>
+                        ) : <p>No seasonal breakdown available for this crop.</p>}
                       </div>
-                    ) : <p>No seasonal breakdown available for this crop.</p>}
+                    )}
                   </div>
                 ))}
               </>

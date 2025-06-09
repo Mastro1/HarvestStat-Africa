@@ -196,6 +196,86 @@ main {
   margin-bottom: 30px;
 }
 
+.chart-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.chart-selectors {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.metric-selector {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.timeseries-admin-selector {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.metric-selector label {
+  font-weight: 600;
+  color: #00695c;
+  font-size: 1em;
+}
+
+.timeseries-admin-selector label {
+  font-weight: 600;
+  color: #00695c;
+  font-size: 1em;
+}
+
+.metric-selector select {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1em;
+  background-color: white;
+  cursor: pointer;
+  transition: border-color 0.2s ease;
+}
+
+.timeseries-admin-selector select {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1em;
+  background-color: white;
+  cursor: pointer;
+  transition: border-color 0.2s ease;
+}
+
+.metric-selector select:focus {
+  outline: none;
+  border-color: #00796b;
+  box-shadow: 0 0 0 2px rgba(0, 121, 107, 0.2);
+}
+
+.timeseries-admin-selector select:focus {
+  outline: none;
+  border-color: #00796b;
+  box-shadow: 0 0 0 2px rgba(0, 121, 107, 0.2);
+}
+
+.metric-selector select:hover {
+  border-color: #00796b;
+}
+
+.timeseries-admin-selector select:hover {
+  border-color: #00796b;
+}
+
 .crop-details {
   margin-bottom: 30px;
   padding: 20px;
@@ -204,7 +284,48 @@ main {
   background-color: #f9f9f9;
 }
 
-.crop-details p {
+.crop-collapsible {
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  background-color: #fff;
+  overflow: hidden;
+}
+
+.crop-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background-color: #f5f5f5;
+  border-bottom: 1px solid #ddd;
+  transition: background-color 0.2s ease;
+  user-select: none;
+}
+
+.crop-header:hover {
+  background-color: #e8f5e9;
+}
+
+.crop-name {
+  font-size: 1.2em;
+  font-weight: 600;
+  color: #00695c;
+}
+
+.dropdown-arrow {
+  font-size: 1em;
+  color: #666;
+  transition: transform 0.2s ease;
+}
+
+.crop-content {
+  padding: 20px;
+  background-color: #fafafa;
+  border-top: 1px solid #eee;
+}
+
+.crop-content p {
   margin: 6px 0;
   font-size: 1em;
 }
@@ -292,6 +413,42 @@ pre {
   /* Adjust XAxis tick font size for smaller screens if needed */
   /* Recharts Text component might not directly respond to CSS,
      so direct prop adjustment in JS is more reliable for tick font size */
+
+  .chart-controls {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+  
+  .chart-controls h3 {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  
+  .chart-selectors {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .metric-selector {
+    justify-content: center;
+  }
+  
+  .timeseries-admin-selector {
+    justify-content: center;
+  }
+
+  .crop-header {
+    padding: 12px 15px;
+  }
+  
+  .crop-name {
+    font-size: 1.1em;
+  }
+  
+  .crop-content {
+    padding: 15px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -314,4 +471,190 @@ pre {
   .data-display h2 { font-size: 1.3em; }
   .data-display h3 { font-size: 1.1em; }
   .data-display h3.chart-title { font-size: 1.1em; }
+
+  .crop-header {
+    padding: 10px 12px;
+  }
+  
+  .crop-name {
+    font-size: 1em;
+  }
+  
+  .crop-content {
+    padding: 12px;
+  }
+  
+  .crop-timeseries-section {
+    padding: 12px;
+  }
+  
+  .crop-chart-container {
+    min-height: 200px;
+  }
+}
+
+.crop-content {
+  padding: 20px;
+  background-color: #fafafa;
+  border-top: 1px solid #eee;
+}
+
+.crop-timeseries-section {
+  margin-top: 20px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  background-color: #fff;
+}
+
+.crop-chart-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.crop-chart-controls h5 {
+  margin: 0;
+  color: #00695c;
+}
+
+.crop-metric-selector {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.crop-metric-selector label {
+  font-weight: 600;
+  color: #00695c;
+  font-size: 0.9em;
+}
+
+.crop-metric-selector select {
+  padding: 6px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 0.9em;
+  background-color: white;
+  cursor: pointer;
+  transition: border-color 0.2s ease;
+}
+
+.crop-metric-selector select:focus {
+  outline: none;
+  border-color: #00796b;
+  box-shadow: 0 0 0 2px rgba(0, 121, 107, 0.15);
+}
+
+.crop-metric-selector select:hover {
+  border-color: #00796b;
+}
+
+.crop-chart-container {
+  width: 100%;
+  min-height: 300px;
+  margin-top: 10px;
+}
+
+.crop-content {
+  padding: 15px;
+}
+
+.crop-chart-controls {
+  flex-direction: column;
+  align-items: stretch;
+  gap: 8px;
+}
+
+.crop-chart-controls h5 {
+  text-align: center;
+}
+
+.crop-metric-selector {
+  justify-content: center;
+}
+
+.crop-chart-container {
+  min-height: 250px;
+}
+
+/* Crop-specific admin level selector styles */
+.crop-selectors {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.crop-admin-selector {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: 15px;
+}
+
+.crop-admin-selector label {
+  margin: 0;
+  font-weight: 600;
+  color: #00695c;
+  white-space: nowrap;
+  font-size: 0.9em;
+}
+
+.crop-admin-selector select {
+  padding: 6px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: white;
+  color: #37474f;
+  font-size: 0.9em;
+  min-width: 160px;
+  outline: none;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.crop-admin-selector select:focus {
+  border-color: #00796b;
+  box-shadow: 0 0 0 2px rgba(0, 121, 107, 0.15);
+}
+
+.crop-admin-selector select:hover {
+  border-color: #00796b;
+}
+
+.crop-admin-selector select:disabled {
+  background-color: #f5f5f5;
+  color: #999;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* Additional responsive adjustments for crop selectors */
+@media (max-width: 768px) {
+  .crop-selectors {
+    flex-direction: column;
+    gap: 10px;
+    align-items: stretch;
+  }
+  
+  .crop-metric-selector,
+  .crop-admin-selector {
+    justify-content: center;
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .crop-selectors {
+    gap: 15px;
+  }
+  
+  .crop-metric-selector select,
+  .crop-admin-selector select {
+    min-width: 100%;
+  }
 }
