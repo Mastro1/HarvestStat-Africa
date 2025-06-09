@@ -27,9 +27,10 @@ const CropTimeSeriesComponent = ({
   const [timeSeriesData, setTimeSeriesData] = useState(initialTimeSeriesData || []);
   const [metric, setMetric] = useState('yield');
   const [adminLevel, setAdminLevel] = useState('0');
+  const [cropSplitBySeason, setCropSplitBySeason] = useState(false);
   const [loading, setLoading] = useState(false);
 
-  const fetchCropTimeSeriesData = async (cropName, cropAdminLevel) => {
+  const fetchCropTimeSeriesData = async (cropName, cropAdminLevel, splitBySeasonParam = false) => {
     if (!selectedCountry || !cropName) return null;
 
     try {
@@ -37,7 +38,8 @@ const CropTimeSeriesComponent = ({
         country: selectedCountry,
         admin_level: selectedAdminLevel,
         crop_name: cropName,
-        timeseries_admin_level: cropAdminLevel
+        timeseries_admin_level: cropAdminLevel,
+        split_by_season: splitBySeasonParam && cropAdminLevel === '0' ? 'true' : 'false'
       };
 
       if (selectedAdminLevel === '1') {
@@ -57,9 +59,23 @@ const CropTimeSeriesComponent = ({
 
   const handleAdminLevelChange = async (newAdminLevel) => {
     setAdminLevel(newAdminLevel);
+    if (newAdminLevel !== '0') {
+      setCropSplitBySeason(false);
+    }
     setLoading(true);
     
-    const newData = await fetchCropTimeSeriesData(crop, newAdminLevel);
+    const newData = await fetchCropTimeSeriesData(crop, newAdminLevel, cropSplitBySeason);
+    if (newData) {
+      setTimeSeriesData(newData);
+    }
+    setLoading(false);
+  };
+
+  const handleSeasonSplitChange = async (newSplitValue) => {
+    setCropSplitBySeason(newSplitValue);
+    setLoading(true);
+    
+    const newData = await fetchCropTimeSeriesData(crop, adminLevel, newSplitValue);
     if (newData) {
       setTimeSeriesData(newData);
     }
@@ -137,6 +153,20 @@ const CropTimeSeriesComponent = ({
               <option value="2">Admin-2 Regions</option>
             </select>
           </div>
+          {adminLevel === '0' && (
+            <div className="crop-season-split-selector">
+              <label htmlFor={`crop-season-split-${crop}`}>
+                <input
+                  id={`crop-season-split-${crop}`}
+                  type="checkbox"
+                  checked={cropSplitBySeason}
+                  onChange={(e) => handleSeasonSplitChange(e.target.checked)}
+                  disabled={loading}
+                />
+                Split by Season/Production System
+              </label>
+            </div>
+          )}
         </div>
       </div>
       <div className="crop-chart-container">
@@ -218,6 +248,7 @@ function App() {
   const [expandedCrops, setExpandedCrops] = useState(new Set());
   const [selectedChartMetric, setSelectedChartMetric] = useState('yield');
   const [timeSeriesAdminLevel, setTimeSeriesAdminLevel] = useState('0');
+  const [splitBySeason, setSplitBySeason] = useState(false);
 
   const [data, setData] = useState(null);
   const [loadingCountries, setLoadingCountries] = useState(true);
@@ -322,6 +353,7 @@ function App() {
     setAdmin2Options([]);
     setExpandedCrops(new Set());
     setTimeSeriesAdminLevel('0');
+    setSplitBySeason(false);
     setError(null); // Clear error on new selection
   };
 
@@ -334,6 +366,7 @@ function App() {
     setAdmin2Options([]);
     setExpandedCrops(new Set());
     setTimeSeriesAdminLevel('0');
+    setSplitBySeason(false);
     setError(null); // Clear error on new selection
   };
 
@@ -346,6 +379,7 @@ function App() {
     setAdmin2Options([]);
     setExpandedCrops(new Set());
     setTimeSeriesAdminLevel('0');
+    setSplitBySeason(false);
     setData(null);
     setError(null);
   };
@@ -379,7 +413,8 @@ function App() {
     let params = {
       country: selectedCountry,
       admin_level: selectedAdminLevel,
-      timeseries_admin_level: timeSeriesAdminLevel
+      timeseries_admin_level: timeSeriesAdminLevel,
+      split_by_season: splitBySeason && timeSeriesAdminLevel === '0' ? 'true' : 'false'
     };
 
     if (selectedAdminLevel === '1') {
@@ -636,13 +671,31 @@ function App() {
                       <select
                         id="timeseries-admin-select"
                         value={timeSeriesAdminLevel}
-                        onChange={(e) => setTimeSeriesAdminLevel(e.target.value)}
+                        onChange={(e) => {
+                          setTimeSeriesAdminLevel(e.target.value);
+                          if (e.target.value !== '0') {
+                            setSplitBySeason(false);
+                          }
+                        }}
                       >
                         <option value="0">Aggregated</option>
                         <option value="1">Admin-1 Regions</option>
                         <option value="2">Admin-2 Regions</option>
                       </select>
                     </div>
+                    {timeSeriesAdminLevel === '0' && (
+                      <div className="season-split-selector">
+                        <label htmlFor="season-split-checkbox">
+                          <input
+                            id="season-split-checkbox"
+                            type="checkbox"
+                            checked={splitBySeason}
+                            onChange={(e) => setSplitBySeason(e.target.checked)}
+                          />
+                          Split by Season/Production System
+                        </label>
+                      </div>
+                    )}
                   </div>
                 </div>
                 <div className="chart-container">

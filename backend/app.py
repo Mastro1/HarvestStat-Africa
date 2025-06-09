@@ -38,7 +38,7 @@ def get_missing_years(years_series):
     expected_years = set(range(min_year, max_year + 1))
     return sorted(list(expected_years - present_years))
 
-def calculate_crop_details(df_crop, total_country_production_for_crop, timeseries_admin_level=0):
+def calculate_crop_details(df_crop, total_country_production_for_crop, timeseries_admin_level=0, split_by_season_production_system=False):
     crop_production = df_crop['production'].sum()
     crop_area = df_crop['area'].sum()
     crop_yield = crop_production / crop_area if crop_area else 0
@@ -47,31 +47,111 @@ def calculate_crop_details(df_crop, total_country_production_for_crop, timeserie
     time_series_data = []
     if 'harvest_year' in df_crop.columns:
         if timeseries_admin_level == 0:
-            # Single aggregated time series
-            yearly_data = df_crop.groupby('harvest_year').agg({
-                'production': 'sum',
-                'area': 'sum'
-            }).reset_index()
-            
-            series_data = []
-            for _, row in yearly_data.iterrows():
-                year = int(row['harvest_year']) if not pd.isna(row['harvest_year']) else None
-                production = row['production'] if not pd.isna(row['production']) else 0
-                area = row['area'] if not pd.isna(row['area']) else 0
-                yield_value = production / area if area > 0 else 0
+            if split_by_season_production_system:
+                # Split by season and production system combination
+                group_columns = []
+                if 'season_name' in df_crop.columns:
+                    group_columns.append('season_name')
+                if 'crop_production_system' in df_crop.columns:
+                    group_columns.append('crop_production_system')
                 
-                if year is not None:
-                    series_data.append({
-                        'year': year,
-                        'production': production,
-                        'area': area,
-                        'yield': yield_value
-                    })
-            
-            time_series_data = [{
-                'admin_unit': 'Total',
-                'data': sorted(series_data, key=lambda x: x['year'])
-            }]
+                if group_columns:
+                    for group_values, group_df in df_crop.groupby(group_columns):
+                        # Handle both single values and tuples
+                        if isinstance(group_values, tuple):
+                            if any(pd.isna(val) for val in group_values):
+                                continue
+                        else:
+                            if pd.isna(group_values):
+                                continue
+                            
+                        yearly_data = group_df.groupby('harvest_year').agg({
+                            'production': 'sum',
+                            'area': 'sum'
+                        }).reset_index()
+                        
+                        series_data = []
+                        for _, row in yearly_data.iterrows():
+                            year = int(row['harvest_year']) if not pd.isna(row['harvest_year']) else None
+                            production = row['production'] if not pd.isna(row['production']) else 0
+                            area = row['area'] if not pd.isna(row['area']) else 0
+                            yield_value = production / area if area > 0 else 0
+                            
+                            if year is not None:
+                                series_data.append({
+                                    'year': year,
+                                    'production': production,
+                                    'area': area,
+                                    'yield': yield_value
+                                })
+                        
+                        if series_data:
+                            # Create descriptive label for the series
+                            if len(group_columns) == 2:
+                                if isinstance(group_values, tuple):
+                                    season_name, production_system = group_values
+                                else:
+                                    season_name, production_system = group_values, 'Unknown'
+                                series_label = f"{season_name} - {production_system}"
+                            else:
+                                series_label = str(group_values)
+                            
+                            time_series_data.append({
+                                'admin_unit': series_label,
+                                'data': sorted(series_data, key=lambda x: x['year'])
+                            })
+                else:
+                    # Fallback to single aggregated if no group columns available
+                    yearly_data = df_crop.groupby('harvest_year').agg({
+                        'production': 'sum',
+                        'area': 'sum'
+                    }).reset_index()
+                    
+                    series_data = []
+                    for _, row in yearly_data.iterrows():
+                        year = int(row['harvest_year']) if not pd.isna(row['harvest_year']) else None
+                        production = row['production'] if not pd.isna(row['production']) else 0
+                        area = row['area'] if not pd.isna(row['area']) else 0
+                        yield_value = production / area if area > 0 else 0
+                        
+                        if year is not None:
+                            series_data.append({
+                                'year': year,
+                                'production': production,
+                                'area': area,
+                                'yield': yield_value
+                            })
+                    
+                    time_series_data = [{
+                        'admin_unit': 'Total',
+                        'data': sorted(series_data, key=lambda x: x['year'])
+                    }]
+            else:
+                # Single aggregated time series
+                yearly_data = df_crop.groupby('harvest_year').agg({
+                    'production': 'sum',
+                    'area': 'sum'
+                }).reset_index()
+                
+                series_data = []
+                for _, row in yearly_data.iterrows():
+                    year = int(row['harvest_year']) if not pd.isna(row['harvest_year']) else None
+                    production = row['production'] if not pd.isna(row['production']) else 0
+                    area = row['area'] if not pd.isna(row['area']) else 0
+                    yield_value = production / area if area > 0 else 0
+                    
+                    if year is not None:
+                        series_data.append({
+                            'year': year,
+                            'production': production,
+                            'area': area,
+                            'yield': yield_value
+                        })
+                
+                time_series_data = [{
+                    'admin_unit': 'Total',
+                    'data': sorted(series_data, key=lambda x: x['year'])
+                }]
             
         elif timeseries_admin_level == 1 and 'admin_1' in df_crop.columns:
             # Group by admin_1 units
@@ -251,6 +331,7 @@ def get_data():
     country = request.args.get('country')
     admin_level_str = request.args.get('admin_level')
     timeseries_admin_level_str = request.args.get('timeseries_admin_level', '0')
+    split_by_season_str = request.args.get('split_by_season', 'false')
 
     if not country:
         app.logger.warning("Missing 'country' parameter in /api/data request.")
@@ -270,6 +351,8 @@ def get_data():
     except ValueError:
         app.logger.warning(f"Invalid 'timeseries_admin_level' parameter: {timeseries_admin_level_str}. Must be integer.")
         return jsonify({"error": "timeseries_admin_level must be an integer (0, 1, or 2)"}), 400
+
+    split_by_season = split_by_season_str.lower() == 'true'
 
     if admin_level not in [0, 1, 2]:
         app.logger.warning(f"Invalid 'admin_level' value: {admin_level}. Must be 0, 1, or 2.")
@@ -312,7 +395,7 @@ def get_data():
             if pd.isna(total_prod_for_calc): total_prod_for_calc = 0
 
             for crop_name, df_crop in country_data.groupby('product'):
-                crops_summary[crop_name] = calculate_crop_details(df_crop, total_prod_for_calc, timeseries_admin_level)
+                crops_summary[crop_name] = calculate_crop_details(df_crop, total_prod_for_calc, timeseries_admin_level, split_by_season)
         response_data['crops_summary'] = crops_summary
 
     elif admin_level == 1: # Admin 1 level
@@ -342,7 +425,7 @@ def get_data():
             total_prod_for_calc = response_data['total_admin_1_production']
             if pd.isna(total_prod_for_calc): total_prod_for_calc = 0
             for crop_name, df_crop in admin_1_data.groupby('product'):
-                crops_summary[crop_name] = calculate_crop_details(df_crop, total_prod_for_calc, timeseries_admin_level)
+                crops_summary[crop_name] = calculate_crop_details(df_crop, total_prod_for_calc, timeseries_admin_level, split_by_season)
         response_data['crops_summary'] = crops_summary
 
     elif admin_level == 2: # Admin 2 level
@@ -379,7 +462,7 @@ def get_data():
             total_prod_for_calc = response_data['total_admin_2_production']
             if pd.isna(total_prod_for_calc): total_prod_for_calc = 0
             for crop_name, df_crop in admin_2_data.groupby('product'):
-                crops_summary[crop_name] = calculate_crop_details(df_crop, total_prod_for_calc, timeseries_admin_level)
+                crops_summary[crop_name] = calculate_crop_details(df_crop, total_prod_for_calc, timeseries_admin_level, split_by_season)
         response_data['crops_summary'] = crops_summary
 
     app.logger.info(f"Successfully processed /api/data request. Returning data for {country}, Level {admin_level}.")
@@ -392,6 +475,7 @@ def get_crop_timeseries():
     admin_level_str = request.args.get('admin_level')
     crop_name = request.args.get('crop_name')
     timeseries_admin_level_str = request.args.get('timeseries_admin_level', '0')
+    split_by_season_str = request.args.get('split_by_season', 'false')
 
     if not country:
         app.logger.warning("Missing 'country' parameter in /api/crop-timeseries request.")
@@ -414,6 +498,8 @@ def get_crop_timeseries():
     except ValueError:
         app.logger.warning(f"Invalid 'timeseries_admin_level' parameter: {timeseries_admin_level_str}. Must be integer.")
         return jsonify({"error": "timeseries_admin_level must be an integer (0, 1, or 2)"}), 400
+
+    split_by_season = split_by_season_str.lower() == 'true'
 
     if admin_level not in [0, 1, 2]:
         app.logger.warning(f"Invalid 'admin_level' value: {admin_level}. Must be 0, 1, or 2.")
@@ -464,7 +550,7 @@ def get_crop_timeseries():
         return jsonify({"error": f"No data found for crop: {crop_name}"}), 404
 
     # Calculate crop details with specified timeseries admin level
-    crop_details = calculate_crop_details(crop_data, 0, timeseries_admin_level)
+    crop_details = calculate_crop_details(crop_data, 0, timeseries_admin_level, split_by_season)
     
     app.logger.info(f"Successfully processed /api/crop-timeseries request for {crop_name} in {country}.")
     return jsonify({

@@ -1,4 +1,4 @@
-# HarvestStat-Africa: Open-Access Harmonized Subnational Crop Statistics
+# HarvestStat-Africa UI: Interactive Data Visualization Interface
 ![GitHub](https://img.shields.io/github/license/HarvestStat/HarvestStat-Africa)
 ![GitHub last commit](https://img.shields.io/github/last-commit/HarvestStat/HarvestStat-Africa)
 ![GitHub issues](https://img.shields.io/github/issues/HarvestStat/HarvestStat-Africa)
@@ -8,9 +8,53 @@
 
 ## Overview
 
-The HarvestStat-Africa is a repository that contains cleaned and harmonized subnational global crop production data for Africa from various sources, including the Famine [Early Warning Systems Network (FEWS NET)](https://fews.net/) of the United States Agency for International Development (USAID) and the Food and Agriculture Organization (FAO).</br>
+This is a **web-based user interface (UI)** for the HarvestStat-Africa dataset - a comprehensive repository of cleaned and harmonized subnational crop production data for Africa. The UI provides an interactive platform for visualizing and exploring crop statistics from various sources, including the Famine [Early Warning Systems Network (FEWS NET)](https://fews.net/) and the Food and Agriculture Organization (FAO).
 
-This repository provides access to a comprehensive crop dataset that allows researchers, policymakers, and stakeholders to explore trends and patterns from  the subnational to the global level, enabling better-informed decisions related to food security, trade, and development.</br>
+The application consists of:
+- **Frontend**: A React-based web interface for data visualization and exploration
+- **Backend**: A Flask API server that processes and serves the crop statistics data
+
+This UI enables researchers, policymakers, and stakeholders to interactively explore trends and patterns from the subnational to the global level, facilitating better-informed decisions related to food security, trade, and development.
+
+## Quick Start
+
+### Prerequisites
+- **Node.js** (version 14 or higher) and **npm**
+- **Python** (version 3.7 or higher) and **pip**
+
+### Running the Application
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/HarvestStat/HarvestStat-Africa.git
+   cd HarvestStat-Africa
+   ```
+
+2. **Start the Backend (Flask API):**
+   ```bash
+   cd backend
+   pip install -r requirements.txt
+   python app.py
+   ```
+   The backend will start on `http://127.0.0.1:5000`
+
+3. **Start the Frontend (React UI):**
+   ```bash
+   # Open a new terminal window/tab
+   cd frontend
+   npm install
+   npm start
+   ```
+   The frontend will start on `http://localhost:3000` and automatically open in your browser
+
+4. **Access the Application:**
+   Open your web browser and navigate to `http://localhost:3000` to use the HarvestStat-Africa UI
+
+### Development Mode
+The application runs in development mode by default, which includes:
+- Hot reloading for both frontend and backend changes
+- Detailed error messages and debugging information
+- Automatic browser refresh when code changes are detected
 
 ## Data sources
 The data in this repository is compiled from various sources, including:
@@ -21,32 +65,43 @@ The data in this repository is compiled from various sources, including:
 - National agricultural agencies
 
 ## Repository structure
-This repository is organized as follows:
-- `data/`: stores raw and intermediate crop statistics generated during internal processing.
-- `docs/`: contains documentation related to the data.
-- `notebook/`: includes Jupyter notebook and Python files for processing crop data for each country.
-- `public/`: holds the semi-final & final processed datasets in CSV, Parquet, and GeoPackage formats, ready for public use.
+This UI application is organized as follows:
+- `frontend/`: React-based web interface for data visualization
+  - `src/`: React components and application logic
+  - `public/`: Static assets and HTML template
+  - `package.json`: Node.js dependencies and scripts
+- `backend/`: Flask API server for data processing
+  - `app.py`: Main Flask application
+  - `requirements.txt`: Python dependencies
+- `docs/`: Documentation related to the data and application
+- `public/`: Processed datasets in CSV, Parquet, and GeoPackage formats
 
-## Setting up the environment
-To set up the environment using `environment.yml`, follow these steps:
+## Alternative Setup (Development Environment)
+For a more detailed development setup:
 
-1. Clone the repository:
-    ```bash
-    git clone https://github.com/HarvestStat/HarvestStat-Africa.git
-    cd HarvestStat-Africa
-    ```
+1. **Backend Setup:**
+   ```bash
+   cd backend
+   # Create virtual environment (optional but recommended)
+   python -m venv venv
+   source venv/bin/activate  # On Windows: venv\Scripts\activate
+   pip install -r requirements.txt
+   ```
 
-2. Create the conda environment:
-    ```bash
-    conda env create -f environment.yml
-    ```
+2. **Frontend Setup:**
+   ```bash
+   cd frontend
+   npm install
+   ```
 
-3. Activate the environment:
-    ```bash
-    conda activate hvstat
-    ```
+3. **Running in Development Mode:**
+   - Start backend: `python backend/app.py`
+   - Start frontend: `npm start` (from frontend directory)
 
-4. Start your preferred development environment (e.g., Jupyter Notebook, VSCode):
+## Troubleshooting
+- **Port conflicts:** If port 3000 or 5000 are in use, the applications will prompt to use alternative ports
+- **Node.js issues:** Ensure you have Node.js version 14 or higher installed
+- **Python issues:** Ensure you have Python 3.7 or higher installed
 
 ## Current data status
 HarvetStat currently contains subnational crop statistics for **`33`** countries.

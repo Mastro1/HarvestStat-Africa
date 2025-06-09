@@ -276,6 +276,48 @@ main {
   border-color: #00796b;
 }
 
+.season-split-selector {
+  margin-left: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.season-split-selector label {
+  display: flex;
+  align-items: center;
+  font-size: 0.9em;
+  color: #555;
+  cursor: pointer;
+  margin: 0;
+}
+
+.season-split-selector input[type="checkbox"] {
+  margin-right: 8px;
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.crop-season-split-selector {
+  margin-left: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.crop-season-split-selector label {
+  display: flex;
+  align-items: center;
+  font-size: 0.85em;
+  color: #555;
+  cursor: pointer;
+  margin: 0;
+}
+
+.crop-season-split-selector input[type="checkbox"] {
+  margin-right: 6px;
+  transform: scale(1.0);
+  cursor: pointer;
+}
+
 .crop-details {
   margin-bottom: 30px;
   padding: 20px;
@@ -435,6 +477,12 @@ pre {
   }
   
   .timeseries-admin-selector {
+    justify-content: center;
+  }
+  
+  .season-split-selector {
+    margin-left: 0;
+    margin-top: 10px;
     justify-content: center;
   }
 
@@ -645,6 +693,12 @@ pre {
   .crop-admin-selector {
     justify-content: center;
     margin-left: 0;
+  }
+  
+  .crop-season-split-selector {
+    margin-left: 0;
+    margin-top: 8px;
+    justify-content: center;
   }
 }
 
