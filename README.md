@@ -16,6 +16,9 @@ The application consists of:
 
 This UI enables researchers, policymakers, and stakeholders to interactively explore trends and patterns from the subnational to the global level, facilitating better-informed decisions related to food security, trade, and development.
 
+## Credits
+This UI interface was developed by Massimo Poretti, Data Engineer @ [Africa Specialty Risks](https://www.asr-re.com/).
+
 ## Quick Start
 
 ### Prerequisites
@@ -95,7 +98,7 @@ For a more detailed development setup:
    ```
 
 3. **Running in Development Mode:**
-   - Start backend: `python backend/app.py`
+   - Start backend: `python app.py` (from backend directory)
    - Start frontend: `npm start` (from frontend directory)
 
 ## Troubleshooting
@@ -121,28 +124,6 @@ To access the data, download the files from the `public` folder.
 The version of the dataset is specified in the filename. The current version is `v1.0`.
 
 The official release version is available on [Dryad - HarvestStat Africa](https://datadryad.org/dataset/doi:10.5061/dryad.vq83bk42w).
-
-## Data structure
-The dataset contains the following columns:
-
-| Column Name             | Description                                                     |
-| ----------------------- | --------------------------------------------------------------- |
-| `fnid`                  | FEWS NET's unique geographic unit identifier                    |
-| `country`               | Name of the country                                             |
-| `country_code`          | ISO 3166-1 alpha-2 country code                                 |
-| `admin_1`               | Name of the first-level administrative unit                     |
-| `admin_2`               | Name of the second-level administrative unit (if applicable)    |
-| `product`               | Name of the crop product                                        |
-| `season_name`           | Name of the growing season                                      |
-| `planting_year`         | Year when planting begins                                       |
-| `planting_month`        | Month when planting begins                                      |
-| `harvest_year`          | Year when harvesting ends                                       |
-| `harvest_month`         | Month when harvesting ends                                      |
-| `crop_production_system`| Type of crop production system (e.g., irrigated, rainfed, etc.) |
-| `qc_flag`               | Quality control flag (0 = no flag, 1 = outlier, 2 = low variance)|
-| `area`                  | Cropped area (hectares; ha)                                     |
-| `production`            | Crop quantity produced (metric tonnes; mt)                      |
-| `yield`                 | Crop yield (metric tonnes per hectare; mt/ha)                   |
 
 For details, please see the paper in the [Citation](#citation) section.
 
@@ -182,11 +163,7 @@ D. Lee, W. Anderson, X. Chen, F. Davenport, S. Shukla, R. Sahajpale, M. Budde, J
 </details>
 
 ## How to contribute
-Contributions to this repository are welcome, including new data sources or improvements to the existing data. To contribute, please create a pull request with a clear description of the changes proposed.
-
-## Contact 
-- Please contact Donghoon Lee ([Donghoon.Lee@umanitoba.ca](Donghoon.Lee@umanitoba.ca) and Weston Anderson [Weston@umd.edu](Weston@umd.edu)) for any questions or collaborations.</br>
-- Users are encouraged to [open an issue](https://github.com/HarvestStat/HarvestStat/issues) for questions, feedback, or bug reports.
+Contributions to this repository are welcome. To contribute, please create a pull request with a clear description of the changes proposed.
 
 ## License
 The data in this repository is licensed under the MIT License.
