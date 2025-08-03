@@ -237,6 +237,62 @@ const CropTimeSeriesComponent = ({
   );
 };
 
+// Landing Page Component
+const LandingPage = ({ statusList }) => {
+  return (
+    <div className="landing-page">
+      <div className="status-map-container">
+        <img 
+          src="status_map_ee.png" 
+          alt="Africa Countries Status Map" 
+          className="status-map-image"
+        />
+      </div>
+      
+      <div className="status-table-container">
+        <h3>Country Data Availability Status</h3>
+        <div className="status-tables">
+          <div className="admin-level-table">
+            <h4>Admin-1 Level Countries</h4>
+            <table className="status-table">
+              <thead>
+                <tr>
+                  <th>Country</th>
+                </tr>
+              </thead>
+              <tbody>
+                {statusList["Admin-1"]?.map((country, index) => (
+                  <tr key={index}>
+                    <td>{country}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          
+          <div className="admin-level-table">
+            <h4>Admin-2 Level Countries</h4>
+            <table className="status-table">
+              <thead>
+                <tr>
+                  <th>Country</th>
+                </tr>
+              </thead>
+              <tbody>
+                {statusList["Admin-2"]?.map((country, index) => (
+                  <tr key={index}>
+                    <td>{country}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
 function App() {
   const [countries, setCountries] = useState([]);
   const [selectedCountry, setSelectedCountry] = useState('');
@@ -256,6 +312,10 @@ function App() {
   const [loadingAdmin1, setLoadingAdmin1] = useState(false);
   const [loadingAdmin2, setLoadingAdmin2] = useState(false);
   const [error, setError] = useState(null);
+  
+  // New state for landing page
+  const [hasDataBeenFetched, setHasDataBeenFetched] = useState(false);
+  const [statusList, setStatusList] = useState({ "Admin-1": [], "Admin-2": [] });
 
   const dataDisplayRef = useRef(null); // For scrolling to data section
 
@@ -269,6 +329,17 @@ function App() {
         console.error("Error fetching countries:", err);
         setError('Failed to load countries. Is the backend server running? Please try refreshing.');
         setLoadingCountries(false);
+      });
+  }, []);
+
+  // Load status list
+  useEffect(() => {
+    axios.get('/status_list.json')
+      .then(response => {
+        setStatusList(response.data);
+      })
+      .catch(err => {
+        console.error("Error loading status list:", err);
       });
   }, []);
 
@@ -375,13 +446,16 @@ function App() {
     setSelectedAdminLevel('0');
     setSelectedAdmin1Name('');
     setSelectedAdmin2Name('');
-    setAdmin1Options([]);
-    setAdmin2Options([]);
+    setData(null);
+    setError('');
     setExpandedCrops(new Set());
     setTimeSeriesAdminLevel('0');
     setSplitBySeason(false);
-    setData(null);
-    setError(null);
+  };
+
+  // Function to handle title click and refresh the page
+  const handleTitleClick = () => {
+    window.location.reload();
   };
 
   const isFetchDisabled = () => {
@@ -430,6 +504,7 @@ function App() {
       .then(response => {
         setData(response.data);
         setLoadingData(false);
+        setHasDataBeenFetched(true); // Mark that data has been fetched
         if (response.data && Object.keys(response.data).length > 0 && dataDisplayRef.current) {
           dataDisplayRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
         } else if (!response.data || Object.keys(response.data).length === 0) {
@@ -564,7 +639,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>HarvestStat Africa Explorer</h1>
+        <h1 onClick={handleTitleClick} style={{ cursor: 'pointer' }}>HarvestStat Africa Explorer</h1>
       </header>
       <main>
         <div className="controls">
@@ -638,6 +713,12 @@ function App() {
             </button>
           </div>
         </div>
+
+        {!hasDataBeenFetched && !loadingData && (
+          <div className="status-legend">
+            <p><strong>Note:</strong> Admin-1 countries provide data at national and first administrative level. Admin-2 countries provide data at national, first, and second administrative levels.</p>
+          </div>
+        )}
 
         {loadingData && <div className="loading-indicator"><p>Loading data, please wait...</p></div>}
         {error && <p className="error-message">{error}</p>}
@@ -716,7 +797,14 @@ function App() {
                 </div>
 
                 <h3>Crop Specific Analysis</h3>
-                {Object.entries(data.crops_summary).map(([crop, details]) => (
+                {Object.entries(data.crops_summary)
+                  .sort(([, detailsA], [, detailsB]) => {
+                    // Sort by total production (descending - highest production first)
+                    const productionA = detailsA.total_production || 0;
+                    const productionB = detailsB.total_production || 0;
+                    return productionB - productionA;
+                  })
+                  .map(([crop, details]) => (
                   <div key={crop} className="crop-collapsible">
                     <div 
                       className="crop-header" 
@@ -788,9 +876,12 @@ function App() {
             )}
           </div>
         )}
-        {/* Message if data is explicitly set to null (e.g. after an error or during reset) and not loading */}
-        {!data && !loadingData && !error && (
-            <p className="no-data-message controls-info">Select options above and click "Fetch Data" to view agricultural statistics.</p>
+        {/* Show landing page when no data has been fetched, or show message if data fetch has been attempted */}
+        {!hasDataBeenFetched && !loadingData && !error && (
+          <LandingPage statusList={statusList} />
+        )}
+        {hasDataBeenFetched && !data && !loadingData && !error && (
+          <p className="no-data-message controls-info">Select options above and click "Fetch Data" to view agricultural statistics.</p>
         )}
       </main>
     </div>
