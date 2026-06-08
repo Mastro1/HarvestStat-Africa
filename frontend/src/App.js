@@ -3,6 +3,9 @@ import axios from 'axios';
 import { BarChart, Bar, LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, Text } from 'recharts';
 import './App.css';
 
+const DEFAULT_STATUS_MAP_URL =
+  'https://raw.githubusercontent.com/HarvestStat/HarvestStat-Africa/refs/heads/main/docs/current_status_map.png';
+
 // Custom Tick for XAxis to prevent overlap and improve readability
 const CustomXAxisTick = (props) => {
   const { x, y, payload } = props;
@@ -237,13 +240,60 @@ const CropTimeSeriesComponent = ({
   );
 };
 
+const Footer = () => (
+  <footer className="App-footer">
+    <div className="footer-content">
+      <p className="footer-about">
+        HarvestStat Africa Explorer — an interactive interface for exploring harmonized
+        subnational crop statistics across Sub-Saharan Africa.
+      </p>
+      <nav className="footer-links" aria-label="Project links">
+        <a
+          href="https://github.com/HarvestStat/HarvestStat-Africa"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          HarvestStat-Africa (dataset)
+        </a>
+        <a
+          href="https://github.com/HarvestStat/HarvestStat-Africa#citation"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Citation
+        </a>
+        <a
+          href="https://github.com/Mastro1/HarvestStat-Africa-UI"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          This UI (source code)
+        </a>
+        <a
+          href="https://fdw.fews.net/data-explorer/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          FEWS NET Data Explorer
+        </a>
+      </nav>
+      <p className="footer-meta">
+        Dataset v1.2 · Data licensed under MIT License
+      </p>
+    </div>
+  </footer>
+);
+
 // Landing Page Component
-const LandingPage = ({ statusList }) => {
+const LandingPage = ({ statusList, statusMapUrl }) => {
+  const totalCountries =
+    (statusList['Admin-1']?.length || 0) + (statusList['Admin-2']?.length || 0);
+
   return (
     <div className="landing-page">
       <div className="status-map-container">
         <img 
-          src="status_map_ee.png" 
+          src={statusMapUrl}
           alt="Africa Countries Status Map" 
           className="status-map-image"
         />
@@ -251,6 +301,11 @@ const LandingPage = ({ statusList }) => {
       
       <div className="status-table-container">
         <h3>Country Data Availability Status</h3>
+        {totalCountries > 0 && (
+          <p className="status-summary">
+            HarvestStat v1.2 includes subnational crop statistics for {totalCountries} countries.
+          </p>
+        )}
         <div className="status-tables">
           <div className="admin-level-table">
             <h4>Admin-1 Level Countries</h4>
@@ -316,6 +371,8 @@ function App() {
   // New state for landing page
   const [hasDataBeenFetched, setHasDataBeenFetched] = useState(false);
   const [statusList, setStatusList] = useState({ "Admin-1": [], "Admin-2": [] });
+  const [statusMapUrl, setStatusMapUrl] = useState(DEFAULT_STATUS_MAP_URL);
+  const [downloadingKey, setDownloadingKey] = useState(null);
 
   const dataDisplayRef = useRef(null); // For scrolling to data section
 
@@ -332,14 +389,21 @@ function App() {
       });
   }, []);
 
-  // Load status list
+  // Load country availability status from the official dataset
   useEffect(() => {
-    axios.get('/status_list.json')
+    axios.get('/api/country-status')
       .then(response => {
-        setStatusList(response.data);
+        const { status_map_url: mapUrl, ...status } = response.data || {};
+        setStatusList(status);
+        if (mapUrl) {
+          setStatusMapUrl(mapUrl);
+        }
       })
       .catch(err => {
-        console.error("Error loading status list:", err);
+        console.error("Error loading country status:", err);
+        axios.get('/status_list.json')
+          .then(response => setStatusList(response.data))
+          .catch(fallbackErr => console.error("Error loading status fallback:", fallbackErr));
       });
   }, []);
 
@@ -527,22 +591,103 @@ function App() {
       });
   };
 
+  const hasReportedValue = (value) => Number(value) > 0;
+
+  const getDownloadScopeLabel = () => {
+    if (!data) return '';
+    if (data.admin_level === 2 && data.admin_2_name) {
+      return `${data.admin_2_name}, ${data.admin_1_name}`;
+    }
+    if (data.admin_level === 1 && data.admin_1_name) {
+      return data.admin_1_name;
+    }
+    return 'National';
+  };
+
+  const downloadCsv = async (crop = null) => {
+    const downloadKey = crop ? `crop:${crop}` : 'country';
+    const params = {
+      country: selectedCountry,
+      admin_level: selectedAdminLevel,
+    };
+
+    if (selectedAdminLevel === '1' || selectedAdminLevel === '2') {
+      params.admin_1_name = selectedAdmin1Name.trim();
+    }
+    if (selectedAdminLevel === '2') {
+      params.admin_2_name = selectedAdmin2Name.trim();
+    }
+    if (crop) {
+      params.crop = crop;
+    }
+
+    setDownloadingKey(downloadKey);
+    setError(null);
+
+    try {
+      const response = await axios.get('/api/download', {
+        params,
+        responseType: 'blob',
+      });
+
+      const disposition = response.headers['content-disposition'];
+      let filename = crop
+        ? `harveststat_${selectedCountry}_${crop}.csv`
+        : `harveststat_${selectedCountry}.csv`;
+
+      if (disposition) {
+        const match = disposition.match(/filename="?([^"]+)"?/);
+        if (match?.[1]) {
+          filename = match[1];
+        }
+      }
+
+      const blobUrl = window.URL.createObjectURL(new Blob([response.data], { type: 'text/csv' }));
+      const link = document.createElement('a');
+      link.href = blobUrl;
+      link.setAttribute('download', filename);
+      document.body.appendChild(link);
+      link.click();
+      link.remove();
+      window.URL.revokeObjectURL(blobUrl);
+    } catch (err) {
+      console.error('Error downloading CSV:', err);
+      let errorMessage = 'Failed to download CSV.';
+      if (err.response?.data instanceof Blob) {
+        try {
+          const errorText = await err.response.data.text();
+          const errorJson = JSON.parse(errorText);
+          errorMessage = errorJson.error || errorMessage;
+        } catch (parseError) {
+          console.error('Could not parse download error response:', parseError);
+        }
+      } else if (err.response?.data?.error) {
+        errorMessage = err.response.data.error;
+      }
+      setError(errorMessage);
+    } finally {
+      setDownloadingKey(null);
+    }
+  };
+
   const getChartData = () => {
     if (!data || !data.crops_summary) {
       return [];
     }
-    return Object.entries(data.crops_summary).map(([crop, details]) => {
-      const production = details.total_production || 0;
-      const area = details.total_area_harvested || 0;
-      const yield_value = area > 0 ? production / area : 0;
-      
-      return {
-        name: crop,
-        production: production,
-        area: area,
-        yield: yield_value,
-      };
-    });
+    return Object.entries(data.crops_summary)
+      .map(([crop, details]) => {
+        const production = details.total_production || 0;
+        const area = details.total_area_harvested || 0;
+        const yield_value = area > 0 ? production / area : 0;
+
+        return {
+          name: crop,
+          production,
+          area,
+          yield: yield_value,
+        };
+      })
+      .filter((entry) => hasReportedValue(entry.production) || hasReportedValue(entry.area));
   };
 
   const getChartConfig = () => {
@@ -725,9 +870,25 @@ function App() {
 
         {data && Object.keys(data).length > 0 && !error && ( // Ensure data is not null/empty and no error
           <div id="data-display-section" ref={dataDisplayRef} className="data-display">
-            <h2>Report for {data.country}</h2>
-            <div className="report-summary">
-              {renderAdminLevelSpecificSummary()}
+            <div className="report-header">
+              <div className="report-title-row">
+                <h2>Report for {data.country}</h2>
+                <button
+                  type="button"
+                  className="download-button"
+                  onClick={() => downloadCsv()}
+                  disabled={downloadingKey !== null}
+                  title={`Download all records for ${data.country} (${getDownloadScopeLabel()})`}
+                >
+                  {downloadingKey === 'country' ? 'Downloading...' : 'Download CSV'}
+                </button>
+              </div>
+              <p className="download-scope-note">
+                Downloads the full HarvestStat record set for {data.country} at the {getDownloadScopeLabel()} level.
+              </p>
+              <div className="report-summary">
+                {renderAdminLevelSpecificSummary()}
+              </div>
             </div>
 
             {data.crops_summary && Object.keys(data.crops_summary).length > 0 ? (
@@ -764,7 +925,7 @@ function App() {
                         <option value="2">Admin-2 Regions</option>
                       </select>
                     </div>
-                    {timeSeriesAdminLevel === '0' && (
+                    {timeSeriesAdminLevel === '0' && data.admin_level !== 0 && (
                       <div className="season-split-selector">
                         <label htmlFor="season-split-checkbox">
                           <input
@@ -798,6 +959,9 @@ function App() {
 
                 <h3>Crop Specific Analysis</h3>
                 {Object.entries(data.crops_summary)
+                  .filter(([, details]) =>
+                    hasReportedValue(details.total_production) || hasReportedValue(details.total_area_harvested)
+                  )
                   .sort(([, detailsA], [, detailsB]) => {
                     // Sort by total production (descending - highest production first)
                     const productionA = detailsA.total_production || 0;
@@ -812,9 +976,23 @@ function App() {
                       style={{ cursor: 'pointer' }}
                     >
                       <span className="crop-name">{crop}</span>
-                      <span className="dropdown-arrow">
-                        {expandedCrops.has(crop) ? '▼' : '▶'}
-                      </span>
+                      <div className="crop-header-actions">
+                        <button
+                          type="button"
+                          className="download-button download-button-compact"
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            downloadCsv(crop);
+                          }}
+                          disabled={downloadingKey !== null}
+                          title={`Download ${crop} records for ${data.country} (${getDownloadScopeLabel()})`}
+                        >
+                          {downloadingKey === `crop:${crop}` ? 'Downloading...' : 'Download CSV'}
+                        </button>
+                        <span className="dropdown-arrow">
+                          {expandedCrops.has(crop) ? '▼' : '▶'}
+                        </span>
+                      </div>
                     </div>
                     
                     {expandedCrops.has(crop) && (
@@ -850,7 +1028,11 @@ function App() {
                                 </tr>
                               </thead>
                               <tbody>
-                                {details.season_specific_breakdown.map(season => (
+                                {details.season_specific_breakdown
+                                  .filter((season) =>
+                                    hasReportedValue(season.production_absolute) || hasReportedValue(season.area_harvested)
+                                  )
+                                  .map(season => (
                                   <tr key={season.season_name}>
                                     <td>{season.season_name || 'N/A'}</td>
                                     <td>{season.production_absolute !== undefined ? season.production_absolute?.toLocaleString() : 'N/A'}</td>
@@ -878,12 +1060,13 @@ function App() {
         )}
         {/* Show landing page when no data has been fetched, or show message if data fetch has been attempted */}
         {!hasDataBeenFetched && !loadingData && !error && (
-          <LandingPage statusList={statusList} />
+          <LandingPage statusList={statusList} statusMapUrl={statusMapUrl} />
         )}
         {hasDataBeenFetched && !data && !loadingData && !error && (
           <p className="no-data-message controls-info">Select options above and click "Fetch Data" to view agricultural statistics.</p>
         )}
       </main>
+      <Footer />
     </div>
   );
 }

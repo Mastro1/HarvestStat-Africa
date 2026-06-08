@@ -1,31 +1,33 @@
-import pandas as pd
-from flask import Flask, jsonify, request
-from flask_cors import CORS
-import numpy as np
 import logging
+import re
+import sys
+from pathlib import Path
 
-# Configure logging
+import pandas as pd
+from flask import Flask, Response, jsonify, request
+from flask_cors import CORS
+
+ROOT_DIR = Path(__file__).resolve().parent.parent
+if str(ROOT_DIR) not in sys.path:
+    sys.path.insert(0, str(ROOT_DIR))
+
+from backend.config import DEFAULT_STATUS_MAP_URL
+from backend.data_loader import get_dataframe
+
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
-# Load the CSV data
-try:
-    data = pd.read_csv('../public/hvstat_africa_data_v1.0.csv')
-    # Convert relevant columns to numeric, coercing errors to NaN
-    numeric_cols = ['planting_year', 'harvest_year', 'area', 'production', 'yield']
-    for col in numeric_cols:
-        if col in data.columns:
-            data[col] = pd.to_numeric(data[col], errors='coerce')
-    logging.info("CSV data loaded and processed successfully.")
-except FileNotFoundError:
-    logging.error("FATAL: The CSV file 'public/hvstat_africa_data_v1.0.csv' was not found.")
-    data = pd.DataFrame() # Create an empty DataFrame to prevent further errors
-except Exception as e:
-    logging.error(f"FATAL: An unexpected error occurred during CSV loading: {e}")
-    data = pd.DataFrame()
-
-
 app = Flask(__name__)
-CORS(app)  # Enable CORS for all routes
+CORS(app)
+
+
+@app.after_request
+def add_cache_headers(response):
+    if request.path.startswith('/api/'):
+        if request.path == '/api/download':
+            response.headers['Cache-Control'] = 'no-store'
+        else:
+            response.headers['Cache-Control'] = 'public, max-age=3600, stale-while-revalidate=86400'
+    return response
 
 def get_missing_years(years_series):
     if years_series.empty or years_series.isnull().all():
@@ -37,6 +39,92 @@ def get_missing_years(years_series):
     present_years = set(years_series.dropna().astype(int))
     expected_years = set(range(min_year, max_year + 1))
     return sorted(list(expected_years - present_years))
+
+
+def _sum_numeric(series) -> float:
+    total = series.sum() if series is not None else 0
+    return 0.0 if pd.isna(total) else float(total)
+
+
+def _has_reported_data(df: pd.DataFrame) -> bool:
+    """Return True when a slice has non-zero production or harvested area."""
+    if df.empty:
+        return False
+    production = _sum_numeric(df['production']) if 'production' in df.columns else 0.0
+    area = _sum_numeric(df['area']) if 'area' in df.columns else 0.0
+    return production > 0 or area > 0
+
+
+def _country_has_admin2_data(country_df: pd.DataFrame) -> bool:
+    if 'admin_2' not in country_df.columns:
+        return False
+    admin_2_values = country_df['admin_2'].dropna().astype(str).str.strip().str.lower()
+    return bool(((admin_2_values != 'none') & (admin_2_values != '')).any())
+
+
+def _parse_admin_level(admin_level_str):
+    if not admin_level_str:
+        return None, ("admin_level parameter is required", 400)
+    try:
+        admin_level = int(admin_level_str)
+    except ValueError:
+        return None, ("admin_level must be an integer (0, 1, or 2)", 400)
+    if admin_level not in (0, 1, 2):
+        return None, ("admin_level must be 0, 1, or 2", 400)
+    return admin_level, None
+
+
+def _filter_scope_dataframe(data, country, admin_level, admin_1_name=None, admin_2_name=None, crop=None):
+    country_data = data[data['country'] == country].copy()
+    if country_data.empty:
+        return None, (f"No data found for country: {country}", 404)
+
+    if admin_level == 1:
+        if not admin_1_name:
+            return None, ("admin_1_name parameter is required for admin_level 1", 400)
+        scoped_data = country_data[country_data['admin_1'] == admin_1_name].copy()
+        if scoped_data.empty:
+            return None, (f"No data found for Admin 1: {admin_1_name} in {country}", 404)
+    elif admin_level == 2:
+        if not admin_1_name or not admin_2_name:
+            return None, ("admin_1_name and admin_2_name parameters are required for admin_level 2", 400)
+        scoped_data = country_data[
+            (country_data['admin_1'] == admin_1_name) & (country_data['admin_2'] == admin_2_name)
+        ].copy()
+        if scoped_data.empty:
+            return None, (
+                f"No data found for Admin 2: {admin_2_name} in Admin 1: {admin_1_name}, Country: {country}",
+                404,
+            )
+    else:
+        scoped_data = country_data
+
+    if crop:
+        if 'product' not in scoped_data.columns:
+            return None, ("No product column in data", 500)
+        scoped_data = scoped_data[scoped_data['product'] == crop].copy()
+        if scoped_data.empty:
+            return None, (f"No data found for crop: {crop}", 404)
+
+    return scoped_data, None
+
+
+def _slugify_filename_part(value) -> str:
+    slug = re.sub(r'[^\w\s-]', '', str(value).strip().lower())
+    slug = re.sub(r'[\s_-]+', '_', slug)
+    return slug[:60].strip('_') or 'data'
+
+
+def _build_download_filename(country, admin_level, admin_1_name, admin_2_name, crop=None) -> str:
+    parts = ['harveststat', _slugify_filename_part(country)]
+    if admin_level == 1 and admin_1_name:
+        parts.append(_slugify_filename_part(admin_1_name))
+    elif admin_level == 2 and admin_2_name:
+        parts.append(_slugify_filename_part(admin_2_name))
+    if crop:
+        parts.append(_slugify_filename_part(crop))
+    return '_'.join(parts) + '.csv'
+
 
 def calculate_crop_details(df_crop, total_country_production_for_crop, timeseries_admin_level=0, split_by_season_production_system=False):
     crop_production = df_crop['production'].sum()
@@ -56,7 +144,9 @@ def calculate_crop_details(df_crop, total_country_production_for_crop, timeserie
                     group_columns.append('crop_production_system')
                 
                 if group_columns:
-                    for group_values, group_df in df_crop.groupby(group_columns):
+                    for group_values, group_df in df_crop.groupby(group_columns, observed=True):
+                        if not _has_reported_data(group_df):
+                            continue
                         # Handle both single values and tuples
                         if isinstance(group_values, tuple):
                             if any(pd.isna(val) for val in group_values):
@@ -155,8 +245,8 @@ def calculate_crop_details(df_crop, total_country_production_for_crop, timeserie
             
         elif timeseries_admin_level == 1 and 'admin_1' in df_crop.columns:
             # Group by admin_1 units
-            for admin_1_name, admin_df in df_crop.groupby('admin_1'):
-                if pd.isna(admin_1_name):
+            for admin_1_name, admin_df in df_crop.groupby('admin_1', observed=True):
+                if pd.isna(admin_1_name) or not _has_reported_data(admin_df):
                     continue
                     
                 yearly_data = admin_df.groupby('harvest_year').agg({
@@ -187,8 +277,8 @@ def calculate_crop_details(df_crop, total_country_production_for_crop, timeserie
                     
         elif timeseries_admin_level == 2 and 'admin_2' in df_crop.columns:
             # Group by admin_2 units
-            for admin_2_name, admin_df in df_crop.groupby('admin_2'):
-                if pd.isna(admin_2_name):
+            for admin_2_name, admin_df in df_crop.groupby('admin_2', observed=True):
+                if pd.isna(admin_2_name) or not _has_reported_data(admin_df):
                     continue
                     
                 yearly_data = admin_df.groupby('harvest_year').agg({
@@ -219,7 +309,10 @@ def calculate_crop_details(df_crop, total_country_production_for_crop, timeserie
 
     seasons_data = []
     if 'season_name' in df_crop.columns:
-        for season_name, df_season in df_crop.groupby('season_name'):
+        for season_name, df_season in df_crop.groupby('season_name', observed=True):
+            if not _has_reported_data(df_season):
+                continue
+
             season_production = df_season['production'].sum()
             season_area = df_season['area'].sum()
             season_yield = season_production / season_area if season_area else 0
@@ -253,9 +346,35 @@ def calculate_crop_details(df_crop, total_country_production_for_crop, timeserie
     }
 
 
+@app.route('/api/country-status')
+def get_country_status():
+    app.logger.info(f"Request received for /api/country-status from {request.remote_addr}")
+    data = get_dataframe()
+    status = {"Admin-1": [], "Admin-2": [], "status_map_url": DEFAULT_STATUS_MAP_URL}
+
+    if data.empty or 'country' not in data.columns:
+        app.logger.warning("Country data is empty or 'country' column missing.")
+        return jsonify(status)
+
+    for country in sorted(data['country'].dropna().unique().tolist()):
+        country_df = data[data['country'] == country]
+        if _country_has_admin2_data(country_df):
+            status["Admin-2"].append(country)
+        else:
+            status["Admin-1"].append(country)
+
+    app.logger.info(
+        "Country status ready: %s Admin-1, %s Admin-2 countries.",
+        len(status["Admin-1"]),
+        len(status["Admin-2"]),
+    )
+    return jsonify(status)
+
+
 @app.route('/api/countries')
 def get_countries():
     app.logger.info(f"Request received for /api/countries from {request.remote_addr}")
+    data = get_dataframe()
     if not data.empty and 'country' in data.columns:
         unique_countries = sorted(data['country'].dropna().unique().tolist())
         app.logger.info(f"Found {len(unique_countries)} countries. Returning list.")
@@ -272,6 +391,7 @@ def get_admin1_levels():
         app.logger.warning("Missing 'country' parameter in /api/admin1 request.")
         return jsonify({"error": "Country parameter is required"}), 400
     
+    data = get_dataframe()
     if data.empty:
         app.logger.error("Data not loaded, cannot serve /api/admin1 request.")
         return jsonify({"error": "Data not loaded or CSV processing failed on server."}), 500
@@ -304,6 +424,7 @@ def get_admin2_levels():
         app.logger.warning("Missing 'admin_1_name' parameter in /api/admin2 request.")
         return jsonify({"error": "admin_1_name parameter is required"}), 400
     
+    data = get_dataframe()
     if data.empty:
         app.logger.error("Data not loaded, cannot serve /api/admin2 request.")
         return jsonify({"error": "Data not loaded or CSV processing failed on server."}), 500
@@ -362,6 +483,7 @@ def get_data():
         app.logger.warning(f"Invalid 'timeseries_admin_level' value: {timeseries_admin_level}. Must be 0, 1, or 2.")
         return jsonify({"error": "timeseries_admin_level must be 0, 1, or 2"}), 400
 
+    data = get_dataframe()
     if data.empty:
         app.logger.error("Data not loaded, cannot serve /api/data request.")
         return jsonify({"error": "Data not loaded or CSV processing failed on server."}), 500
@@ -394,7 +516,9 @@ def get_data():
             total_prod_for_calc = response_data['total_national_production']
             if pd.isna(total_prod_for_calc): total_prod_for_calc = 0
 
-            for crop_name, df_crop in country_data.groupby('product'):
+            for crop_name, df_crop in country_data.groupby('product', observed=True):
+                if not _has_reported_data(df_crop):
+                    continue
                 crops_summary[crop_name] = calculate_crop_details(df_crop, total_prod_for_calc, timeseries_admin_level, split_by_season)
         response_data['crops_summary'] = crops_summary
 
@@ -424,7 +548,9 @@ def get_data():
         if 'product' in admin_1_data.columns:
             total_prod_for_calc = response_data['total_admin_1_production']
             if pd.isna(total_prod_for_calc): total_prod_for_calc = 0
-            for crop_name, df_crop in admin_1_data.groupby('product'):
+            for crop_name, df_crop in admin_1_data.groupby('product', observed=True):
+                if not _has_reported_data(df_crop):
+                    continue
                 crops_summary[crop_name] = calculate_crop_details(df_crop, total_prod_for_calc, timeseries_admin_level, split_by_season)
         response_data['crops_summary'] = crops_summary
 
@@ -461,7 +587,9 @@ def get_data():
         if 'product' in admin_2_data.columns:
             total_prod_for_calc = response_data['total_admin_2_production']
             if pd.isna(total_prod_for_calc): total_prod_for_calc = 0
-            for crop_name, df_crop in admin_2_data.groupby('product'):
+            for crop_name, df_crop in admin_2_data.groupby('product', observed=True):
+                if not _has_reported_data(df_crop):
+                    continue
                 crops_summary[crop_name] = calculate_crop_details(df_crop, total_prod_for_calc, timeseries_admin_level, split_by_season)
         response_data['crops_summary'] = crops_summary
 
@@ -509,6 +637,7 @@ def get_crop_timeseries():
         app.logger.warning(f"Invalid 'timeseries_admin_level' value: {timeseries_admin_level}. Must be 0, 1, or 2.")
         return jsonify({"error": "timeseries_admin_level must be 0, 1, or 2"}), 400
 
+    data = get_dataframe()
     if data.empty:
         app.logger.error("Data not loaded, cannot serve /api/crop-timeseries request.")
         return jsonify({"error": "Data not loaded or CSV processing failed on server."}), 500
@@ -558,6 +687,60 @@ def get_crop_timeseries():
         "time_series_data": crop_details.get('time_series_data', [])
     })
 
+
+@app.route('/api/download')
+def download_csv():
+    app.logger.info(f"Request received for /api/download from {request.remote_addr} with args: {request.args}")
+    country = request.args.get('country')
+    crop = request.args.get('crop')
+    admin_1_name = request.args.get('admin_1_name')
+    admin_2_name = request.args.get('admin_2_name')
+
+    if not country:
+        return jsonify({"error": "Country parameter is required"}), 400
+
+    admin_level, error = _parse_admin_level(request.args.get('admin_level'))
+    if error:
+        message, status_code = error
+        return jsonify({"error": message}), status_code
+
+    data = get_dataframe()
+    if data.empty:
+        return jsonify({"error": "Data not loaded or CSV processing failed on server."}), 500
+
+    scoped_data, error = _filter_scope_dataframe(
+        data,
+        country,
+        admin_level,
+        admin_1_name=admin_1_name,
+        admin_2_name=admin_2_name,
+        crop=crop,
+    )
+    if error:
+        message, status_code = error
+        return jsonify({"error": message}), status_code
+
+    export_df = scoped_data.copy()
+    for col in export_df.select_dtypes(include=['category']).columns:
+        export_df[col] = export_df[col].astype(str)
+
+    filename = _build_download_filename(country, admin_level, admin_1_name, admin_2_name, crop=crop)
+    csv_content = export_df.to_csv(index=False)
+
+    app.logger.info(
+        "Prepared CSV download %s (%s rows) for %s, level %s%s.",
+        filename,
+        len(export_df),
+        country,
+        admin_level,
+        f", crop {crop}" if crop else "",
+    )
+    return Response(
+        csv_content,
+        mimetype='text/csv',
+        headers={'Content-Disposition': f'attachment; filename="{filename}"'},
+    )
+
+
 if __name__ == '__main__':
-    # Make sure to set debug=False for production environments
-    app.run(debug=True) # Set debug=False in a production environment
+    app.run(debug=True, port=5000)

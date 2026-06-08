@@ -178,6 +178,9 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# Runtime/build CSV cache (fetched from official GitHub repo)
+backend/.cache/
 data/crop/adm_crop_production_ALL.hdf
 data/crop/Harvestat_crop_yield_anomalies.hdf
 data/crop_raw_data/adm_crop_data_raw_NE.csv
