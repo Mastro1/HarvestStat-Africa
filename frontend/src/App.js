@@ -385,7 +385,8 @@ function App() {
       })
       .catch(err => {
         console.error("Error fetching countries:", err);
-        setError('Failed to load countries. Is the backend server running? Please try refreshing.');
+        setError('Failed to load countries. The backend may still be starting — please refresh in a moment.');
+        setCountries([]);
         setLoadingCountries(false);
       });
   }, []);
@@ -869,7 +870,7 @@ function App() {
         {loadingData && <div className="loading-indicator"><p>Loading data, please wait...</p></div>}
         {error && <p className="error-message">{error}</p>}
 
-        {data && Object.keys(data).length > 0 && !error && ( // Ensure data is not null/empty and no error
+        {data && Object.keys(data).length > 0 && (
           <div id="data-display-section" ref={dataDisplayRef} className="data-display">
             <div className="report-header">
               <div className="report-title-row">
@@ -1060,7 +1061,7 @@ function App() {
           </div>
         )}
         {/* Show landing page when no data has been fetched, or show message if data fetch has been attempted */}
-        {!hasDataBeenFetched && !loadingData && !error && (
+        {!hasDataBeenFetched && !loadingData && (
           <LandingPage statusList={statusList} statusMapUrl={statusMapUrl} />
         )}
         {hasDataBeenFetched && !data && !loadingData && !error && (

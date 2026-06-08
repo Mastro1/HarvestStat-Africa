@@ -1,6 +1,6 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "buildCommand": "python scripts/download_data.py",
+  "installCommand": "python scripts/download_data.py",
   "env": {
     "DATA_CACHE_ONLY": "true",
     "REACT_APP_API_BASE_URL": "/_/backend",
@@ -11,13 +11,15 @@
       "root": "frontend",
       "entrypoint": ".",
       "framework": "create-react-app",
-      "routePrefix": "/"
+      "routePrefix": "/",
+      "outputDirectory": "build"
     },
     "backend": {
       "root": "backend",
       "entrypoint": "index.py",
       "framework": "flask",
       "routePrefix": "/_/backend",
+      "buildCommand": "python build.py",
       "maxDuration": 10,
       "memory": 1024,
       "includeFiles": ".cache/**"
