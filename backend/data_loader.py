@@ -109,6 +109,12 @@ def load_dataframe(force_reload: bool = False) -> pd.DataFrame:
 
     if CACHE_ONLY_AT_RUNTIME:
         if not CACHE_FILE.exists():
+            logger.warning(
+                "Bundled data cache missing at %s; attempting emergency download.",
+                CACHE_FILE,
+            )
+            download_csv_to_cache()
+        if not CACHE_FILE.exists():
             raise FileNotFoundError(
                 f"Bundled data cache not found at {CACHE_FILE}. "
                 "On Vercel, the CSV must be downloaded during the build step."

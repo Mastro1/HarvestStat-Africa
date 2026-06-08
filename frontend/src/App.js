@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import axios from 'axios';
 import { BarChart, Bar, LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, Text } from 'recharts';
 import './App.css';
-import { apiUrl } from './config';
+import { apiUrl, asArray, normalizeCountryStatus } from './config';
 
 const DEFAULT_STATUS_MAP_URL =
   'https://raw.githubusercontent.com/HarvestStat/HarvestStat-Africa/refs/heads/main/docs/current_status_map.png';
@@ -380,7 +380,7 @@ function App() {
   useEffect(() => {
     axios.get(apiUrl('/api/countries'))
       .then(response => {
-        setCountries(response.data || []);
+        setCountries(asArray(response.data));
         setLoadingCountries(false);
       })
       .catch(err => {
@@ -396,7 +396,7 @@ function App() {
     axios.get(apiUrl('/api/country-status'))
       .then(response => {
         const { status_map_url: mapUrl, ...status } = response.data || {};
-        setStatusList(status);
+        setStatusList(normalizeCountryStatus(status));
         if (mapUrl) {
           setStatusMapUrl(mapUrl);
         }
@@ -404,7 +404,7 @@ function App() {
       .catch(err => {
         console.error("Error loading country status:", err);
         axios.get('/status_list.json')
-          .then(response => setStatusList(response.data))
+          .then(response => setStatusList(normalizeCountryStatus(response.data)))
           .catch(fallbackErr => console.error("Error loading status fallback:", fallbackErr));
       });
   }, []);
@@ -418,7 +418,7 @@ function App() {
     setLoadingAdmin1(true);
     axios.get(apiUrl('/api/admin1'), { params: { country } })
       .then(response => {
-        setAdmin1Options(response.data || []);
+        setAdmin1Options(asArray(response.data));
         setLoadingAdmin1(false);
       })
       .catch(err => {
@@ -437,7 +437,7 @@ function App() {
     setLoadingAdmin2(true);
     axios.get(apiUrl('/api/admin2'), { params: { country, admin_1_name: admin1Name } })
       .then(response => {
-        setAdmin2Options(response.data || []);
+        setAdmin2Options(asArray(response.data));
         setLoadingAdmin2(false);
       })
       .catch(err => {
