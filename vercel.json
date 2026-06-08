@@ -11,8 +11,7 @@
       "root": "frontend",
       "entrypoint": ".",
       "framework": "create-react-app",
-      "routePrefix": "/",
-      "outputDirectory": "build"
+      "routePrefix": "/"
     },
     "backend": {
       "root": "backend",
