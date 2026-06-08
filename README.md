@@ -1,169 +1,171 @@
-# HarvestStat-Africa UI: Interactive Data Visualization Interface
+# HarvestStat Africa Explorer
+
+[![Live Demo](https://img.shields.io/badge/demo-live-brightgreen)](https://harvest-stat-africa-ui.vercel.app/)
 ![GitHub](https://img.shields.io/github/license/HarvestStat/HarvestStat-Africa)
-![GitHub last commit](https://img.shields.io/github/last-commit/HarvestStat/HarvestStat-Africa)
-![GitHub issues](https://img.shields.io/github/issues/HarvestStat/HarvestStat-Africa)
-![GitHub pull requests](https://img.shields.io/github/issues-pr/HarvestStat/HarvestStat-Africa)
-<!-- ![GitHub forks](https://img.shields.io/github/forks/HarvestStat/HarvestStat-Africa)
-![GitHub stars](https://img.shields.io/github/stars/HarvestStat/HarvestStat-Africa) -->
+![Dataset](https://img.shields.io/badge/dataset-v1.2-blue)
 
-## Overview
+**Live app:** [https://harvest-stat-africa-ui.vercel.app/](https://harvest-stat-africa-ui.vercel.app/)
 
-This is a **web-based user interface (UI)** for the HarvestStat-Africa dataset - a comprehensive repository of cleaned and harmonized subnational crop production data for Africa. The UI provides an interactive platform for visualizing and exploring crop statistics from various sources, including the Famine [Early Warning Systems Network (FEWS NET)](https://fews.net/) and the Food and Agriculture Organization (FAO).
+Interactive web UI for exploring [HarvestStat-Africa](https://github.com/HarvestStat/HarvestStat-Africa) — harmonized subnational crop production statistics across Sub-Saharan Africa. Data is sourced from FEWS NET, FAO, and national agencies.
 
-The application consists of:
-- **Frontend**: A React-based web interface for data visualization and exploration
-- **Backend**: A Flask API server that processes and serves the crop statistics data
+## Features
 
-This UI enables researchers, policymakers, and stakeholders to interactively explore trends and patterns from the subnational to the global level, facilitating better-informed decisions related to food security, trade, and development.
+- Browse crop statistics at **national**, **Admin-1**, and **Admin-2** levels
+- Interactive charts for yield, production, and area harvested
+- Per-crop time series and seasonal breakdowns
+- **Download CSV** for a full country or individual crops
+- Country availability map and status tables on the landing page
 
-## Credits
-This UI interface was developed by Massimo Poretti, Data Engineer @ [Africa Specialty Risks](https://www.asr-re.com/).
+## Architecture
 
-## Quick Start
+| Layer | Stack | Role |
+|---|---|---|
+| **Frontend** | React (CRA) | Data visualization and user controls |
+| **Backend** | Flask + pandas | API for filtering, aggregation, and CSV export |
 
-### Prerequisites
-- **Node.js** (version 14 or higher) and **npm**
-- **Python** (version 3.7 or higher) and **pip**
+**Data source:** The app fetches the official dataset (**v1.2**) directly from the HarvestStat-Africa GitHub repository at build/deploy time — no local CSV copy is stored in this repo.
 
-### Running the Application
-
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/HarvestStat/HarvestStat-Africa.git
-   cd HarvestStat-Africa
-   ```
-
-2. **Start the Backend (Flask API):**
-   ```bash
-   cd backend
-   pip install -r requirements.txt
-   python app.py
-   ```
-   The backend will start on `http://127.0.0.1:5000`
-
-3. **Start the Frontend (React UI):**
-   ```bash
-   # Open a new terminal window/tab
-   cd frontend
-   npm install
-   npm start
-   ```
-   The frontend will start on `http://localhost:3000` and automatically open in your browser
-
-4. **Access the Application:**
-   Open your web browser and navigate to `http://localhost:3000` to use the HarvestStat-Africa UI
-
-### Development Mode
-The application runs in development mode by default, which includes:
-- Hot reloading for both frontend and backend changes
-- Detailed error messages and debugging information
-- Automatic browser refresh when code changes are detected
-
-## Data sources
-The data in this repository is compiled from various sources, including:
-- Famine Early Warning Systems Network (FEWS NET) of the United States Agency for International Development (USAID). This is the primary source of information
-    - [FEWS NET Data Warehouse (FDW)](https://fews.net/data)
-- Food and Agriculture Organization (FAO)
-    - [FAOSTAT](https://www.fao.org/faostat/en/#home)
-- National agricultural agencies
+```
+https://raw.githubusercontent.com/HarvestStat/HarvestStat-Africa/refs/heads/main/public/hvstat_africa_data_v1.2.csv
+```
 
 ## Repository structure
-This UI application is organized as follows:
-- `frontend/`: React-based web interface for data visualization
-  - `src/`: React components and application logic
-  - `public/`: Static assets and HTML template
-  - `package.json`: Node.js dependencies and scripts
-- `backend/`: Flask API server for data processing
-  - `app.py`: Main Flask application
-  - `requirements.txt`: Python dependencies
-- `docs/`: Documentation related to the data and application
-- `public/`: Processed datasets in CSV, Parquet, and GeoPackage formats
 
-## Alternative Setup (Development Environment)
-For a more detailed development setup:
+```
+├── frontend/          React UI (Create React App)
+├── backend/           Flask API
+│   ├── app.py         API routes and data processing
+│   ├── index.py       Vercel Services entrypoint
+│   ├── data_loader.py Dataset fetch, cache, and loading
+│   └── .cache/        Build-time CSV cache (gitignored)
+├── scripts/           Build helpers (data download)
+├── vercel.json        Vercel Services deployment config
+└── docs/              Additional documentation
+```
 
-1. **Backend Setup:**
+## Local development
+
+### Prerequisites
+
+- **Node.js** 14+ and **npm**
+- **Python** 3.12+ and **pip**
+
+### Setup
+
+1. **Clone this repository:**
    ```bash
-   cd backend
-   # Create virtual environment (optional but recommended)
-   python -m venv venv
-   source venv/bin/activate  # On Windows: venv\Scripts\activate
-   pip install -r requirements.txt
+   git clone https://github.com/Mastro1/HarvestStat-Africa-UI.git
+   cd HarvestStat-Africa-UI
    ```
 
-2. **Frontend Setup:**
+2. **Create and activate a virtual environment (recommended):**
+   ```bash
+   python -m venv .venv
+   # Windows
+   .venv\Scripts\activate
+   # macOS / Linux
+   source .venv/bin/activate
+   ```
+
+3. **Install dependencies:**
+   ```bash
+   pip install -r requirements.txt
+   cd frontend && npm install && cd ..
+   ```
+
+4. **Run the backend** (terminal 1):
+   ```bash
+   python -m backend.app
+   ```
+   API available at `http://127.0.0.1:5000`
+
+5. **Run the frontend** (terminal 2):
    ```bash
    cd frontend
-   npm install
+   npm start
    ```
+   UI available at `http://localhost:3000` (proxies `/api` to the Flask server)
 
-3. **Running in Development Mode:**
-   - Start backend: `python app.py` (from backend directory)
-   - Start frontend: `npm start` (from frontend directory)
+On first run, the backend downloads the dataset from GitHub and caches it in `backend/.cache/`.
 
-## Troubleshooting
-- **Port conflicts:** If port 3000 or 5000 are in use, the applications will prompt to use alternative ports
-- **Node.js issues:** Ensure you have Node.js version 14 or higher installed
-- **Python issues:** Ensure you have Python 3.7 or higher installed
+## Deployment (Vercel)
+
+The app is deployed on [Vercel](https://vercel.com) using the **Services** framework preset. Frontend and backend run as separate services in one project:
+
+| Service | Route | Description |
+|---|---|---|
+| Frontend | `/` | React static build |
+| Backend | `/_/backend` | Flask API |
+
+1. Import [this repository](https://github.com/Mastro1/HarvestStat-Africa-UI) into Vercel
+2. Set **Framework Preset** to **Services**
+3. Deploy — `vercel.json` configures the rest
+
+The dataset is downloaded during the build step and bundled with the backend function. To refresh data, redeploy the project.
+
+### Optional environment variables
+
+| Variable | Default | Description |
+|---|---|---|
+| `DATA_CSV_URL` | Official v1.2 GitHub URL | Override the dataset source |
+| `DATA_CACHE_ONLY` | `true` on Vercel | Skip runtime downloads (required on free tier) |
+| `BACKEND_ROUTE_PREFIX` | `/_/backend` | Backend mount path |
 
 ## Current data status
-HarvetStat currently contains subnational crop statistics for **`33`** countries.
-<!-- (see [current data status per country](/docs/data_status_per_country.md)):</br> -->
-- Admin-1 level: Angola, Burundi, Central African Republic, Chad, DRC, Ghana, Kenya, Lesotho, Liberia, Mali, Mauritania, Mozambique, Nigeria, South Africa, South Sudan, Sudan, Tanzania, Zimbabwe
-- Admin-2 level: Benin, Burkina Faso, Cameroon, Ethiopia, Guinea, Madagascar, Malawi, Niger, Rwanda, Senegal, Sierra Leone, Somalia, Togo, Uganda, Zambia
 
-<img src="./docs/current_status_map.png" alt="drawing" width="400"/>
+HarvestStat **v1.2** includes subnational crop statistics for **33 countries**:
 
-## Data access
-The data in this repository is available in the `public` folder in CSV and GeoPackage formats.
+- **Admin-1 level:** Angola, Burundi, Central African Republic, Chad, Congo (Democratic Republic of the), Ghana, Kenya, Lesotho, Liberia, Mali, Mauritania, Mozambique, Nigeria, South Africa, South Sudan, Sudan, Tanzania (United Republic of), Zimbabwe
+- **Admin-2 level:** Benin, Burkina Faso, Cameroon, Ethiopia, Guinea, Madagascar, Malawi, Niger, Rwanda, Senegal, Sierra Leone, Somalia, Togo, Uganda, Zambia
 
-To access the data, download the files from the `public` folder.
-- hvstat_africa_data_{version}.csv: The final processed crop statistics dataset.
-- hvstat_africa_boundary_{version}.gpkg: Boundary data for subnational administrative units.
+The availability map is loaded from the [official HarvestStat-Africa repository](https://github.com/HarvestStat/HarvestStat-Africa).
 
-The version of the dataset is specified in the filename. The current version is `v1.0`.
+## Data sources
 
-The official release version is available on [Dryad - HarvestStat Africa](https://datadryad.org/dataset/doi:10.5061/dryad.vq83bk42w).
+- [FEWS NET Data Explorer](https://fdw.fews.net/data-explorer/) (primary source)
+- [FAOSTAT](https://www.fao.org/faostat/en/#home)
+- National agricultural agencies
 
-For details, please see the paper in the [Citation](#citation) section.
+Official dataset and documentation: [HarvestStat/HarvestStat-Africa](https://github.com/HarvestStat/HarvestStat-Africa)
+
+## Credits
+
+UI developed by **Massimo Poretti**, Data Engineer @ [Africa Specialty Risks](https://www.asr-re.com/).
 
 ## Citation
-The data in this repository is available for free and unrestricted use. Users are encouraged to cite the following:
 
-D. Lee, W. Anderson, X. Chen, F. Davenport, S. Shukla, R. Sahajpale, M. Budde, J. Rowland, J. Verdin, L. You, M. Ahouangbenoni, K. Davis, E. Kebede, S. Ehrmannk, C. Justice, and C. Meyer. (2024), HarvestStat Africa – Harmonized Subnational Crop Statistics for Sub-Saharan Africa. EarthArXiv, [https://doi.org/10.31223/X5M123](https://doi.org/10.31223/X5M123).
+If you use HarvestStat data, please cite:
+
+> Lee, D., Anderson, W., Chen, X. et al. HarvestStat Africa – Harmonized Subnational Crop Statistics for Sub-Saharan Africa. *Sci Data* **12**, 690 (2025). [https://doi.org/10.1038/s41597-025-05001-z](https://doi.org/10.1038/s41597-025-05001-z)
 
 <details>
 <summary>BibTeX</summary>
-<pre>
-@article{lee_eaxv2024,
-  author       = {Lee, Donghoon and
-                  Anderson, Weston and
-                  Chen, Xuan and
-                  Davenport, Frank and
-                  Shukla, Shraddhanand and
-                  Sahajpal, Ritvik and
-                  Budde, Michael and
-                  Rowland, James and
-                  Verdin, Jim and
-                  You, Liangzhi and
-                  Ahouangbenon, Matthieu and
-                  Davis, Kyle Frankel and
-                  Kebede, Endalkachew and
-                  Ehrmann, Steffen and
-                  Justice, Christina and
-                  Meyer, Carsten},
-  title        = {{HarvestStat Africa – Harmonized Subnational Crop Statistics for Sub-Saharan Africa}},
-  year         = {2024},
-  journal      = {EarthArXiv},
-  note         = {Preprint},
-  doi          = {10.31223/X5M123},
-  url          = {https://doi.org/10.31223/X5M123}
+
+```bibtex
+@article{lee2025harveststat,
+  author  = {Lee, Donghoon and Anderson, Weston and Chen, Xuan and
+             Davenport, Frank and Shukla, Shraddhanand and Sahajpal, Ritvik and
+             Budde, Michael and Rowland, James and Verdin, Jim and You, Liangzhi and
+             Ahouangbenon, Matthieu and Davis, Kyle Frankel and Kebede, Endalkachew and
+             Ehrmann, Steffen and Justice, Christina and Meyer, Carsten},
+  title   = {HarvestStat Africa – Harmonized Subnational Crop Statistics for Sub-Saharan Africa},
+  journal = {Scientific Data},
+  year    = {2025},
+  volume  = {12},
+  pages   = {690},
+  doi     = {10.1038/s41597-025-05001-z}
 }
-</pre>
+```
+
 </details>
 
-## How to contribute
-Contributions to this repository are welcome. To contribute, please create a pull request with a clear description of the changes proposed.
+## Related links
+
+- **Live UI:** [harvest-stat-africa-ui.vercel.app](https://harvest-stat-africa-ui.vercel.app/)
+- **Official dataset:** [github.com/HarvestStat/HarvestStat-Africa](https://github.com/HarvestStat/HarvestStat-Africa)
+- **This UI (source code):** [github.com/Mastro1/HarvestStat-Africa-UI](https://github.com/Mastro1/HarvestStat-Africa-UI)
+- **Dryad archive:** [doi:10.5061/dryad.vq83bk42w](https://datadryad.org/dataset/doi:10.5061/dryad.vq83bk42w)
 
 ## License
-The data in this repository is licensed under the MIT License.
+
+MIT License — see [LICENSE](LICENSE).
