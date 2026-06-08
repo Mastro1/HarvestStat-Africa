@@ -8,10 +8,15 @@
   },
   "experimentalServices": {
     "frontend": {
+      "root": "frontend",
+      "entrypoint": ".",
+      "framework": "create-react-app",
       "routePrefix": "/"
     },
     "backend": {
       "root": "backend",
+      "entrypoint": "index.py",
+      "framework": "flask",
       "routePrefix": "/_/backend",
       "maxDuration": 10,
       "memory": 1024,
