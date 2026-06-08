@@ -1,20 +1,21 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "buildCommand": "python scripts/download_data.py && cd frontend && npm run build",
-  "outputDirectory": "frontend/build",
-  "installCommand": "pip install -r requirements.txt && cd frontend && npm install",
-  "functions": {
-    "api/index.py": {
+  "buildCommand": "python scripts/download_data.py",
+  "env": {
+    "DATA_CACHE_ONLY": "true",
+    "REACT_APP_API_BASE_URL": "/_/backend",
+    "BACKEND_ROUTE_PREFIX": "/_/backend"
+  },
+  "experimentalServices": {
+    "frontend": {
+      "routePrefix": "/"
+    },
+    "backend": {
+      "root": "backend",
+      "routePrefix": "/_/backend",
       "maxDuration": 10,
       "memory": 1024,
-      "includeFiles": "backend/.cache/**"
+      "includeFiles": ".cache/**"
     }
-  },
-  "env": {
-    "DATA_CACHE_ONLY": "true"
-  },
-  "rewrites": [
-    { "source": "/api/(.*)", "destination": "/api/index" },
-    { "source": "/(.*)", "destination": "/index.html" }
-  ]
+  }
 }

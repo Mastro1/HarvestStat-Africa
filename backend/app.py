@@ -1,4 +1,5 @@
 import logging
+import os
 import re
 import sys
 from pathlib import Path
@@ -18,6 +19,28 @@ logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(
 
 app = Flask(__name__)
 CORS(app)
+
+BACKEND_ROUTE_PREFIX = os.environ.get('BACKEND_ROUTE_PREFIX', '').rstrip('/')
+
+
+class _StripRoutePrefixMiddleware:
+    """Strip the Vercel Services mount prefix so Flask routes stay at /api/..."""
+
+    def __init__(self, wsgi_app, prefix):
+        self.wsgi_app = wsgi_app
+        self.prefix = prefix
+
+    def __call__(self, environ, start_response):
+        path = environ.get('PATH_INFO', '')
+        if self.prefix and path.startswith(self.prefix):
+            stripped = path[len(self.prefix):] or '/'
+            environ['PATH_INFO'] = stripped
+            environ['SCRIPT_NAME'] = self.prefix
+        return self.wsgi_app(environ, start_response)
+
+
+if BACKEND_ROUTE_PREFIX:
+    app.wsgi_app = _StripRoutePrefixMiddleware(app.wsgi_app, BACKEND_ROUTE_PREFIX)
 
 
 @app.after_request

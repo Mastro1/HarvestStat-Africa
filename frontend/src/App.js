@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import axios from 'axios';
 import { BarChart, Bar, LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, Text } from 'recharts';
 import './App.css';
+import { apiUrl } from './config';
 
 const DEFAULT_STATUS_MAP_URL =
   'https://raw.githubusercontent.com/HarvestStat/HarvestStat-Africa/refs/heads/main/docs/current_status_map.png';
@@ -52,7 +53,7 @@ const CropTimeSeriesComponent = ({
         params.admin_2_name = selectedAdmin2Name.trim();
       }
 
-      const response = await axios.get('/api/crop-timeseries', { params });
+      const response = await axios.get(apiUrl('/api/crop-timeseries'), { params });
       return response.data.time_series_data;
     } catch (error) {
       console.error('Error fetching crop time series data:', error);
@@ -377,7 +378,7 @@ function App() {
   const dataDisplayRef = useRef(null); // For scrolling to data section
 
   useEffect(() => {
-    axios.get('/api/countries')
+    axios.get(apiUrl('/api/countries'))
       .then(response => {
         setCountries(response.data || []);
         setLoadingCountries(false);
@@ -391,7 +392,7 @@ function App() {
 
   // Load country availability status from the official dataset
   useEffect(() => {
-    axios.get('/api/country-status')
+    axios.get(apiUrl('/api/country-status'))
       .then(response => {
         const { status_map_url: mapUrl, ...status } = response.data || {};
         setStatusList(status);
@@ -414,7 +415,7 @@ function App() {
     }
     
     setLoadingAdmin1(true);
-    axios.get('/api/admin1', { params: { country } })
+    axios.get(apiUrl('/api/admin1'), { params: { country } })
       .then(response => {
         setAdmin1Options(response.data || []);
         setLoadingAdmin1(false);
@@ -433,7 +434,7 @@ function App() {
     }
     
     setLoadingAdmin2(true);
-    axios.get('/api/admin2', { params: { country, admin_1_name: admin1Name } })
+    axios.get(apiUrl('/api/admin2'), { params: { country, admin_1_name: admin1Name } })
       .then(response => {
         setAdmin2Options(response.data || []);
         setLoadingAdmin2(false);
@@ -564,7 +565,7 @@ function App() {
 
     console.log("Fetching data with params:", params);
 
-    axios.get('/api/data', { params })
+    axios.get(apiUrl('/api/data'), { params })
       .then(response => {
         setData(response.data);
         setLoadingData(false);
@@ -625,7 +626,7 @@ function App() {
     setError(null);
 
     try {
-      const response = await axios.get('/api/download', {
+      const response = await axios.get(apiUrl('/api/download'), {
         params,
         responseType: 'blob',
       });
