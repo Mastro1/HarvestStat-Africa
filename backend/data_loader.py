@@ -7,12 +7,20 @@ from typing import Optional
 
 import pandas as pd
 
-from backend.config import (
-    CACHE_FILE,
-    CACHE_ONLY_AT_RUNTIME,
-    CACHE_TTL_SECONDS,
-    DATA_CSV_URL,
-)
+try:
+    from backend.config import (
+        CACHE_FILE,
+        CACHE_ONLY_AT_RUNTIME,
+        CACHE_TTL_SECONDS,
+        DATA_CSV_URL,
+    )
+except ImportError:
+    from config import (
+        CACHE_FILE,
+        CACHE_ONLY_AT_RUNTIME,
+        CACHE_TTL_SECONDS,
+        DATA_CSV_URL,
+    )
 
 logger = logging.getLogger(__name__)
 

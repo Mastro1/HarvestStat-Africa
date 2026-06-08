@@ -1,16 +1,10 @@
 """Vercel Services entrypoint for the Flask backend."""
 
 import logging
-import sys
-from pathlib import Path
 
-ROOT_DIR = Path(__file__).resolve().parent.parent
-if str(ROOT_DIR) not in sys.path:
-    sys.path.insert(0, str(ROOT_DIR))
-
-from backend.app import app  # noqa: E402
-from backend.config import CACHE_FILE  # noqa: E402
-from backend.data_loader import download_csv_to_cache, get_dataframe  # noqa: E402
+from app import app
+from config import CACHE_FILE
+from data_loader import download_csv_to_cache, get_dataframe
 
 logger = logging.getLogger(__name__)
 

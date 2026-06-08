@@ -12,8 +12,12 @@ ROOT_DIR = Path(__file__).resolve().parent.parent
 if str(ROOT_DIR) not in sys.path:
     sys.path.insert(0, str(ROOT_DIR))
 
-from backend.config import DEFAULT_STATUS_MAP_URL
-from backend.data_loader import get_dataframe
+try:
+    from backend.config import DEFAULT_STATUS_MAP_URL
+    from backend.data_loader import get_dataframe
+except ImportError:
+    from config import DEFAULT_STATUS_MAP_URL
+    from data_loader import get_dataframe
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
